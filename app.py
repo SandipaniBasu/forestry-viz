@@ -1,184 +1,272 @@
 # -*- coding: utf-8 -*-
 """
-Created on Tue Jan 18 23:56:31 2022
+Created on Thu Feb  3 16:20:28 2022
 
 @author: basus
 """
 
-import os
+# 1. Import Dash
+import pandas as pd
+import sqlite3
+import dash
+import plotly.express as px
+from dash import dcc
 from urllib.request import urlopen
 import json
-import dash
-import dash_core_components as dcc
-import dash_html_components as html
-from dash.dependencies import Input, Output, State
-import dash_daq as daq
 import dash_bootstrap_components as dbc
-import numpy as np
-import pandas as pd
-import plotly.graph_objs as go
-import plotly.express as px
-import sqlite3
+from dash import html
+from dash.dependencies import Input, Output, State
+import geopandas as gpd
 
-# ------------------------------------------------------ APP ------------------------------------------------------
-external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
-app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+# 2. Create a Dash app instance
+app = dash.Dash(external_stylesheets=[dbc.themes.LUX])
+PLOTLY_LOGO = "https://images.plot.ly/logo/new-branding/plotly-logomark.png"
+states = [
+    dbc.DropdownMenuItem("Georgia"),
+]
+measures = [
+    dbc.DropdownMenuItem("Area of Forest land"),
+]
 
-colors = {
-    'background': '#EBEBEB',
-    'text': '#030626'
-}
+df = pd.read_csv('unitWise.csv',columns=['State','Fips','CountyName','Region','LandUse','EstimatedValue'])
+#df = df[df.LandUse=='`0001 Timberland']
+regions = df.Region.unique()
+df['CountyEstimatedValue'] = df.groupby(['State','Fips','CountyName','Region'])['EstimatedValue'].transform('sum')
+df['RegionEstimatedValue'] = df.groupby(['Region'])['EstimatedValue'].transform('sum')
 
-connection = sqlite3.connect('D:\\Study\\UGA\\SQLite_FIADB_GA\\FIADB_GA.db')
+df2 = pd.read_csv('yearWise.csv',columns=['State','Fips','CountyName','Region','Year' ,'EstimatedValue'])
+county = df2.CountyName.unique()
+df2[['Dummy','Year']] = df2['Year'].str.split(expand=True)
+overallState = df2.groupby(['State','Year']).sum('EstimatedValue').reset_index()
+overallRegions = df2.groupby(['State','Region','Year']).sum('EstimatedValue').reset_index()
 
-print(connection.total_changes)
-cursor=connection.cursor()
-cursor.execute("select sum(estimated_value)from (SELECT case 1 when 1 then '`0001 None`' end as pagestr, case cond.owncd when 11 then '`0001 National Forest' when 12 then '`0001 National Forest' when 13 then '`0001 National Forest' when 21 then '`0002 National Park Service' when 22 then '`0003 Bureau of Land Mgmt' when 23 then '`0004 Fish and Wildlife Service' when 24 then '`0005 Dept of Defense' when 25 then '`0006 Other federal' when 31 then '`0007 State' when 32 then '`0008 County and Municipal' when 33 then '`0009 Other local govt' when 41 then '`0010 Private' when 42 then '`0010 Private' when 43 then '`0010 Private' when 44 then '`0010 Private' when 45 then '`0010 Private' when 46 then '`0010 Private' when -1 then '`0011 Unavailable' else '`0012 Other' end as rowstr, case cond.cond_status_cd*100+coalesce(cond.reservcd,0)*10+coalesce(cond.siteclcd,0) when 101 then '`0001 Timberland' when 102 then '`0001 Timberland' when 103 then '`0001 Timberland' when 104 then '`0001 Timberland' when 105 then '`0001 Timberland' when 106 then '`0001 Timberland' when 107 then '`0003 Other forestland' when 111 then '`0002 Reserved Forestland' when 112 then '`0002 Reserved Forestland' when 113 then '`0002 Reserved Forestland' when 114 then '`0002 Reserved Forestland' when 115 then '`0002 Reserved Forestland' when 116 then '`0002 Reserved Forestland' when 117 then '`0002 Reserved Forestland' when min(cond.cond_status_cd*100 +coalesce(cond.reservcd,0)*10+coalesce(cond.siteclcd,0),199) then '`0011 Forest (bad reservcd or siteclcd)' when min(cond.cond_status_cd*100 +coalesce(cond.reservcd,0)*10+coalesce(cond.siteclcd,0),299) then '`0004 Nonforest' when min(cond.cond_status_cd*100 +coalesce(cond.reservcd,0)*10+coalesce(cond.siteclcd,0),399) then '`0005 Non-Census water' when min(cond.cond_status_cd*100 +coalesce(cond.reservcd,0)*10+coalesce(cond.siteclcd,0),499) then '`0006 Census water' else case cond.cond_nonsample_reasn_cd when 1 then '`0007 Outside U.S. boundary' when 2 then '`0008 Denied access' when 3 then '`0009 Hazardous' else '`0010 Other' end end as colstr, SUM((COND.CONDPROP_UNADJ * CASE COND.PROP_BASIS WHEN 'MACR' THEN POP_STRATUM.ADJ_FACTOR_MACR ELSE POP_STRATUM.ADJ_FACTOR_SUBP END)*POP_STRATUM.EXPNS) AS ESTIMATED_VALUE FROM POP_STRATUM POP_STRATUM JOIN POP_PLOT_STRATUM_ASSGN ON (POP_PLOT_STRATUM_ASSGN.STRATUM_CN = POP_STRATUM.CN) JOIN PLOT ON (POP_PLOT_STRATUM_ASSGN.PLT_CN = PLOT.CN) JOIN PLOTGEOM ON (PLOT.CN = PLOTGEOM.CN) JOIN COND ON (COND.PLT_CN = PLOT.CN) WHERE COND.COND_STATUS_CD = 1 AND COND.CONDPROP_UNADJ IS NOT NULL AND ((pop_stratum.rscd=33 and pop_stratum.evalid=131901)) and 1=1 GROUP BY case 1 when 1 then '`0001 None`' end,case cond.owncd when 11 then '`0001 National Forest' when 12 then '`0001 National Forest' when 13 then '`0001 National Forest' when 21 then '`0002 National Park Service' when 22 then '`0003 Bureau of Land Mgmt' when 23 then '`0004 Fish and Wildlife Service' when 24 then '`0005 Dept of Defense' when 25 then '`0006 Other federal' when 31 then '`0007 State' when 32 then '`0008 County and Municipal' when 33 then '`0009 Other local govt' when 41 then '`0010 Private' when 42 then '`0010 Private' when 43 then '`0010 Private' when 44 then '`0010 Private' when 45 then '`0010 Private' when 46 then '`0010 Private' when -1 then '`0011 Unavailable' else '`0012 Other' end ,case cond.cond_status_cd*100+coalesce(cond.reservcd,0)*10+coalesce(cond.siteclcd,0) when 101 then '`0001 Timberland' when 102 then '`0001 Timberland' when 103 then '`0001 Timberland' when 104 then '`0001 Timberland' when 105 then '`0001 Timberland' when 106 then '`0001 Timberland' when 107 then '`0003 Other forestland' when 111 then '`0002 Reserved Forestland' when 112 then '`0002 Reserved Forestland' when 113 then '`0002 Reserved Forestland' when 114 then '`0002 Reserved Forestland' when 115 then '`0002 Reserved Forestland' when 116 then '`0002 Reserved Forestland' when 117 then '`0002 Reserved Forestland' when min(cond.cond_status_cd*100 +coalesce(cond.reservcd,0)*10+coalesce(cond.siteclcd,0),199) then '`0011 Forest (bad reservcd or siteclcd)' when min(cond.cond_status_cd*100 +coalesce(cond.reservcd,0)*10+coalesce(cond.siteclcd,0),299) then '`0004 Nonforest' when min(cond.cond_status_cd*100 +coalesce(cond.reservcd,0)*10+coalesce(cond.siteclcd,0),399) then '`0005 Non-Census water' when min(cond.cond_status_cd*100 +coalesce(cond.reservcd,0)*10+coalesce(cond.siteclcd,0),499) then '`0006 Census water' else case cond.cond_nonsample_reasn_cd when 1 then '`0007 Outside U.S. boundary' when 2 then '`0008 Denied access' when 3 then '`0009 Hazardous' else '`0010 Other' end end )")
-totalacre = cursor.fetchone()
-
-unitwise_Query = """SELECT rowstr,sum(estimated_value) from (
-SELECT case 1 when 1 then '`0001 None`' end as pagestr, case cond.owncd when 11 then '`0001 National Forest' when 12 then '`0001 National Forest' when 13 then '`0001 National Forest' when 21 then '`0002 National Park Service' when 22 then '`0003 Bureau of Land Mgmt' when 23 then '`0004 Fish and Wildlife Service' when 24 then '`0005 Dept of Defense' when 25 then '`0006 Other federal' when 31 then '`0007 State' when 32 then '`0008 County and Municipal' when 33 then '`0009 Other local govt' when 41 then '`0010 Private' when 42 then '`0010 Private' when 43 then '`0010 Private' when 44 then '`0010 Private' when 45 then '`0010 Private' when 46 then '`0010 Private' when -1 then '`0011 Unavailable' else '`0012 Other' end as rowstr, case cond.cond_status_cd*100+coalesce(cond.reservcd,0)*10+coalesce(cond.siteclcd,0) when 101 then '`0001 Timberland' when 102 then '`0001 Timberland' when 103 then '`0001 Timberland' when 104 then '`0001 Timberland' when 105 then '`0001 Timberland' when 106 then '`0001 Timberland' when 107 then '`0003 Other forestland' when 111 then '`0002 Reserved Forestland' when 112 then '`0002 Reserved Forestland' when 113 then '`0002 Reserved Forestland' when 114 then '`0002 Reserved Forestland' when 115 then '`0002 Reserved Forestland' when 116 then '`0002 Reserved Forestland' when 117 then '`0002 Reserved Forestland' when min(cond.cond_status_cd*100 +coalesce(cond.reservcd,0)*10+coalesce(cond.siteclcd,0),199) then '`0011 Forest (bad reservcd or siteclcd)' when min(cond.cond_status_cd*100 +coalesce(cond.reservcd,0)*10+coalesce(cond.siteclcd,0),299) then '`0004 Nonforest' when min(cond.cond_status_cd*100 +coalesce(cond.reservcd,0)*10+coalesce(cond.siteclcd,0),399) then '`0005 Non-Census water' when min(cond.cond_status_cd*100 +coalesce(cond.reservcd,0)*10+coalesce(cond.siteclcd,0),499) then '`0006 Census water' else case cond.cond_nonsample_reasn_cd when 1 then '`0007 Outside U.S. boundary' when 2 then '`0008 Denied access' when 3 then '`0009 Hazardous' else '`0010 Other' end end as colstr, SUM((COND.CONDPROP_UNADJ * CASE COND.PROP_BASIS WHEN 'MACR' THEN POP_STRATUM.ADJ_FACTOR_MACR ELSE POP_STRATUM.ADJ_FACTOR_SUBP END)*POP_STRATUM.EXPNS) AS ESTIMATED_VALUE FROM POP_STRATUM POP_STRATUM JOIN POP_PLOT_STRATUM_ASSGN ON (POP_PLOT_STRATUM_ASSGN.STRATUM_CN = POP_STRATUM.CN) JOIN PLOT ON (POP_PLOT_STRATUM_ASSGN.PLT_CN = PLOT.CN) JOIN PLOTGEOM ON (PLOT.CN = PLOTGEOM.CN) JOIN COND ON (COND.PLT_CN = PLOT.CN) WHERE COND.COND_STATUS_CD = 1 AND COND.CONDPROP_UNADJ IS NOT NULL AND ((pop_stratum.rscd=33 and pop_stratum.evalid=131901)) and 1=1 GROUP BY case 1 when 1 then '`0001 None`' end,case cond.owncd when 11 then '`0001 National Forest' when 12 then '`0001 National Forest' when 13 then '`0001 National Forest' when 21 then '`0002 National Park Service' when 22 then '`0003 Bureau of Land Mgmt' when 23 then '`0004 Fish and Wildlife Service' when 24 then '`0005 Dept of Defense' when 25 then '`0006 Other federal' when 31 then '`0007 State' when 32 then '`0008 County and Municipal' when 33 then '`0009 Other local govt' when 41 then '`0010 Private' when 42 then '`0010 Private' when 43 then '`0010 Private' when 44 then '`0010 Private' when 45 then '`0010 Private' when 46 then '`0010 Private' when -1 then '`0011 Unavailable' else '`0012 Other' end ,case cond.cond_status_cd*100+coalesce(cond.reservcd,0)*10+coalesce(cond.siteclcd,0) when 101 then '`0001 Timberland' when 102 then '`0001 Timberland' when 103 then '`0001 Timberland' when 104 then '`0001 Timberland' when 105 then '`0001 Timberland' when 106 then '`0001 Timberland' when 107 then '`0003 Other forestland' when 111 then '`0002 Reserved Forestland' when 112 then '`0002 Reserved Forestland' when 113 then '`0002 Reserved Forestland' when 114 then '`0002 Reserved Forestland' when 115 then '`0002 Reserved Forestland' when 116 then '`0002 Reserved Forestland' when 117 then '`0002 Reserved Forestland' when min(cond.cond_status_cd*100 +coalesce(cond.reservcd,0)*10+coalesce(cond.siteclcd,0),199) then '`0011 Forest (bad reservcd or siteclcd)' when min(cond.cond_status_cd*100 +coalesce(cond.reservcd,0)*10+coalesce(cond.siteclcd,0),299) then '`0004 Nonforest' when min(cond.cond_status_cd*100 +coalesce(cond.reservcd,0)*10+coalesce(cond.siteclcd,0),399) then '`0005 Non-Census water' when min(cond.cond_status_cd*100 +coalesce(cond.reservcd,0)*10+coalesce(cond.siteclcd,0),499) then '`0006 Census water' else case cond.cond_nonsample_reasn_cd when 1 then '`0007 Outside U.S. boundary' when 2 then '`0008 Denied access' when 3 then '`0009 Hazardous' else '`0010 Other' end end
-)group by rowstr;
-"""
-cursor.execute(unitwise_Query)
-unitwise = cursor.fetchall()
-df = pd.DataFrame(unitwise,columns=['Unit','Acreage'])
-
-forest_type = """ select B.MEANING,A.colstr,A.sum_estimated_value
-from
-(select pagestr,rowstr,colstr,sum(estimated_value) as sum_estimated_value from (SELECT case 1 when 1 then '`0001 None`' end as pagestr, cond.fortypcd as rowstr, case coalesce(cond.siteclcd,-1) when 1 then '`0001 225+' when 2 then '`0002 165-224' when 3 then '`0003 120-164' when 4 then '`0004 85-119' when 5 then '`0005 50-84' when 6 then '`0006 20-49' when 7 then '`0007 0-19' when -1 then '`0008 Not available' else '`0009 Other' end as colstr, SUM((COND.CONDPROP_UNADJ * CASE COND.PROP_BASIS WHEN 'MACR' THEN POP_STRATUM.ADJ_FACTOR_MACR ELSE POP_STRATUM.ADJ_FACTOR_SUBP END)*POP_STRATUM.EXPNS) AS ESTIMATED_VALUE FROM POP_STRATUM POP_STRATUM JOIN POP_PLOT_STRATUM_ASSGN ON (POP_PLOT_STRATUM_ASSGN.STRATUM_CN = POP_STRATUM.CN) JOIN PLOT ON (POP_PLOT_STRATUM_ASSGN.PLT_CN = PLOT.CN) JOIN PLOTGEOM ON (PLOT.CN = PLOTGEOM.CN) JOIN COND ON (COND.PLT_CN = PLOT.CN) WHERE COND.COND_STATUS_CD = 1 AND COND.CONDPROP_UNADJ IS NOT NULL AND ((pop_stratum.rscd=33 and pop_stratum.evalid=131901)) and 1=1 GROUP BY case 1 when 1 then '`0001 None`' end,cond.fortypcd ,case coalesce(cond.siteclcd,-1) when 1 then '`0001 225+' when 2 then '`0002 165-224' when 3 then '`0003 120-164' when 4 then '`0004 85-119' when 5 then '`0005 50-84' when 6 then '`0006 20-49' when 7 then '`0007 0-19' when -1 then '`0008 Not available' else '`0009 Other' end ) tmpzzz group by pagestr,rowstr,colstr order by pagestr, rowstr, colstr) A
-LEFT JOIN (SELECT MEANING,VALUE FROM REF_FOREST_TYPE) B ON A.rowstr = B.VALUE; """
-
-cursor.execute(forest_type)
-forest = cursor.fetchall()
-df_2 = pd.DataFrame(forest,columns=['ForestType','SiteProductivity','Acreage'])
-df_2.reset_index(inplace=True)
-ftype = df_2.ForestType.unique()
-
-unitMap_Query = """select A.statecd || substr('00000' || A.rowstr,-3,3) as countycd,B.COUNTYNM , C.MEANING REGION,colstr,estimated_value from(
-SELECT case 1 when 1 then '`0001 None`' end as pagestr, cond.statecd,cond.countycd as rowstr, case cond.cond_status_cd*100+coalesce(cond.reservcd,0)*10+coalesce(cond.siteclcd,0) when 101 then '`0001 Timberland' when 102 then '`0001 Timberland' when 103 then '`0001 Timberland' when 104 then '`0001 Timberland' when 105 then '`0001 Timberland' when 106 then '`0001 Timberland' when 107 then '`0003 Other forestland' when 111 then '`0002 Reserved Forestland' when 112 then '`0002 Reserved Forestland' when 113 then '`0002 Reserved Forestland' when 114 then '`0002 Reserved Forestland' when 115 then '`0002 Reserved Forestland' when 116 then '`0002 Reserved Forestland' when 117 then '`0002 Reserved Forestland' when min(cond.cond_status_cd*100 +coalesce(cond.reservcd,0)*10+coalesce(cond.siteclcd,0),199) then '`0011 Forest (bad reservcd or siteclcd)' when min(cond.cond_status_cd*100 +coalesce(cond.reservcd,0)*10+coalesce(cond.siteclcd,0),299) then '`0004 Nonforest' when min(cond.cond_status_cd*100 +coalesce(cond.reservcd,0)*10+coalesce(cond.siteclcd,0),399) then '`0005 Non-Census water' when min(cond.cond_status_cd*100 +coalesce(cond.reservcd,0)*10+coalesce(cond.siteclcd,0),499) then '`0006 Census water' else case cond.cond_nonsample_reasn_cd when 1 then '`0007 Outside U.S. boundary' when 2 then '`0008 Denied access' when 3 then '`0009 Hazardous' else '`0010 Other' end end as colstr, SUM((COALESCE(SCCM.SUBPTYP_PROP_CHNG / 4 * CASE COND.PROP_BASIS WHEN 'MACR' THEN POP_STRATUM.ADJ_FACTOR_MACR ELSE POP_STRATUM.ADJ_FACTOR_SUBP END, 0))*POP_STRATUM.EXPNS) AS ESTIMATED_VALUE FROM POP_STRATUM POP_STRATUM JOIN POP_PLOT_STRATUM_ASSGN POP_PLOT_STRATUM_ASSGN ON (POP_PLOT_STRATUM_ASSGN.STRATUM_CN = POP_STRATUM.CN) JOIN PLOT PLOT ON (POP_PLOT_STRATUM_ASSGN.PLT_CN = PLOT.CN) JOIN PLOTGEOM PLOTGEOM ON (PLOT.CN = PLOTGEOM.CN) JOIN COND COND ON (COND.PLT_CN = PLOT.CN) JOIN COND PCOND ON (PCOND.PLT_CN = PLOT.PREV_PLT_CN) JOIN SUBP_COND_CHNG_MTRX SCCM ON (SCCM.PLT_CN = COND.PLT_CN AND SCCM.PREV_PLT_CN = PCOND.PLT_CN AND SCCM.CONDID = COND.CONDID AND SCCM.PREVCOND = PCOND.CONDID) WHERE COND.CONDPROP_UNADJ IS NOT NULL AND ((SCCM.SUBPTYP = 3 AND COND.PROP_BASIS = 'MACR') OR (SCCM.SUBPTYP = 1 AND COND.PROP_BASIS = 'SUBP')) AND COALESCE(COND.COND_NONSAMPLE_REASN_CD, 0) = 0 AND COALESCE(PCOND.COND_NONSAMPLE_REASN_CD, 0) = 0 AND (COND.COND_STATUS_CD = 1 AND PCOND.COND_STATUS_CD = 1) AND ((pop_stratum.rscd=33 and pop_stratum.evalid=131903)) and 1=1 GROUP BY case 1 when 1 then '`0001 None`' end,cond.statecd,cond.countycd ,case cond.cond_status_cd*100+coalesce(cond.reservcd,0)*10+coalesce(cond.siteclcd,0) when 101 then '`0001 Timberland' when 102 then '`0001 Timberland' when 103 then '`0001 Timberland' when 104 then '`0001 Timberland' when 105 then '`0001 Timberland' when 106 then '`0001 Timberland' when 107 then '`0003 Other forestland' when 111 then '`0002 Reserved Forestland' when 112 then '`0002 Reserved Forestland' when 113 then '`0002 Reserved Forestland' when 114 then '`0002 Reserved Forestland' when 115 then '`0002 Reserved Forestland' when 116 then '`0002 Reserved Forestland' when 117 then '`0002 Reserved Forestland' when min(cond.cond_status_cd*100 +coalesce(cond.reservcd,0)*10+coalesce(cond.siteclcd,0),199) then '`0011 Forest (bad reservcd or siteclcd)' when min(cond.cond_status_cd*100 +coalesce(cond.reservcd,0)*10+coalesce(cond.siteclcd,0),299) then '`0004 Nonforest' when min(cond.cond_status_cd*100 +coalesce(cond.reservcd,0)*10+coalesce(cond.siteclcd,0),399) then '`0005 Non-Census water' when min(cond.cond_status_cd*100 +coalesce(cond.reservcd,0)*10+coalesce(cond.siteclcd,0),499) then '`0006 Census water' else case cond.cond_nonsample_reasn_cd when 1 then '`0007 Outside U.S. boundary' when 2 then '`0008 Denied access' when 3 then '`0009 Hazardous' else '`0010 Other' end end 
-) A LEFT JOIN COUNTY B ON A.ROWSTR = B.COUNTYCD
-LEFT JOIN REF_UNIT C ON B.UNITCD = C.VALUE; 
-"""
-cursor.execute(unitMap_Query)
-unitMap = cursor.fetchall()
-df_3 = pd.DataFrame(unitMap,columns=['Fips','CountyName','Region','LandUse' ,'EstimatedValue'])
-df_3 = df_3[df_3.LandUse=='`0001 Timberland']
-regions = df_3.Region.unique()
 with urlopen('https://raw.githubusercontent.com/plotly/datasets/master/geojson-counties-fips.json') as response:
     counties = json.load(response)
 
-connection.close()
 
-fig = px.pie(df, values='Acreage', names='Unit', title='% of forest cover')
-
-
-app.layout = html.Div(
-    [
-        html.Div(
-            [
-                html.H1(children="GEORGIA"),
-                html.Label(
-                    ["Georgia has a total forest cover of ",int(totalacre[0])," acres"],
-                    style={"color": "rgb(33 36 35)"},
+    
+navbar = dbc.Navbar(
+    dbc.Container(
+        [
+            html.A(
+                # Use row and col to control vertical alignment of logo / brand
+                dbc.Row(
+                    [
+                        dbc.Col(html.Img(src=PLOTLY_LOGO, height="30px")),
+                        dbc.Col(dbc.NavbarBrand("FIA Data Mart", className="ms-2")),
+                    ],
+                    align="center",
+                    className="g-0",
                 ),
-                html.Img(
-                    src=app.get_asset_url("maple-tree-transparent-background.png"),
-                    style={
-                        "position": "relative",
-                        "width": "100%",
-                        "left": "-10px",
-                        "top": "10px",
-                    },
-                ),
-            ],
-            className="side_bar",
-        ),
-        html.Div(
-            [
-                html.Div(
-                    [                        
-                        html.Div(
-                            [
-                                
-                                dcc.Dropdown(
-                                id="dropdown",
-                                options=[{"label": x, "value": x} for x in ftype],
-                                value=ftype[0],
-                                clearable=False,
-                            ),
-                                dcc.Graph(id="bar-chart"),
-                                html.Div(
-                                    [html.P(id="comment")],
-                                    className="box_comment",
-                                ),
-                    
-                            ],
-                            className="box",
-                            style={
-                                "margin": "10px",
-                                "padding-top": "15px",
-                                "padding-bottom": "15px",
-                            }
-                            ),
-                            
-                                    html.Div(
-                                        [
-                                            html.Div(
-                                                dcc.Graph(
-                                                             id='example-graph-2',
-                                                             figure=fig
-                                                             )
-                                            ),
-                                        ]
-                                    ),
-                                ],
-                                style={"width": "40%","float":"left"}, 
-                                className="main"
-                    )
-                ]
+                href="https://plotly.com",
+                style={"textDecoration": "none"},
             ),
-        html.Div([
-            html.P("Regions:"),
-            dcc.Dropdown(
-                id='regions', 
-                options=[{'value': x, 'label': x} 
-                         for x in regions],
-                value=regions[0],
-                clearable=False
-            ),
-            dcc.Graph(id="choropleth"),
-        ],  style={'width': '49%', 'display': 'inline-block', 'vertical-align': 'middle','float':'left'},
-            )
+            dbc.NavbarToggler(id="navbar-toggler2"),            
         ]
-    )
+    ),
+    color="dark",
+    dark=True,
+)
+
+layout = html.Div([
+    dbc.Container([
+        dbc.Row([
+            dbc.Col(html.H5("Visualising forestry data across the country",className="text-center"),className = "mb-5 mt-5"),            
+            ]),
+        dbc.Row([
+            dbc.Col([
+                html.Div([
+                    dcc.Dropdown(
+                        id="states",
+                        options=[                            
+                            {'label': 'Georgia', 'value': 'Georgia'},
+                            {'label': 'Alabama', 'value': 'Alabama'},
+                            {'label': 'Florida', 'value': 'Florida'}
+                            ],
+                        className ="nav-link dropdown-toggle show",
+                        placeholder="Select a state",
+                        )],#style = {'left':'0px','width':'200px' }
+                    ),
+                ],md=4),
+                dbc.Col([
+                html.Div([dcc.Dropdown(
+                id="spatial",
+                options=[
+                    {'label': 'Statewide', 'value': 'State'},
+                    {'label': 'Region/FIA-Unit wide', 'value': 'Region'},
+                    {'label': 'Countywide', 'value': 'County'}
+                ],
+                className ="nav-link dropdown-toggle",
+                placeholder="Spatial resolution",
+                )], #style = {'left':'0px','width':'200px' }       
+                ),
+                ],md=4),
+                dbc.Col([                    
+                html.Div([dcc.Dropdown(
+                options=[
+                    {'label': 'Area of Forest land', 'value': 'forest'},                
+                ],
+                className ="nav-link dropdown-toggle",
+                value='forest',
+                disabled=True
+                )],  #style = {'left':'0px','width':'200px' }                
+                )
+                ],md=4),
+            ]),
+        html.Br(),               
+        dbc.Row([
+            dbc.Col([
+                html.Button('Visualise !!', id='viz', n_clicks=0,className = 'btn btn-success'),
+                ],md=2)
+                ],justify='center')
+            ,html.Br(), html.Br(),       
+        dbc.Row([
+            dbc.Col(dcc.Graph(id="choropleth")),
+            dbc.Col(html.Div([
+                html.Div([dcc.Dropdown(
+                    id='regions', 
+                    options=[{'value': x, 'label': x} 
+                              for x in regions],
+                    value=regions[0],
+                    clearable=False,
+                    className ='nav-link dropdown-toggle'
+                ),
+                    ]),
+                html.Div([dcc.Dropdown(
+                    id='counties', 
+                    options=[{'value': x, 'label': x} 
+                              for x in county],
+                    value=county[0],
+                    clearable=False,
+                    className ='nav-link dropdown-toggle'
+                ),
+                    ]),
+                dcc.Graph(id="timeseries")
+                ])
+                ), 
+            ])
+                       
+        ]),            
+    ])
+
+# Then we incorporate the snippet into our layout.
+# This example keeps it simple and just wraps it in a Container
+app.layout = html.Div([    
+    navbar,
+    layout
         
+],
+)
 
+
+#print(regions["features"][0])
 @app.callback(
-    Output("bar-chart" "figure"),
-    [Input("dropdown", "value")],
-    Output("choropleth", "figure"), 
-    [Input("regions", "value")])
-def update_bar_chart(ftype):
-    mask = df_2['ForestType'] == ftype
-    fig = px.bar(df_2[mask], x="SiteProductivity", y="Acreage",text_auto='.2s')
+    Output("choropleth", "figure"),
+    #Output("timeseries","figure"),
+    #Output("regions", "style"),
+    [Input("viz","n_clicks")],
+    [State("states","value")],
+    [State("spatial","value")],
+    #[State("regions","value")]
+    )
+def display_choropleth(n_clicks,state,spatial):    
+    fig = px.choropleth(locationmode="USA-states", color=[1], scope="usa",template='plotly_dark')
+    #fig2 = px.bar(df2[df2.State == state],x='Year',y='EstimatedValue')
+    changed_id = [p['prop_id'] for p in dash.callback_context.triggered][0]
+    if 'viz' in changed_id and state == "Georgia" and spatial == "State":
+        print(state)
+        fig = px.choropleth(df[df.State == state], geojson=counties, locations='Fips',                                     
+                                     color_discrete_sequence = ["green"],                                
+                                     scope="usa",
+                                     template='plotly_dark',
+                                     basemap_visible=False,
+                                     center={"lat":32.6836,"lon":-83.4644},
+                                     hover_data = ["CountyName","CountyEstimatedValue"],
+                                     #labels={'EstimatedValue':'Estimated Value'},
+                                     fitbounds='locations',
+                                   )
+
+        fig.update_geos(fitbounds="locations", visible=False)
+        fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})             
+    
+    elif 'viz' in changed_id and state == "Georgia" and spatial == "Region":        
+        print(spatial)
+        fig = px.choropleth(df, geojson=counties, locations='Fips',                                     
+                                     color = "RegionEstimatedValue",                                
+                                     scope="usa",
+                                     template='plotly_dark',
+                                     basemap_visible=False,
+                                     center={"lat":32.6836,"lon":-83.4644},
+                                     hover_data = ["Region","RegionEstimatedValue"],                                     
+                                     #labels={'EstimatedValue':'Estimated Value'},
+                                     fitbounds='locations',                                   
+                                   )
+    
+        fig.update_geos(fitbounds="locations", visible=False)
+        fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
+        fig.update_layout({"plot_bgcolor":"rgba(0,0,0,0)",
+                           "paper_bgcolor":"rgba(0,0,0,0)"})        
+        
+    elif 'viz' in changed_id and state == "Georgia" and spatial == "County":
+        print(spatial)
+        fig = px.choropleth(df[df.State == state], geojson=counties, locations='Fips',                                     
+                                     color = "CountyEstimatedValue",                                
+                                     scope="usa",
+                                     template='plotly_dark',
+                                     basemap_visible=False,
+                                     center={"lat":32.6836,"lon":-83.4644},
+                                     hover_data = ["CountyName","CountyEstimatedValue"],                                    
+                                     #labels={'CountyEstimatedValue':'Estimated Value'},
+                                     fitbounds='locations',
+                                   )
+
+        fig.update_geos(fitbounds="locations", visible=False)
+        fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
+        fig.update_layout({"plot_bgcolor":"rgba(0,0,0,0)",
+                           "paper_bgcolor":"rgba(0,0,0,0)"})
+    
+    fig.update_layout(autosize=True,coloraxis={'showscale':False},legend=dict(
+    yanchor="top",
+    y=0.99,
+    xanchor="left",
+    x=0.01
+))
     return fig
-def display_choropleth(region):
-    fig2 = px.choropleth(df[df.Region==region], geojson=counties, locations='Fips', color='EstimatedValue',
-                                color_continuous_scale="Viridis",                            
-                                #range_color=(100000, 12),
-                                scope="usa",
-                                basemap_visible=False,
-                                center={"lat":32.6836,"lon":-83.4644},
-                                hover_data = ["CountyName"],
-                                labels={'EstimatedValue':'Estimated Value'},
-                                fitbounds='locations',
-                              )
-    fig2.update_geos(fitbounds="locations", visible=False)
-    fig2.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
 
-    return fig2
+@app.callback(    
+    [Output("timeseries","figure"),
+     Output("regions", "style"),
+     Output("counties", "style")],
+    [Input("viz","n_clicks")],
+    [State("states","value")],
+    [State("spatial","value")],
+    [State("regions","value")],
+    [State("counties", "value")]
+    )
+def display_timeseries(n_clicks,state,spatial,regions,county):
+    style_dict_region = {'display': 'none'}   
+    style_dict_county = {'display': 'none'}
+    fig = px.choropleth(locationmode="USA-states", color=[1], scope="usa", template='plotly_dark')
+    #fig2 = px.bar(df2[df2.State == state],x='Year',y='EstimatedValue')
+    changed_id = [p['prop_id'] for p in dash.callback_context.triggered][0]
+    if 'viz' in changed_id and state == "Georgia" and spatial == "State":
+        print(state)
+        fig = px.line(overallState,x='Year',y='EstimatedValue',template='plotly_dark')                  
+    
+    elif 'viz' in changed_id and state == "Georgia" and spatial == "Region":
+        style_dict_region = {'display': 'block'}
+        style_dict_county = {'display': 'none'} 
+        print(spatial)
+        fig = px.line(overallRegions[overallRegions.Region == regions],x='Year',y='EstimatedValue',template='plotly_dark')        
+        
+    elif 'viz' in changed_id and state == "Georgia" and spatial == "County":
+        style_dict_region = {'display': 'none'} 
+        style_dict_county = {'display': 'block'} 
+        print(county)
+        fig = px.line(df2[df2.CountyName == county],x='Year',y='EstimatedValue',template='plotly_dark')             
+    return fig,style_dict_region,style_dict_county    
 
+# 5. Start the Dash server
 if __name__ == "__main__":
-    app.run_server(debug=True)
+    app.run_server()
