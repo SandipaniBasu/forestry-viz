@@ -29,13 +29,13 @@ measures = [
     dbc.DropdownMenuItem("Area of Forest land"),
 ]
 
-df = pd.read_csv('unitWise.csv',columns=['State','Fips','CountyName','Region','LandUse','EstimatedValue'])
+df = pd.read_csv('unitWise.csv')
 #df = df[df.LandUse=='`0001 Timberland']
 regions = df.Region.unique()
 df['CountyEstimatedValue'] = df.groupby(['State','Fips','CountyName','Region'])['EstimatedValue'].transform('sum')
 df['RegionEstimatedValue'] = df.groupby(['Region'])['EstimatedValue'].transform('sum')
 
-df2 = pd.read_csv('yearWise.csv',columns=['State','Fips','CountyName','Region','Year' ,'EstimatedValue'])
+df2 = pd.read_csv('yearWise.csv')
 county = df2.CountyName.unique()
 df2[['Dummy','Year']] = df2['Year'].str.split(expand=True)
 overallState = df2.groupby(['State','Year']).sum('EstimatedValue').reset_index()
