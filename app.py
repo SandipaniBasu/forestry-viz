@@ -16,7 +16,6 @@ import json
 import dash_bootstrap_components as dbc
 from dash import html
 from dash.dependencies import Input, Output, State
-import geopandas as gpd
 
 
 # 2. Create a Dash app instance
