@@ -270,4 +270,4 @@ def display_timeseries(n_clicks,state,spatial,regions,county):
 
 # 5. Start the Dash server
 if __name__ == "__main__":
-    app.run_server()
+    app.run_server(debug=True)
