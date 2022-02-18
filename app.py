@@ -20,7 +20,8 @@ import geopandas as gpd
 
 
 # 2. Create a Dash app instance
-app = dash.Dash(external_stylesheets=[dbc.themes.LUX])
+app = dash.Dash(__name__,external_stylesheets=[dbc.themes.LUX])
+server = app.server
 PLOTLY_LOGO = "https://images.plot.ly/logo/new-branding/plotly-logomark.png"
 states = [
     dbc.DropdownMenuItem("Georgia"),
