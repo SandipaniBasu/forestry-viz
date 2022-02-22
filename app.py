@@ -29,23 +29,28 @@ measures = [
     dbc.DropdownMenuItem("Area of Forest land"),
 ]
 
-df = pd.read_csv('unitWise.csv')
+
+
+df = pd.read_csv('trials/unitWise_GA.csv')
 #df = df[df.LandUse=='`0001 Timberland']
 regions = df.Region.unique()
 df['CountyEstimatedValue'] = df.groupby(['State','Fips','CountyName','Region'])['EstimatedValue'].transform('sum')
 df['RegionEstimatedValue'] = df.groupby(['Region'])['EstimatedValue'].transform('sum')
 
-df2 = pd.read_csv('yearWise.csv')
+df2 = pd.read_csv('trials/yearWise_GA.csv')
 county = df2.CountyName.unique()
 df2[['Dummy','Year']] = df2['Year'].str.split(expand=True)
+df2.sort_values(by='Year',inplace=True)
+df2['CumEstimatedValue'] = df2[['CountyName','Year','EstimatedValue']].groupby('CountyName').cumsum()
 overallState = df2.groupby(['State','Year']).sum('EstimatedValue').reset_index()
+overallState['CumEstimatedValue'] = overallState['EstimatedValue'].cumsum()
 overallRegions = df2.groupby(['State','Region','Year']).sum('EstimatedValue').reset_index()
-
+overallRegions['CumEstimatedValue'] = overallRegions[['Region','Year','EstimatedValue']].groupby(['Region']).cumsum()
+df2 = df2.astype({'Year':'int'})
+print(df2.Year.unique())
 with urlopen('https://raw.githubusercontent.com/plotly/datasets/master/geojson-counties-fips.json') as response:
     counties = json.load(response)
-
-
-    
+  
 navbar = dbc.Navbar(
     dbc.Container(
         [
@@ -130,7 +135,7 @@ layout = html.Div([
                               for x in regions],
                     value=regions[0],
                     clearable=False,
-                    className ='nav-link dropdown-toggle'
+                    #className ='nav-link dropdown-toggle'
                 ),
                     ]),
                 html.Div([dcc.Dropdown(
@@ -139,7 +144,7 @@ layout = html.Div([
                               for x in county],
                     value=county[0],
                     clearable=False,
-                    className ='nav-link dropdown-toggle'
+                    #className ='nav-link dropdown-toggle'
                 ),
                     ]),
                 dcc.Graph(id="timeseries")
@@ -198,15 +203,16 @@ def display_choropleth(n_clicks,state,spatial):
                                      template='plotly_dark',
                                      basemap_visible=False,
                                      center={"lat":32.6836,"lon":-83.4644},
+                                     color_continuous_scale = 'RdBu',                                
                                      hover_data = ["Region","RegionEstimatedValue"],                                     
                                      #labels={'EstimatedValue':'Estimated Value'},
-                                     fitbounds='locations',                                   
+                                     fitbounds='locations',                                     
                                    )
     
         fig.update_geos(fitbounds="locations", visible=False)
         fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
-        fig.update_layout({"plot_bgcolor":"rgba(0,0,0,0)",
-                           "paper_bgcolor":"rgba(0,0,0,0)"})        
+        # fig.update_layout({"plot_bgcolor":"rgba(0,0,0,0)",
+        #                    "paper_bgcolor":"rgba(0,0,0,0)"})        
         
     elif 'viz' in changed_id and state == "Georgia" and spatial == "County":
         print(spatial)
@@ -223,10 +229,12 @@ def display_choropleth(n_clicks,state,spatial):
 
         fig.update_geos(fitbounds="locations", visible=False)
         fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
-        fig.update_layout({"plot_bgcolor":"rgba(0,0,0,0)",
-                           "paper_bgcolor":"rgba(0,0,0,0)"})
+        # fig.update_layout({"plot_bgcolor":"rgba(0,0,0,0)",
+        #                    "paper_bgcolor":"rgba(0,0,0,0)"})
     
-    fig.update_layout(autosize=True,coloraxis={'showscale':False},legend=dict(
+    fig.update_layout(autosize=True,
+                      #coloraxis={'showscale':False},
+                      legend=dict(
     yanchor="top",
     y=0.99,
     xanchor="left",
@@ -252,19 +260,19 @@ def display_timeseries(n_clicks,state,spatial,regions,county):
     changed_id = [p['prop_id'] for p in dash.callback_context.triggered][0]
     if 'viz' in changed_id and state == "Georgia" and spatial == "State":
         print(state)
-        fig = px.line(overallState,x='Year',y='EstimatedValue',template='plotly_dark')                  
+        fig = px.line(overallState,x='Year',y='CumEstimatedValue',template='plotly_dark')                  
     
     elif 'viz' in changed_id and state == "Georgia" and spatial == "Region":
         style_dict_region = {'display': 'block'}
         style_dict_county = {'display': 'none'} 
         print(spatial)
-        fig = px.line(overallRegions[overallRegions.Region == regions],x='Year',y='EstimatedValue',template='plotly_dark')        
+        fig = px.line(overallRegions[overallRegions.Region == regions],x='Year',y='CumEstimatedValue',template='plotly_dark')        
         
     elif 'viz' in changed_id and state == "Georgia" and spatial == "County":
         style_dict_region = {'display': 'none'} 
         style_dict_county = {'display': 'block'} 
         print(county)
-        fig = px.line(df2[df2.CountyName == county],x='Year',y='EstimatedValue',template='plotly_dark')             
+        fig = px.line(df2[df2.CountyName == county],x='Year',y='CumEstimatedValue',template='plotly_dark')             
     return fig,style_dict_region,style_dict_county    
 
 # 5. Start the Dash server

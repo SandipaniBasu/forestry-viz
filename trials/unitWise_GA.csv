@@ -1,0 +1,181 @@
+,State,Fips,CountyName,Region,LandUse,EstimatedValue
+0,Georgia,13001,Appling,Southeast,`0001 Timberland,224411.32502757607
+1,Georgia,13003,Atkinson,Southeast,`0001 Timberland,154938.7465596056
+2,Georgia,13005,Bacon,Southeast,`0001 Timberland,108269.24901360401
+3,Georgia,13007,Baker,Southwest,`0001 Timberland,129202.8657550825
+4,Georgia,13009,Baldwin,Central,`0001 Timberland,117910.8638987362
+5,Georgia,13011,Banks,North Central,`0001 Timberland,83686.56825576627
+6,Georgia,13013,Barrow,North Central,`0001 Timberland,45465.59239300298
+7,Georgia,13015,Bartow,North,`0001 Timberland,159051.20991640474
+8,Georgia,13017,Ben Hill,Southwest,`0001 Timberland,90550.21509229131
+9,Georgia,13019,Berrien,Southwest,`0001 Timberland,149165.15421005967
+10,Georgia,13021,Bibb,Central,`0001 Timberland,64433.99821565361
+11,Georgia,13021,Bibb,Central,`0002 Reserved Forestland,5850.4910788642355
+12,Georgia,13023,Bleckley,Central,`0001 Timberland,80323.80010557767
+13,Georgia,13025,Brantley,Southeast,`0001 Timberland,259946.40754963335
+14,Georgia,13027,Brooks,Southwest,`0001 Timberland,173511.27424556017
+15,Georgia,13029,Bryan,Southeast,`0001 Timberland,197835.0917588923
+16,Georgia,13031,Bulloch,Southeast,`0001 Timberland,290277.9554754366
+17,Georgia,13033,Burke,Central,`0001 Timberland,318786.60250920034
+18,Georgia,13035,Butts,Central,`0001 Timberland,77527.08630429253
+19,Georgia,13037,Calhoun,Central,`0001 Timberland,84368.55777789245
+20,Georgia,13039,Camden,Southeast,`0001 Timberland,256125.00351914566
+21,Georgia,13039,Camden,Southeast,`0002 Reserved Forestland,13175.120520284649
+22,Georgia,13043,Candler,Southeast,`0001 Timberland,85718.78526203433
+23,Georgia,13045,Carroll,North Central,`0001 Timberland,165014.85997838626
+24,Georgia,13047,Catoosa,North,`0001 Timberland,32846.143736941856
+25,Georgia,13047,Catoosa,North,`0002 Reserved Forestland,8697.477923279306
+26,Georgia,13047,Catoosa,North,`0003 Other forestland,3294.6702052730475
+27,Georgia,13049,Charlton,Southeast,`0001 Timberland,289112.83856965246
+28,Georgia,13049,Charlton,Southeast,`0002 Reserved Forestland,145087.23491452707
+29,Georgia,13051,Chatham,Southeast,`0001 Timberland,93701.71035755813
+30,Georgia,13053,Chattahoochee,Central,`0001 Timberland,135112.02383424382
+31,Georgia,13055,Chattooga,North,`0001 Timberland,174443.67110791933
+32,Georgia,13057,Cherokee,North,`0001 Timberland,136380.56053733965
+33,Georgia,13059,Clarke,North Central,`0001 Timberland,25290.624527344164
+34,Georgia,13061,Clay,Central,`0001 Timberland,75428.99201372107
+35,Georgia,13063,Clayton,North Central,`0001 Timberland,16661.02028833116
+36,Georgia,13065,Clinch,Southeast,`0001 Timberland,507415.7745133282
+37,Georgia,13065,Clinch,Southeast,`0002 Reserved Forestland,34965.002929975526
+38,Georgia,13067,Cobb,North Central,`0001 Timberland,19890.613418985067
+39,Georgia,13069,Coffee,Southeast,`0001 Timberland,199581.2785609753
+40,Georgia,13071,Colquitt,Southwest,`0001 Timberland,148959.86135331736
+41,Georgia,13073,Columbia,Central,`0001 Timberland,100581.70021880772
+42,Georgia,13075,Cook,Southwest,`0001 Timberland,78216.58317321914
+43,Georgia,13077,Coweta,North Central,`0001 Timberland,168945.7349257869
+44,Georgia,13079,Crawford,Central,`0001 Timberland,173902.49022139236
+45,Georgia,13081,Crisp,Southwest,`0001 Timberland,81091.57791873631
+46,Georgia,13083,Dade,North,`0001 Timberland,78858.65853794443
+47,Georgia,13085,Dawson,North,`0001 Timberland,105281.19164716435
+48,Georgia,13087,Decatur,Southwest,`0001 Timberland,204177.47031949752
+49,Georgia,13089,DeKalb,North Central,`0001 Timberland,43697.51230304942
+50,Georgia,13091,Dodge,Southeast,`0001 Timberland,242011.86165488634
+51,Georgia,13093,Dooly,Southwest,`0001 Timberland,89751.06265499721
+52,Georgia,13095,Dougherty,Central,`0001 Timberland,136387.9843797282
+53,Georgia,13097,Douglas,North Central,`0001 Timberland,82043.38788033841
+54,Georgia,13099,Early,Southwest,`0001 Timberland,184016.8760930367
+55,Georgia,13101,Echols,Southeast,`0001 Timberland,244959.68940865004
+56,Georgia,13103,Effingham,Southeast,`0001 Timberland,232204.92739893464
+57,Georgia,13105,Elbert,North Central,`0001 Timberland,137893.65034133726
+58,Georgia,13107,Emanuel,Southeast,`0001 Timberland,321810.7480888469
+59,Georgia,13109,Evans,Southeast,`0001 Timberland,89371.55135420043
+60,Georgia,13111,Fannin,North,`0001 Timberland,154770.99428121484
+61,Georgia,13111,Fannin,North,`0002 Reserved Forestland,39804.90145212841
+62,Georgia,13113,Fayette,North Central,`0001 Timberland,35376.03549874111
+63,Georgia,13115,Floyd,North,`0001 Timberland,191567.62096972702
+64,Georgia,13117,Forsyth,North Central,`0001 Timberland,59659.58413992545
+65,Georgia,13119,Franklin,North Central,`0001 Timberland,74537.06905607201
+66,Georgia,13121,Fulton,North Central,`0001 Timberland,115127.3928518314
+67,Georgia,13123,Gilmer,North,`0001 Timberland,230660.5970603704
+68,Georgia,13123,Gilmer,North,`0002 Reserved Forestland,11788.977003073915
+69,Georgia,13125,Glascock,Central,`0001 Timberland,78257.2425690942
+70,Georgia,13127,Glynn,Southeast,`0001 Timberland,137820.48157244516
+71,Georgia,13129,Gordon,North,`0001 Timberland,114208.07618796655
+72,Georgia,13131,Grady,Southwest,`0001 Timberland,156740.63263059882
+73,Georgia,13133,Greene,Central,`0001 Timberland,191873.82433878575
+74,Georgia,13135,Gwinnett,North Central,`0001 Timberland,68697.77528704972
+75,Georgia,13137,Habersham,North,`0001 Timberland,109517.25314914643
+76,Georgia,13137,Habersham,North,`0002 Reserved Forestland,2483.830749871873
+77,Georgia,13139,Hall,North Central,`0001 Timberland,96314.89780208477
+78,Georgia,13141,Hancock,Central,`0001 Timberland,274586.8802901854
+79,Georgia,13143,Haralson,North Central,`0001 Timberland,112603.69983451956
+80,Georgia,13145,Harris,Central,`0001 Timberland,234877.56569541074
+81,Georgia,13147,Hart,North Central,`0001 Timberland,57088.13829032946
+82,Georgia,13149,Heard,North Central,`0001 Timberland,103322.00962092895
+83,Georgia,13151,Henry,North Central,`0001 Timberland,85807.71949326362
+84,Georgia,13153,Houston,Central,`0001 Timberland,123482.3132569744
+85,Georgia,13155,Irwin,Southwest,`0001 Timberland,107566.94332352612
+86,Georgia,13157,Jackson,North Central,`0001 Timberland,108238.95153428944
+87,Georgia,13159,Jasper,Central,`0001 Timberland,174219.04029154545
+88,Georgia,13159,Jasper,Central,`0002 Reserved Forestland,11924.945671851445
+89,Georgia,13161,Jeff Davis,Southeast,`0001 Timberland,135072.1851291351
+90,Georgia,13163,Jefferson,Central,`0001 Timberland,225504.5189252824
+91,Georgia,13165,Jenkins,Southeast,`0001 Timberland,150749.364215385
+92,Georgia,13167,Johnson,Southeast,`0001 Timberland,154384.93851406503
+93,Georgia,13169,Jones,Central,`0001 Timberland,179757.3244415954
+94,Georgia,13169,Jones,Central,`0002 Reserved Forestland,23401.96431545694
+95,Georgia,13171,Lamar,Central,`0001 Timberland,95371.95819732874
+96,Georgia,13173,Lanier,Southwest,`0001 Timberland,94910.97589832035
+97,Georgia,13175,Laurens,Southeast,`0001 Timberland,353709.0758327324
+98,Georgia,13177,Lee,Central,`0001 Timberland,139207.7869024681
+99,Georgia,13179,Liberty,Southeast,`0001 Timberland,225054.97721310385
+100,Georgia,13181,Lincoln,Central,`0001 Timberland,114212.58833020033
+101,Georgia,13183,Long,Southeast,`0001 Timberland,235515.45714649593
+102,Georgia,13185,Lowndes,Southwest,`0001 Timberland,196952.80940702462
+103,Georgia,13187,Lumpkin,North,`0001 Timberland,136128.09566481464
+104,Georgia,13187,Lumpkin,North,`0002 Reserved Forestland,9431.18160245913
+105,Georgia,13189,McDuffie,Central,`0001 Timberland,112071.52542613092
+106,Georgia,13191,McIntosh,Southeast,`0001 Timberland,161153.09642228758
+107,Georgia,13191,McIntosh,Southeast,`0002 Reserved Forestland,1486.3461474645467
+108,Georgia,13193,Macon,Central,`0001 Timberland,142783.7097657962
+109,Georgia,13195,Madison,North Central,`0001 Timberland,83128.30788054474
+110,Georgia,13197,Marion,Central,`0001 Timberland,172718.35911579104
+111,Georgia,13199,Meriwether,North Central,`0001 Timberland,261171.0890167328
+112,Georgia,13201,Miller,Southwest,`0001 Timberland,74401.27331251059
+113,Georgia,13205,Mitchell,Southwest,`0001 Timberland,127794.38275163386
+114,Georgia,13207,Monroe,Central,`0001 Timberland,181081.49746628778
+115,Georgia,13209,Montgomery,Southeast,`0001 Timberland,138175.49709981537
+116,Georgia,13211,Morgan,Central,`0001 Timberland,160128.72522827206
+117,Georgia,13213,Murray,North,`0001 Timberland,131180.78502568518
+118,Georgia,13213,Murray,North,`0002 Reserved Forestland,9683.25230097331
+119,Georgia,13215,Muscogee,Central,`0001 Timberland,68042.18692692007
+120,Georgia,13217,Newton,North Central,`0001 Timberland,73071.31166121324
+121,Georgia,13219,Oconee,North Central,`0001 Timberland,60301.987396909426
+122,Georgia,13221,Oglethorpe,North Central,`0001 Timberland,233670.20413383585
+123,Georgia,13223,Paulding,North Central,`0001 Timberland,102322.35166127452
+124,Georgia,13225,Peach,Central,`0001 Timberland,35729.60902268229
+125,Georgia,13227,Pickens,North,`0001 Timberland,109628.9284905688
+126,Georgia,13229,Pierce,Southeast,`0001 Timberland,106665.84463918937
+127,Georgia,13231,Pike,Central,`0001 Timberland,95622.9233733069
+128,Georgia,13233,Polk,North Central,`0001 Timberland,128040.51424518441
+129,Georgia,13235,Pulaski,Central,`0001 Timberland,81716.73937782741
+130,Georgia,13237,Putnam,Central,`0001 Timberland,146156.1171636904
+131,Georgia,13239,Quitman,Central,`0001 Timberland,91323.48333946214
+132,Georgia,13241,Rabun,North,`0001 Timberland,196996.37680793446
+133,Georgia,13241,Rabun,North,`0002 Reserved Forestland,16464.482822736005
+134,Georgia,13243,Randolph,Central,`0001 Timberland,184251.635351242
+135,Georgia,13245,Richmond,Central,`0001 Timberland,123042.78984224862
+136,Georgia,13247,Rockdale,North Central,`0001 Timberland,16868.217899921983
+137,Georgia,13249,Schley,Central,`0001 Timberland,113303.22116043193
+138,Georgia,13251,Screven,Southeast,`0001 Timberland,320766.4847769286
+139,Georgia,13253,Seminole,Southwest,`0001 Timberland,43840.39789606098
+140,Georgia,13255,Spalding,North Central,`0001 Timberland,83171.42666031317
+141,Georgia,13257,Stephens,North,`0001 Timberland,89249.95956566026
+142,Georgia,13259,Stewart,Central,`0001 Timberland,232740.2873471911
+143,Georgia,13261,Sumter,Central,`0001 Timberland,190563.70280138715
+144,Georgia,13263,Talbot,Central,`0001 Timberland,209182.17871651825
+145,Georgia,13265,Taliaferro,Central,`0001 Timberland,122403.57553374876
+146,Georgia,13267,Tattnall,Southeast,`0001 Timberland,185284.66206525808
+147,Georgia,13269,Taylor,Central,`0001 Timberland,230927.20828500894
+148,Georgia,13269,Taylor,Central,`0003 Other forestland,5842.60554551379
+149,Georgia,13271,Telfair,Southeast,`0001 Timberland,237595.73850504396
+150,Georgia,13273,Terrell,Central,`0001 Timberland,156630.04973450108
+151,Georgia,13275,Thomas,Southwest,`0001 Timberland,199073.0669281867
+152,Georgia,13277,Tift,Southwest,`0001 Timberland,78263.31338707599
+153,Georgia,13279,Toombs,Southeast,`0001 Timberland,154161.73235922106
+154,Georgia,13281,Towns,North,`0001 Timberland,62553.9811468069
+155,Georgia,13281,Towns,North,`0002 Reserved Forestland,21103.34231509343
+156,Georgia,13283,Treutlen,Southeast,`0001 Timberland,105271.98098649566
+157,Georgia,13285,Troup,North Central,`0001 Timberland,200286.3476012832
+158,Georgia,13287,Turner,Southwest,`0001 Timberland,73091.75444026799
+159,Georgia,13289,Twiggs,Central,`0001 Timberland,191287.95094363648
+160,Georgia,13289,Twiggs,Central,`0002 Reserved Forestland,4387.868309148176
+161,Georgia,13291,Union,North,`0001 Timberland,119270.4440266001
+162,Georgia,13291,Union,North,`0002 Reserved Forestland,31029.446255763418
+163,Georgia,13293,Upson,Central,`0001 Timberland,148168.32619409822
+164,Georgia,13295,Walker,North,`0001 Timberland,162073.6063260318
+165,Georgia,13297,Walton,North Central,`0001 Timberland,124845.28644580301
+166,Georgia,13299,Ware,Southeast,`0001 Timberland,343297.54350448266
+167,Georgia,13299,Ware,Southeast,`0002 Reserved Forestland,156728.7990244599
+168,Georgia,13301,Warren,Central,`0001 Timberland,164740.40753716184
+169,Georgia,13303,Washington,Central,`0001 Timberland,308546.4821110833
+170,Georgia,13305,Wayne,Southeast,`0001 Timberland,350374.1874963224
+171,Georgia,13307,Webster,Central,`0001 Timberland,85136.71712422546
+172,Georgia,13309,Wheeler,Southeast,`0001 Timberland,147648.08605969732
+173,Georgia,13311,White,North,`0001 Timberland,115363.04197542733
+174,Georgia,13311,White,North,`0002 Reserved Forestland,19240.46925268953
+175,Georgia,13313,Whitfield,North,`0001 Timberland,89086.39007262213
+176,Georgia,13315,Wilcox,Southwest,`0001 Timberland,183224.7144832901
+177,Georgia,13317,Wilkes,Central,`0001 Timberland,238012.14886621837
+178,Georgia,13319,Wilkinson,Central,`0001 Timberland,265445.0346878465
+179,Georgia,13321,Worth,Southwest,`0001 Timberland,163673.71608159438
