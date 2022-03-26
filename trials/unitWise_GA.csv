@@ -1,181 +1,1591 @@
-,State,Fips,CountyName,Region,LandUse,EstimatedValue
-0,Georgia,13001,Appling,Southeast,`0001 Timberland,224411.32502757607
-1,Georgia,13003,Atkinson,Southeast,`0001 Timberland,154938.7465596056
-2,Georgia,13005,Bacon,Southeast,`0001 Timberland,108269.24901360401
-3,Georgia,13007,Baker,Southwest,`0001 Timberland,129202.8657550825
-4,Georgia,13009,Baldwin,Central,`0001 Timberland,117910.8638987362
-5,Georgia,13011,Banks,North Central,`0001 Timberland,83686.56825576627
-6,Georgia,13013,Barrow,North Central,`0001 Timberland,45465.59239300298
-7,Georgia,13015,Bartow,North,`0001 Timberland,159051.20991640474
-8,Georgia,13017,Ben Hill,Southwest,`0001 Timberland,90550.21509229131
-9,Georgia,13019,Berrien,Southwest,`0001 Timberland,149165.15421005967
-10,Georgia,13021,Bibb,Central,`0001 Timberland,64433.99821565361
-11,Georgia,13021,Bibb,Central,`0002 Reserved Forestland,5850.4910788642355
-12,Georgia,13023,Bleckley,Central,`0001 Timberland,80323.80010557767
-13,Georgia,13025,Brantley,Southeast,`0001 Timberland,259946.40754963335
-14,Georgia,13027,Brooks,Southwest,`0001 Timberland,173511.27424556017
-15,Georgia,13029,Bryan,Southeast,`0001 Timberland,197835.0917588923
-16,Georgia,13031,Bulloch,Southeast,`0001 Timberland,290277.9554754366
-17,Georgia,13033,Burke,Central,`0001 Timberland,318786.60250920034
-18,Georgia,13035,Butts,Central,`0001 Timberland,77527.08630429253
-19,Georgia,13037,Calhoun,Central,`0001 Timberland,84368.55777789245
-20,Georgia,13039,Camden,Southeast,`0001 Timberland,256125.00351914566
-21,Georgia,13039,Camden,Southeast,`0002 Reserved Forestland,13175.120520284649
-22,Georgia,13043,Candler,Southeast,`0001 Timberland,85718.78526203433
-23,Georgia,13045,Carroll,North Central,`0001 Timberland,165014.85997838626
-24,Georgia,13047,Catoosa,North,`0001 Timberland,32846.143736941856
-25,Georgia,13047,Catoosa,North,`0002 Reserved Forestland,8697.477923279306
-26,Georgia,13047,Catoosa,North,`0003 Other forestland,3294.6702052730475
-27,Georgia,13049,Charlton,Southeast,`0001 Timberland,289112.83856965246
-28,Georgia,13049,Charlton,Southeast,`0002 Reserved Forestland,145087.23491452707
-29,Georgia,13051,Chatham,Southeast,`0001 Timberland,93701.71035755813
-30,Georgia,13053,Chattahoochee,Central,`0001 Timberland,135112.02383424382
-31,Georgia,13055,Chattooga,North,`0001 Timberland,174443.67110791933
-32,Georgia,13057,Cherokee,North,`0001 Timberland,136380.56053733965
-33,Georgia,13059,Clarke,North Central,`0001 Timberland,25290.624527344164
-34,Georgia,13061,Clay,Central,`0001 Timberland,75428.99201372107
-35,Georgia,13063,Clayton,North Central,`0001 Timberland,16661.02028833116
-36,Georgia,13065,Clinch,Southeast,`0001 Timberland,507415.7745133282
-37,Georgia,13065,Clinch,Southeast,`0002 Reserved Forestland,34965.002929975526
-38,Georgia,13067,Cobb,North Central,`0001 Timberland,19890.613418985067
-39,Georgia,13069,Coffee,Southeast,`0001 Timberland,199581.2785609753
-40,Georgia,13071,Colquitt,Southwest,`0001 Timberland,148959.86135331736
-41,Georgia,13073,Columbia,Central,`0001 Timberland,100581.70021880772
-42,Georgia,13075,Cook,Southwest,`0001 Timberland,78216.58317321914
-43,Georgia,13077,Coweta,North Central,`0001 Timberland,168945.7349257869
-44,Georgia,13079,Crawford,Central,`0001 Timberland,173902.49022139236
-45,Georgia,13081,Crisp,Southwest,`0001 Timberland,81091.57791873631
-46,Georgia,13083,Dade,North,`0001 Timberland,78858.65853794443
-47,Georgia,13085,Dawson,North,`0001 Timberland,105281.19164716435
-48,Georgia,13087,Decatur,Southwest,`0001 Timberland,204177.47031949752
-49,Georgia,13089,DeKalb,North Central,`0001 Timberland,43697.51230304942
-50,Georgia,13091,Dodge,Southeast,`0001 Timberland,242011.86165488634
-51,Georgia,13093,Dooly,Southwest,`0001 Timberland,89751.06265499721
-52,Georgia,13095,Dougherty,Central,`0001 Timberland,136387.9843797282
-53,Georgia,13097,Douglas,North Central,`0001 Timberland,82043.38788033841
-54,Georgia,13099,Early,Southwest,`0001 Timberland,184016.8760930367
-55,Georgia,13101,Echols,Southeast,`0001 Timberland,244959.68940865004
-56,Georgia,13103,Effingham,Southeast,`0001 Timberland,232204.92739893464
-57,Georgia,13105,Elbert,North Central,`0001 Timberland,137893.65034133726
-58,Georgia,13107,Emanuel,Southeast,`0001 Timberland,321810.7480888469
-59,Georgia,13109,Evans,Southeast,`0001 Timberland,89371.55135420043
-60,Georgia,13111,Fannin,North,`0001 Timberland,154770.99428121484
-61,Georgia,13111,Fannin,North,`0002 Reserved Forestland,39804.90145212841
-62,Georgia,13113,Fayette,North Central,`0001 Timberland,35376.03549874111
-63,Georgia,13115,Floyd,North,`0001 Timberland,191567.62096972702
-64,Georgia,13117,Forsyth,North Central,`0001 Timberland,59659.58413992545
-65,Georgia,13119,Franklin,North Central,`0001 Timberland,74537.06905607201
-66,Georgia,13121,Fulton,North Central,`0001 Timberland,115127.3928518314
-67,Georgia,13123,Gilmer,North,`0001 Timberland,230660.5970603704
-68,Georgia,13123,Gilmer,North,`0002 Reserved Forestland,11788.977003073915
-69,Georgia,13125,Glascock,Central,`0001 Timberland,78257.2425690942
-70,Georgia,13127,Glynn,Southeast,`0001 Timberland,137820.48157244516
-71,Georgia,13129,Gordon,North,`0001 Timberland,114208.07618796655
-72,Georgia,13131,Grady,Southwest,`0001 Timberland,156740.63263059882
-73,Georgia,13133,Greene,Central,`0001 Timberland,191873.82433878575
-74,Georgia,13135,Gwinnett,North Central,`0001 Timberland,68697.77528704972
-75,Georgia,13137,Habersham,North,`0001 Timberland,109517.25314914643
-76,Georgia,13137,Habersham,North,`0002 Reserved Forestland,2483.830749871873
-77,Georgia,13139,Hall,North Central,`0001 Timberland,96314.89780208477
-78,Georgia,13141,Hancock,Central,`0001 Timberland,274586.8802901854
-79,Georgia,13143,Haralson,North Central,`0001 Timberland,112603.69983451956
-80,Georgia,13145,Harris,Central,`0001 Timberland,234877.56569541074
-81,Georgia,13147,Hart,North Central,`0001 Timberland,57088.13829032946
-82,Georgia,13149,Heard,North Central,`0001 Timberland,103322.00962092895
-83,Georgia,13151,Henry,North Central,`0001 Timberland,85807.71949326362
-84,Georgia,13153,Houston,Central,`0001 Timberland,123482.3132569744
-85,Georgia,13155,Irwin,Southwest,`0001 Timberland,107566.94332352612
-86,Georgia,13157,Jackson,North Central,`0001 Timberland,108238.95153428944
-87,Georgia,13159,Jasper,Central,`0001 Timberland,174219.04029154545
-88,Georgia,13159,Jasper,Central,`0002 Reserved Forestland,11924.945671851445
-89,Georgia,13161,Jeff Davis,Southeast,`0001 Timberland,135072.1851291351
-90,Georgia,13163,Jefferson,Central,`0001 Timberland,225504.5189252824
-91,Georgia,13165,Jenkins,Southeast,`0001 Timberland,150749.364215385
-92,Georgia,13167,Johnson,Southeast,`0001 Timberland,154384.93851406503
-93,Georgia,13169,Jones,Central,`0001 Timberland,179757.3244415954
-94,Georgia,13169,Jones,Central,`0002 Reserved Forestland,23401.96431545694
-95,Georgia,13171,Lamar,Central,`0001 Timberland,95371.95819732874
-96,Georgia,13173,Lanier,Southwest,`0001 Timberland,94910.97589832035
-97,Georgia,13175,Laurens,Southeast,`0001 Timberland,353709.0758327324
-98,Georgia,13177,Lee,Central,`0001 Timberland,139207.7869024681
-99,Georgia,13179,Liberty,Southeast,`0001 Timberland,225054.97721310385
-100,Georgia,13181,Lincoln,Central,`0001 Timberland,114212.58833020033
-101,Georgia,13183,Long,Southeast,`0001 Timberland,235515.45714649593
-102,Georgia,13185,Lowndes,Southwest,`0001 Timberland,196952.80940702462
-103,Georgia,13187,Lumpkin,North,`0001 Timberland,136128.09566481464
-104,Georgia,13187,Lumpkin,North,`0002 Reserved Forestland,9431.18160245913
-105,Georgia,13189,McDuffie,Central,`0001 Timberland,112071.52542613092
-106,Georgia,13191,McIntosh,Southeast,`0001 Timberland,161153.09642228758
-107,Georgia,13191,McIntosh,Southeast,`0002 Reserved Forestland,1486.3461474645467
-108,Georgia,13193,Macon,Central,`0001 Timberland,142783.7097657962
-109,Georgia,13195,Madison,North Central,`0001 Timberland,83128.30788054474
-110,Georgia,13197,Marion,Central,`0001 Timberland,172718.35911579104
-111,Georgia,13199,Meriwether,North Central,`0001 Timberland,261171.0890167328
-112,Georgia,13201,Miller,Southwest,`0001 Timberland,74401.27331251059
-113,Georgia,13205,Mitchell,Southwest,`0001 Timberland,127794.38275163386
-114,Georgia,13207,Monroe,Central,`0001 Timberland,181081.49746628778
-115,Georgia,13209,Montgomery,Southeast,`0001 Timberland,138175.49709981537
-116,Georgia,13211,Morgan,Central,`0001 Timberland,160128.72522827206
-117,Georgia,13213,Murray,North,`0001 Timberland,131180.78502568518
-118,Georgia,13213,Murray,North,`0002 Reserved Forestland,9683.25230097331
-119,Georgia,13215,Muscogee,Central,`0001 Timberland,68042.18692692007
-120,Georgia,13217,Newton,North Central,`0001 Timberland,73071.31166121324
-121,Georgia,13219,Oconee,North Central,`0001 Timberland,60301.987396909426
-122,Georgia,13221,Oglethorpe,North Central,`0001 Timberland,233670.20413383585
-123,Georgia,13223,Paulding,North Central,`0001 Timberland,102322.35166127452
-124,Georgia,13225,Peach,Central,`0001 Timberland,35729.60902268229
-125,Georgia,13227,Pickens,North,`0001 Timberland,109628.9284905688
-126,Georgia,13229,Pierce,Southeast,`0001 Timberland,106665.84463918937
-127,Georgia,13231,Pike,Central,`0001 Timberland,95622.9233733069
-128,Georgia,13233,Polk,North Central,`0001 Timberland,128040.51424518441
-129,Georgia,13235,Pulaski,Central,`0001 Timberland,81716.73937782741
-130,Georgia,13237,Putnam,Central,`0001 Timberland,146156.1171636904
-131,Georgia,13239,Quitman,Central,`0001 Timberland,91323.48333946214
-132,Georgia,13241,Rabun,North,`0001 Timberland,196996.37680793446
-133,Georgia,13241,Rabun,North,`0002 Reserved Forestland,16464.482822736005
-134,Georgia,13243,Randolph,Central,`0001 Timberland,184251.635351242
-135,Georgia,13245,Richmond,Central,`0001 Timberland,123042.78984224862
-136,Georgia,13247,Rockdale,North Central,`0001 Timberland,16868.217899921983
-137,Georgia,13249,Schley,Central,`0001 Timberland,113303.22116043193
-138,Georgia,13251,Screven,Southeast,`0001 Timberland,320766.4847769286
-139,Georgia,13253,Seminole,Southwest,`0001 Timberland,43840.39789606098
-140,Georgia,13255,Spalding,North Central,`0001 Timberland,83171.42666031317
-141,Georgia,13257,Stephens,North,`0001 Timberland,89249.95956566026
-142,Georgia,13259,Stewart,Central,`0001 Timberland,232740.2873471911
-143,Georgia,13261,Sumter,Central,`0001 Timberland,190563.70280138715
-144,Georgia,13263,Talbot,Central,`0001 Timberland,209182.17871651825
-145,Georgia,13265,Taliaferro,Central,`0001 Timberland,122403.57553374876
-146,Georgia,13267,Tattnall,Southeast,`0001 Timberland,185284.66206525808
-147,Georgia,13269,Taylor,Central,`0001 Timberland,230927.20828500894
-148,Georgia,13269,Taylor,Central,`0003 Other forestland,5842.60554551379
-149,Georgia,13271,Telfair,Southeast,`0001 Timberland,237595.73850504396
-150,Georgia,13273,Terrell,Central,`0001 Timberland,156630.04973450108
-151,Georgia,13275,Thomas,Southwest,`0001 Timberland,199073.0669281867
-152,Georgia,13277,Tift,Southwest,`0001 Timberland,78263.31338707599
-153,Georgia,13279,Toombs,Southeast,`0001 Timberland,154161.73235922106
-154,Georgia,13281,Towns,North,`0001 Timberland,62553.9811468069
-155,Georgia,13281,Towns,North,`0002 Reserved Forestland,21103.34231509343
-156,Georgia,13283,Treutlen,Southeast,`0001 Timberland,105271.98098649566
-157,Georgia,13285,Troup,North Central,`0001 Timberland,200286.3476012832
-158,Georgia,13287,Turner,Southwest,`0001 Timberland,73091.75444026799
-159,Georgia,13289,Twiggs,Central,`0001 Timberland,191287.95094363648
-160,Georgia,13289,Twiggs,Central,`0002 Reserved Forestland,4387.868309148176
-161,Georgia,13291,Union,North,`0001 Timberland,119270.4440266001
-162,Georgia,13291,Union,North,`0002 Reserved Forestland,31029.446255763418
-163,Georgia,13293,Upson,Central,`0001 Timberland,148168.32619409822
-164,Georgia,13295,Walker,North,`0001 Timberland,162073.6063260318
-165,Georgia,13297,Walton,North Central,`0001 Timberland,124845.28644580301
-166,Georgia,13299,Ware,Southeast,`0001 Timberland,343297.54350448266
-167,Georgia,13299,Ware,Southeast,`0002 Reserved Forestland,156728.7990244599
-168,Georgia,13301,Warren,Central,`0001 Timberland,164740.40753716184
-169,Georgia,13303,Washington,Central,`0001 Timberland,308546.4821110833
-170,Georgia,13305,Wayne,Southeast,`0001 Timberland,350374.1874963224
-171,Georgia,13307,Webster,Central,`0001 Timberland,85136.71712422546
-172,Georgia,13309,Wheeler,Southeast,`0001 Timberland,147648.08605969732
-173,Georgia,13311,White,North,`0001 Timberland,115363.04197542733
-174,Georgia,13311,White,North,`0002 Reserved Forestland,19240.46925268953
-175,Georgia,13313,Whitfield,North,`0001 Timberland,89086.39007262213
-176,Georgia,13315,Wilcox,Southwest,`0001 Timberland,183224.7144832901
-177,Georgia,13317,Wilkes,Central,`0001 Timberland,238012.14886621837
-178,Georgia,13319,Wilkinson,Central,`0001 Timberland,265445.0346878465
-179,Georgia,13321,Worth,Southwest,`0001 Timberland,163673.71608159438
+,Year,State,Fips,CountyName,Region,EstimatedValue
+0,2010,Georgia,13001,Appling,Southeast,235182.41
+1,2010,Georgia,13003,Atkinson,Southeast,164959.36
+2,2010,Georgia,13005,Bacon,Southeast,127391.9
+3,2010,Georgia,13007,Baker,Southwest,108906.05
+4,2010,Georgia,13009,Baldwin,Central,120737.89
+5,2010,Georgia,13011,Banks,North Central,82317.31
+6,2010,Georgia,13013,Barrow,North Central,46432.06
+7,2010,Georgia,13015,Bartow,North,177585.19
+8,2010,Georgia,13017,Ben Hill,Southwest,93665.19
+9,2010,Georgia,13019,Berrien,Southwest,177809.85
+10,2010,Georgia,13021,Bibb,Central,65410.91
+11,2010,Georgia,13023,Bleckley,Central,77646.97
+12,2010,Georgia,13025,Brantley,Southeast,234446.58
+13,2010,Georgia,13027,Brooks,Southwest,170674.96
+14,2010,Georgia,13029,Bryan,Southeast,205500.77
+15,2010,Georgia,13031,Bulloch,Southeast,289453.8
+16,2010,Georgia,13033,Burke,Central,330401.31
+17,2010,Georgia,13035,Butts,Central,77951.0
+18,2010,Georgia,13037,Calhoun,Central,73913.0
+19,2010,Georgia,13039,Camden,Southeast,267884.83
+20,2010,Georgia,13043,Candler,Southeast,78784.53
+21,2010,Georgia,13045,Carroll,North Central,177635.11
+22,2010,Georgia,13047,Catoosa,North,38073.03
+23,2010,Georgia,13049,Charlton,Southeast,391465.83
+24,2010,Georgia,13051,Chatham,Southeast,84081.49
+25,2010,Georgia,13053,Chattahoochee,Central,134415.77
+26,2010,Georgia,13055,Chattooga,North,186704.46
+27,2010,Georgia,13057,Cherokee,North,152673.48
+28,2010,Georgia,13059,Clarke,North Central,23974.2
+29,2010,Georgia,13061,Clay,Central,84627.75
+30,2010,Georgia,13063,Clayton,North Central,14141.61
+31,2010,Georgia,13065,Clinch,Southeast,554726.24
+32,2010,Georgia,13067,Cobb,North Central,15759.91
+33,2010,Georgia,13069,Coffee,Southeast,213540.2
+34,2010,Georgia,13071,Colquitt,Southwest,148897.31
+35,2010,Georgia,13073,Columbia,Central,97011.7
+36,2010,Georgia,13075,Cook,Southwest,74232.88
+37,2010,Georgia,13077,Coweta,North Central,164332.07
+38,2010,Georgia,13079,Crawford,Central,175368.22
+39,2010,Georgia,13081,Crisp,Southwest,77243.22
+40,2010,Georgia,13083,Dade,North,66856.24
+41,2010,Georgia,13085,Dawson,North,98494.44
+42,2010,Georgia,13087,Decatur,Southwest,168097.61
+43,2010,Georgia,13089,DeKalb,North Central,46631.39
+44,2010,Georgia,13091,Dodge,Southeast,215592.42
+45,2010,Georgia,13093,Dooly,Southwest,94240.42
+46,2010,Georgia,13095,Dougherty,Central,140655.56
+47,2010,Georgia,13097,Douglas,North Central,70318.36
+48,2010,Georgia,13099,Early,Southwest,166881.66
+49,2010,Georgia,13101,Echols,Southeast,225040.36
+50,2010,Georgia,13103,Effingham,Southeast,223039.74
+51,2010,Georgia,13105,Elbert,North Central,129459.2
+52,2010,Georgia,13107,Emanuel,Southeast,326457.42
+53,2010,Georgia,13109,Evans,Southeast,74785.66
+54,2010,Georgia,13111,Fannin,North,206665.12
+55,2010,Georgia,13113,Fayette,North Central,33020.83
+56,2010,Georgia,13115,Floyd,North,179759.06
+57,2010,Georgia,13117,Forsyth,North Central,54007.98
+58,2010,Georgia,13119,Franklin,North Central,79423.99
+59,2010,Georgia,13121,Fulton,North Central,119723.69
+60,2010,Georgia,13123,Gilmer,North,248534.63
+61,2010,Georgia,13125,Glascock,Central,70862.68
+62,2010,Georgia,13127,Glynn,Southeast,142801.92
+63,2010,Georgia,13129,Gordon,North,108334.6
+64,2010,Georgia,13131,Grady,Southwest,138106.77
+65,2010,Georgia,13133,Greene,Central,205113.04
+66,2010,Georgia,13135,Gwinnett,North Central,88429.75
+67,2010,Georgia,13137,Habersham,North,103966.57
+68,2010,Georgia,13139,Hall,North Central,101795.51
+69,2010,Georgia,13141,Hancock,Central,261369.42
+70,2010,Georgia,13143,Haralson,North Central,107393.04
+71,2010,Georgia,13145,Harris,Central,219416.94
+72,2010,Georgia,13147,Hart,North Central,53576.87
+73,2010,Georgia,13149,Heard,North Central,132694.35
+74,2010,Georgia,13151,Henry,North Central,78917.49
+75,2010,Georgia,13153,Houston,Central,127068.68
+76,2010,Georgia,13155,Irwin,Southwest,98919.2
+77,2010,Georgia,13157,Jackson,North Central,104939.46
+78,2010,Georgia,13159,Jasper,Central,196866.54
+79,2010,Georgia,13161,Jeff Davis,Southeast,150734.72
+80,2010,Georgia,13163,Jefferson,Central,231294.77
+81,2010,Georgia,13165,Jenkins,Southeast,145176.13
+82,2010,Georgia,13167,Johnson,Southeast,152313.53
+83,2010,Georgia,13169,Jones,Central,189656.19
+84,2010,Georgia,13171,Lamar,Central,91556.49
+85,2010,Georgia,13173,Lanier,Southwest,101032.82
+86,2010,Georgia,13175,Laurens,Southeast,311126.4
+87,2010,Georgia,13177,Lee,Central,109398.4
+88,2010,Georgia,13179,Liberty,Southeast,216212.97
+89,2010,Georgia,13181,Lincoln,Central,97693.67
+90,2010,Georgia,13183,Long,Southeast,220524.18
+91,2010,Georgia,13185,Lowndes,Southwest,205143.13
+92,2010,Georgia,13187,Lumpkin,North,153092.28
+93,2010,Georgia,13189,McDuffie,Central,116772.3
+94,2010,Georgia,13191,McIntosh,Southeast,151842.1
+95,2010,Georgia,13193,Macon,Central,140901.32
+96,2010,Georgia,13195,Madison,North Central,88458.65
+97,2010,Georgia,13197,Marion,Central,173890.02
+98,2010,Georgia,13199,Meriwether,North Central,253354.95
+99,2010,Georgia,13201,Miller,Southwest,70062.48
+100,2010,Georgia,13205,Mitchell,Southwest,127059.63
+101,2010,Georgia,13207,Monroe,Central,181392.92
+102,2010,Georgia,13209,Montgomery,Southeast,129005.15
+103,2010,Georgia,13211,Morgan,Central,153624.01
+104,2010,Georgia,13213,Murray,North,130347.12
+105,2010,Georgia,13215,Muscogee,Central,65847.93
+106,2010,Georgia,13217,Newton,North Central,72792.32
+107,2010,Georgia,13219,Oconee,North Central,66831.19
+108,2010,Georgia,13221,Oglethorpe,North Central,225797.46
+109,2010,Georgia,13223,Paulding,North Central,112774.28
+110,2010,Georgia,13225,Peach,Central,35994.34
+111,2010,Georgia,13227,Pickens,North,109822.27
+112,2010,Georgia,13229,Pierce,Southeast,110432.95
+113,2010,Georgia,13231,Pike,Central,94916.45
+114,2010,Georgia,13233,Polk,North Central,126609.92
+115,2010,Georgia,13235,Pulaski,Central,79197.95
+116,2010,Georgia,13237,Putnam,Central,142519.18
+117,2010,Georgia,13239,Quitman,Central,83592.54
+118,2010,Georgia,13241,Rabun,North,222374.75
+119,2010,Georgia,13243,Randolph,Central,172119.99
+120,2010,Georgia,13245,Richmond,Central,119116.96
+121,2010,Georgia,13247,Rockdale,North Central,21126.62
+122,2010,Georgia,13249,Schley,Central,112657.07
+123,2010,Georgia,13251,Screven,Southeast,297097.91
+124,2010,Georgia,13253,Seminole,Southwest,40536.16
+125,2010,Georgia,13255,Spalding,North Central,74597.66
+126,2010,Georgia,13257,Stephens,North,89909.47
+127,2010,Georgia,13259,Stewart,Central,235878.43
+128,2010,Georgia,13261,Sumter,Central,177953.48
+129,2010,Georgia,13263,Talbot,Central,209877.2
+130,2010,Georgia,13265,Taliaferro,Central,116806.48
+131,2010,Georgia,13267,Tattnall,Southeast,181117.14
+132,2010,Georgia,13269,Taylor,Central,224681.73
+133,2010,Georgia,13271,Telfair,Southeast,245932.25
+134,2010,Georgia,13273,Terrell,Central,144140.25
+135,2010,Georgia,13275,Thomas,Southwest,196532.37
+136,2010,Georgia,13277,Tift,Southwest,73309.01
+137,2010,Georgia,13279,Toombs,Southeast,152946.48
+138,2010,Georgia,13281,Towns,North,69235.34
+139,2010,Georgia,13283,Treutlen,Southeast,107578.34
+140,2010,Georgia,13285,Troup,North Central,186074.23
+141,2010,Georgia,13287,Turner,Southwest,64295.39
+142,2010,Georgia,13289,Twiggs,Central,201003.11
+143,2010,Georgia,13291,Union,North,153370.94
+144,2010,Georgia,13293,Upson,Central,143384.51
+145,2010,Georgia,13295,Walker,North,153329.39
+146,2010,Georgia,13297,Walton,North Central,124369.36
+147,2010,Georgia,13299,Ware,Southeast,458530.14
+148,2010,Georgia,13301,Warren,Central,160848.65
+149,2010,Georgia,13303,Washington,Central,295709.7
+150,2010,Georgia,13305,Wayne,Southeast,344133.91
+151,2010,Georgia,13307,Webster,Central,65802.82
+152,2010,Georgia,13309,Wheeler,Southeast,139900.53
+153,2010,Georgia,13311,White,North,120695.3
+154,2010,Georgia,13313,Whitfield,North,88633.12
+155,2010,Georgia,13315,Wilcox,Southwest,169876.39
+156,2010,Georgia,13317,Wilkes,Central,204646.77
+157,2010,Georgia,13319,Wilkinson,Central,258948.89
+158,2010,Georgia,13321,Worth,Southwest,169404.75
+0,2011,Georgia,13001,Appling,Southeast,234467.26
+1,2011,Georgia,13003,Atkinson,Southeast,164633.53
+2,2011,Georgia,13005,Bacon,Southeast,128332.02
+3,2011,Georgia,13007,Baker,Southwest,113129.47
+4,2011,Georgia,13009,Baldwin,Central,120521.05
+5,2011,Georgia,13011,Banks,North Central,82322.59
+6,2011,Georgia,13013,Barrow,North Central,46415.19
+7,2011,Georgia,13015,Bartow,North,173095.74
+8,2011,Georgia,13017,Ben Hill,Southwest,94906.74
+9,2011,Georgia,13019,Berrien,Southwest,177371.43
+10,2011,Georgia,13021,Bibb,Central,63531.32
+11,2011,Georgia,13023,Bleckley,Central,76957.93
+12,2011,Georgia,13025,Brantley,Southeast,234385.69
+13,2011,Georgia,13027,Brooks,Southwest,170283.6
+14,2011,Georgia,13029,Bryan,Southeast,203448.82
+15,2011,Georgia,13031,Bulloch,Southeast,285597.38
+16,2011,Georgia,13033,Burke,Central,329295.33
+17,2011,Georgia,13035,Butts,Central,77878.34
+18,2011,Georgia,13037,Calhoun,Central,73826.57
+19,2011,Georgia,13039,Camden,Southeast,273530.23
+20,2011,Georgia,13043,Candler,Southeast,78739.44
+21,2011,Georgia,13045,Carroll,North Central,177443.2
+22,2011,Georgia,13047,Catoosa,North,38133.38
+23,2011,Georgia,13049,Charlton,Southeast,398105.89
+24,2011,Georgia,13051,Chatham,Southeast,84074.87
+25,2011,Georgia,13053,Chattahoochee,Central,136378.4
+26,2011,Georgia,13055,Chattooga,North,187082.64
+27,2011,Georgia,13057,Cherokee,North,151083.63
+28,2011,Georgia,13059,Clarke,North Central,23944.07
+29,2011,Georgia,13061,Clay,Central,84840.6
+30,2011,Georgia,13063,Clayton,North Central,14119.53
+31,2011,Georgia,13065,Clinch,Southeast,559347.87
+32,2011,Georgia,13067,Cobb,North Central,15573.79
+33,2011,Georgia,13069,Coffee,Southeast,213663.49
+34,2011,Georgia,13071,Colquitt,Southwest,148212.45
+35,2011,Georgia,13073,Columbia,Central,101297.6
+36,2011,Georgia,13075,Cook,Southwest,74035.56
+37,2011,Georgia,13077,Coweta,North Central,163649.66
+38,2011,Georgia,13079,Crawford,Central,173198.01
+39,2011,Georgia,13081,Crisp,Southwest,80446.46
+40,2011,Georgia,13083,Dade,North,66981.64
+41,2011,Georgia,13085,Dawson,North,98683.28
+42,2011,Georgia,13087,Decatur,Southwest,166325.17
+43,2011,Georgia,13089,DeKalb,North Central,45123.86
+44,2011,Georgia,13091,Dodge,Southeast,223388.18
+45,2011,Georgia,13093,Dooly,Southwest,87308.38
+46,2011,Georgia,13095,Dougherty,Central,139591.27
+47,2011,Georgia,13097,Douglas,North Central,66068.69
+48,2011,Georgia,13099,Early,Southwest,166611.8
+49,2011,Georgia,13101,Echols,Southeast,236717.81
+50,2011,Georgia,13103,Effingham,Southeast,228849.16
+51,2011,Georgia,13105,Elbert,North Central,130913.8
+52,2011,Georgia,13107,Emanuel,Southeast,326372.99
+53,2011,Georgia,13109,Evans,Southeast,74718.52
+54,2011,Georgia,13111,Fannin,North,207009.51
+55,2011,Georgia,13113,Fayette,North Central,32943.86
+56,2011,Georgia,13115,Floyd,North,187281.37
+57,2011,Georgia,13117,Forsyth,North Central,53835.74
+58,2011,Georgia,13119,Franklin,North Central,79867.97
+59,2011,Georgia,13121,Fulton,North Central,119894.25
+60,2011,Georgia,13123,Gilmer,North,248979.94
+61,2011,Georgia,13125,Glascock,Central,70742.53
+62,2011,Georgia,13127,Glynn,Southeast,138732.3
+63,2011,Georgia,13129,Gordon,North,108593.49
+64,2011,Georgia,13131,Grady,Southwest,137871.26
+65,2011,Georgia,13133,Greene,Central,204835.77
+66,2011,Georgia,13135,Gwinnett,North Central,83742.25
+67,2011,Georgia,13137,Habersham,North,104674.15
+68,2011,Georgia,13139,Hall,North Central,103220.33
+69,2011,Georgia,13141,Hancock,Central,257811.97
+70,2011,Georgia,13143,Haralson,North Central,108069.31
+71,2011,Georgia,13145,Harris,Central,214865.86
+72,2011,Georgia,13147,Hart,North Central,55320.4
+73,2011,Georgia,13149,Heard,North Central,126146.93
+74,2011,Georgia,13151,Henry,North Central,78846.9
+75,2011,Georgia,13153,Houston,Central,127428.33
+76,2011,Georgia,13155,Irwin,Southwest,98887.61
+77,2011,Georgia,13157,Jackson,North Central,105594.17
+78,2011,Georgia,13159,Jasper,Central,200914.65
+79,2011,Georgia,13161,Jeff Davis,Southeast,152112.63
+80,2011,Georgia,13163,Jefferson,Central,228127.67
+81,2011,Georgia,13165,Jenkins,Southeast,145122.03
+82,2011,Georgia,13167,Johnson,Southeast,152287.95
+83,2011,Georgia,13169,Jones,Central,190431.52
+84,2011,Georgia,13171,Lamar,Central,91284.71
+85,2011,Georgia,13173,Lanier,Southwest,100829.91
+86,2011,Georgia,13175,Laurens,Southeast,322769.67
+87,2011,Georgia,13177,Lee,Central,121869.24
+88,2011,Georgia,13179,Liberty,Southeast,213225.66
+89,2011,Georgia,13181,Lincoln,Central,103479.77
+90,2011,Georgia,13183,Long,Southeast,225808.13
+91,2011,Georgia,13185,Lowndes,Southwest,204655.22
+92,2011,Georgia,13187,Lumpkin,North,147415.27
+93,2011,Georgia,13189,McDuffie,Central,110469.87
+94,2011,Georgia,13191,McIntosh,Southeast,151819.51
+95,2011,Georgia,13193,Macon,Central,140714.9
+96,2011,Georgia,13195,Madison,North Central,88379.58
+97,2011,Georgia,13197,Marion,Central,174200.72
+98,2011,Georgia,13199,Meriwether,North Central,254712.68
+99,2011,Georgia,13201,Miller,Southwest,69907.04
+100,2011,Georgia,13205,Mitchell,Southwest,132662.76
+101,2011,Georgia,13207,Monroe,Central,185372.05
+102,2011,Georgia,13209,Montgomery,Southeast,129052.25
+103,2011,Georgia,13211,Morgan,Central,153370.2
+104,2011,Georgia,13213,Murray,North,136132.41
+105,2011,Georgia,13215,Muscogee,Central,65730.05
+106,2011,Georgia,13217,Newton,North Central,69794.4
+107,2011,Georgia,13219,Oconee,North Central,66817.47
+108,2011,Georgia,13221,Oglethorpe,North Central,229928.74
+109,2011,Georgia,13223,Paulding,North Central,112785.1
+110,2011,Georgia,13225,Peach,Central,35924.28
+111,2011,Georgia,13227,Pickens,North,107647.04
+112,2011,Georgia,13229,Pierce,Southeast,110370.83
+113,2011,Georgia,13231,Pike,Central,94754.87
+114,2011,Georgia,13233,Polk,North Central,126508.59
+115,2011,Georgia,13235,Pulaski,Central,79532.43
+116,2011,Georgia,13237,Putnam,Central,142272.76
+117,2011,Georgia,13239,Quitman,Central,83430.37
+118,2011,Georgia,13241,Rabun,North,223052.61
+119,2011,Georgia,13243,Randolph,Central,168316.13
+120,2011,Georgia,13245,Richmond,Central,122181.22
+121,2011,Georgia,13247,Rockdale,North Central,21122.25
+122,2011,Georgia,13249,Schley,Central,112169.9
+123,2011,Georgia,13251,Screven,Southeast,316044.83
+124,2011,Georgia,13253,Seminole,Southwest,40428.3
+125,2011,Georgia,13255,Spalding,North Central,79202.45
+126,2011,Georgia,13257,Stephens,North,90261.64
+127,2011,Georgia,13259,Stewart,Central,235293.49
+128,2011,Georgia,13261,Sumter,Central,183480.51
+129,2011,Georgia,13263,Talbot,Central,207988.77
+130,2011,Georgia,13265,Taliaferro,Central,116620.29
+131,2011,Georgia,13267,Tattnall,Southeast,181072.44
+132,2011,Georgia,13269,Taylor,Central,223968.44
+133,2011,Georgia,13271,Telfair,Southeast,245877.5
+134,2011,Georgia,13273,Terrell,Central,149791.23
+135,2011,Georgia,13275,Thomas,Southwest,196209.09
+136,2011,Georgia,13277,Tift,Southwest,78942.56
+137,2011,Georgia,13279,Toombs,Southeast,152904.61
+138,2011,Georgia,13281,Towns,North,69371.42
+139,2011,Georgia,13283,Treutlen,Southeast,107552.28
+140,2011,Georgia,13285,Troup,North Central,185554.12
+141,2011,Georgia,13287,Turner,Southwest,69754.33
+142,2011,Georgia,13289,Twiggs,Central,200739.26
+143,2011,Georgia,13291,Union,North,159727.47
+144,2011,Georgia,13293,Upson,Central,143236.75
+145,2011,Georgia,13295,Walker,North,151114.28
+146,2011,Georgia,13297,Walton,North Central,122897.37
+147,2011,Georgia,13299,Ware,Southeast,466700.06
+148,2011,Georgia,13301,Warren,Central,160490.79
+149,2011,Georgia,13303,Washington,Central,292560.48
+150,2011,Georgia,13305,Wayne,Southeast,354658.41
+151,2011,Georgia,13307,Webster,Central,71358.52
+152,2011,Georgia,13309,Wheeler,Southeast,150600.72
+153,2011,Georgia,13311,White,North,120980.29
+154,2011,Georgia,13313,Whitfield,North,87384.66
+155,2011,Georgia,13315,Wilcox,Southwest,169226.28
+156,2011,Georgia,13317,Wilkes,Central,204338.41
+157,2011,Georgia,13319,Wilkinson,Central,263043.26
+158,2011,Georgia,13321,Worth,Southwest,170982.68
+0,2012,Georgia,13001,Appling,Southeast,234428.01
+1,2012,Georgia,13003,Atkinson,Southeast,159166.12
+2,2012,Georgia,13005,Bacon,Southeast,127657.77
+3,2012,Georgia,13007,Baker,Southwest,122795.43
+4,2012,Georgia,13009,Baldwin,Central,119136.79
+5,2012,Georgia,13011,Banks,North Central,83460.43
+6,2012,Georgia,13013,Barrow,North Central,46208.53
+7,2012,Georgia,13015,Bartow,North,172508.52
+8,2012,Georgia,13017,Ben Hill,Southwest,94846.92
+9,2012,Georgia,13019,Berrien,Southwest,178982.76
+10,2012,Georgia,13021,Bibb,Central,68073.32
+11,2012,Georgia,13023,Bleckley,Central,79860.11
+12,2012,Georgia,13025,Brantley,Southeast,244648.76
+13,2012,Georgia,13027,Brooks,Southwest,173627.98
+14,2012,Georgia,13029,Bryan,Southeast,199044.03
+15,2012,Georgia,13031,Bulloch,Southeast,286342.53
+16,2012,Georgia,13033,Burke,Central,328355.15
+17,2012,Georgia,13035,Butts,Central,76979.49
+18,2012,Georgia,13037,Calhoun,Central,73952.83
+19,2012,Georgia,13039,Camden,Southeast,271992.54
+20,2012,Georgia,13043,Candler,Southeast,83166.57
+21,2012,Georgia,13045,Carroll,North Central,181031.16
+22,2012,Georgia,13047,Catoosa,North,37873.33
+23,2012,Georgia,13049,Charlton,Southeast,376143.33
+24,2012,Georgia,13051,Chatham,Southeast,84589.42
+25,2012,Georgia,13053,Chattahoochee,Central,131581.26
+26,2012,Georgia,13055,Chattooga,North,184665.96
+27,2012,Georgia,13057,Cherokee,North,139642.34
+28,2012,Georgia,13059,Clarke,North Central,24853.31
+29,2012,Georgia,13061,Clay,Central,84743.64
+30,2012,Georgia,13063,Clayton,North Central,14522.28
+31,2012,Georgia,13065,Clinch,Southeast,582040.56
+32,2012,Georgia,13067,Cobb,North Central,21114.57
+33,2012,Georgia,13069,Coffee,Southeast,208693.99
+34,2012,Georgia,13071,Colquitt,Southwest,147863.27
+35,2012,Georgia,13073,Columbia,Central,96601.21
+36,2012,Georgia,13075,Cook,Southwest,74754.77
+37,2012,Georgia,13077,Coweta,North Central,161768.42
+38,2012,Georgia,13079,Crawford,Central,173712.26
+39,2012,Georgia,13081,Crisp,Southwest,79137.39
+40,2012,Georgia,13083,Dade,North,70909.85
+41,2012,Georgia,13085,Dawson,North,100124.7
+42,2012,Georgia,13087,Decatur,Southwest,174174.32
+43,2012,Georgia,13089,DeKalb,North Central,45937.14
+44,2012,Georgia,13091,Dodge,Southeast,221989.11
+45,2012,Georgia,13093,Dooly,Southwest,90082.28
+46,2012,Georgia,13095,Dougherty,Central,140430.83
+47,2012,Georgia,13097,Douglas,North Central,65442.64
+48,2012,Georgia,13099,Early,Southwest,174217.99
+49,2012,Georgia,13101,Echols,Southeast,234648.64
+50,2012,Georgia,13103,Effingham,Southeast,229846.02
+51,2012,Georgia,13105,Elbert,North Central,130069.3
+52,2012,Georgia,13107,Emanuel,Southeast,326139.1
+53,2012,Georgia,13109,Evans,Southeast,74991.92
+54,2012,Georgia,13111,Fannin,North,202646.73
+55,2012,Georgia,13113,Fayette,North Central,33547.62
+56,2012,Georgia,13115,Floyd,North,189579.83
+57,2012,Georgia,13117,Forsyth,North Central,57870.12
+58,2012,Georgia,13119,Franklin,North Central,79634.38
+59,2012,Georgia,13121,Fulton,North Central,111386.37
+60,2012,Georgia,13123,Gilmer,North,242448.32
+61,2012,Georgia,13125,Glascock,Central,71852.45
+62,2012,Georgia,13127,Glynn,Southeast,138396.27
+63,2012,Georgia,13129,Gordon,North,105309.46
+64,2012,Georgia,13131,Grady,Southwest,140136.67
+65,2012,Georgia,13133,Greene,Central,204161.3
+66,2012,Georgia,13135,Gwinnett,North Central,83626.26
+67,2012,Georgia,13137,Habersham,North,107670.09
+68,2012,Georgia,13139,Hall,North Central,105485.67
+69,2012,Georgia,13141,Hancock,Central,261789.85
+70,2012,Georgia,13143,Haralson,North Central,100960.86
+71,2012,Georgia,13145,Harris,Central,214522.6
+72,2012,Georgia,13147,Hart,North Central,55696.75
+73,2012,Georgia,13149,Heard,North Central,124997.08
+74,2012,Georgia,13151,Henry,North Central,80036.68
+75,2012,Georgia,13153,Houston,Central,127737.35
+76,2012,Georgia,13155,Irwin,Southwest,104883.69
+77,2012,Georgia,13157,Jackson,North Central,107717.86
+78,2012,Georgia,13159,Jasper,Central,201615.93
+79,2012,Georgia,13161,Jeff Davis,Southeast,150428.66
+80,2012,Georgia,13163,Jefferson,Central,240091.65
+81,2012,Georgia,13165,Jenkins,Southeast,144272.13
+82,2012,Georgia,13167,Johnson,Southeast,150291.86
+83,2012,Georgia,13169,Jones,Central,196410.57
+84,2012,Georgia,13171,Lamar,Central,91045.46
+85,2012,Georgia,13173,Lanier,Southwest,98688.23
+86,2012,Georgia,13175,Laurens,Southeast,326466.05
+87,2012,Georgia,13177,Lee,Central,126566.86
+88,2012,Georgia,13179,Liberty,Southeast,217941.73
+89,2012,Georgia,13181,Lincoln,Central,102649.96
+90,2012,Georgia,13183,Long,Southeast,223895.96
+91,2012,Georgia,13185,Lowndes,Southwest,206018.15
+92,2012,Georgia,13187,Lumpkin,North,144814.67
+93,2012,Georgia,13189,McDuffie,Central,115550.32
+94,2012,Georgia,13191,McIntosh,Southeast,162872.41
+95,2012,Georgia,13193,Macon,Central,142045.91
+96,2012,Georgia,13195,Madison,North Central,94904.2
+97,2012,Georgia,13197,Marion,Central,170430.81
+98,2012,Georgia,13199,Meriwether,North Central,250596.03
+99,2012,Georgia,13201,Miller,Southwest,70073.82
+100,2012,Georgia,13205,Mitchell,Southwest,135526.03
+101,2012,Georgia,13207,Monroe,Central,186194.92
+102,2012,Georgia,13209,Montgomery,Southeast,135970.71
+103,2012,Georgia,13211,Morgan,Central,154823.27
+104,2012,Georgia,13213,Murray,North,135300.66
+105,2012,Georgia,13215,Muscogee,Central,66233.77
+106,2012,Georgia,13217,Newton,North Central,68383.92
+107,2012,Georgia,13219,Oconee,North Central,65909.68
+108,2012,Georgia,13221,Oglethorpe,North Central,224626.57
+109,2012,Georgia,13223,Paulding,North Central,111004.45
+110,2012,Georgia,13225,Peach,Central,35451.95
+111,2012,Georgia,13227,Pickens,North,120672.79
+112,2012,Georgia,13229,Pierce,Southeast,109627.55
+113,2012,Georgia,13231,Pike,Central,95660.71
+114,2012,Georgia,13233,Polk,North Central,129226.32
+115,2012,Georgia,13235,Pulaski,Central,80652.42
+116,2012,Georgia,13237,Putnam,Central,142530.01
+117,2012,Georgia,13239,Quitman,Central,89168.73
+118,2012,Georgia,13241,Rabun,North,225749.65
+119,2012,Georgia,13243,Randolph,Central,169861.82
+120,2012,Georgia,13245,Richmond,Central,121398.62
+121,2012,Georgia,13247,Rockdale,North Central,21903.73
+122,2012,Georgia,13249,Schley,Central,111485.12
+123,2012,Georgia,13251,Screven,Southeast,322718.06
+124,2012,Georgia,13253,Seminole,Southwest,40299.51
+125,2012,Georgia,13255,Spalding,North Central,78135.5
+126,2012,Georgia,13257,Stephens,North,92635.57
+127,2012,Georgia,13259,Stewart,Central,234718.99
+128,2012,Georgia,13261,Sumter,Central,184647.07
+129,2012,Georgia,13263,Talbot,Central,207273.59
+130,2012,Georgia,13265,Taliaferro,Central,117557.65
+131,2012,Georgia,13267,Tattnall,Southeast,180535.0
+132,2012,Georgia,13269,Taylor,Central,223493.49
+133,2012,Georgia,13271,Telfair,Southeast,251025.85
+134,2012,Georgia,13273,Terrell,Central,158576.55
+135,2012,Georgia,13275,Thomas,Southwest,190660.39
+136,2012,Georgia,13277,Tift,Southwest,78395.3
+137,2012,Georgia,13279,Toombs,Southeast,151868.65
+138,2012,Georgia,13281,Towns,North,68557.52
+139,2012,Georgia,13283,Treutlen,Southeast,107218.58
+140,2012,Georgia,13285,Troup,North Central,186783.89
+141,2012,Georgia,13287,Turner,Southwest,68804.2
+142,2012,Georgia,13289,Twiggs,Central,195687.55
+143,2012,Georgia,13291,Union,North,157182.22
+144,2012,Georgia,13293,Upson,Central,144332.57
+145,2012,Georgia,13295,Walker,North,154128.16
+146,2012,Georgia,13297,Walton,North Central,122985.59
+147,2012,Georgia,13299,Ware,Southeast,478254.68
+148,2012,Georgia,13301,Warren,Central,162332.97
+149,2012,Georgia,13303,Washington,Central,298456.59
+150,2012,Georgia,13305,Wayne,Southeast,350011.88
+151,2012,Georgia,13307,Webster,Central,71989.21
+152,2012,Georgia,13309,Wheeler,Southeast,146084.83
+153,2012,Georgia,13311,White,North,118743.43
+154,2012,Georgia,13313,Whitfield,North,89762.24
+155,2012,Georgia,13315,Wilcox,Southwest,170234.85
+156,2012,Georgia,13317,Wilkes,Central,222600.43
+157,2012,Georgia,13319,Wilkinson,Central,265169.52
+158,2012,Georgia,13321,Worth,Southwest,168678.18
+0,2013,Georgia,13001,Appling,Southeast,234853.0
+1,2013,Georgia,13003,Atkinson,Southeast,159342.22
+2,2013,Georgia,13005,Bacon,Southeast,127617.91
+3,2013,Georgia,13007,Baker,Southwest,122720.95
+4,2013,Georgia,13009,Baldwin,Central,119301.88
+5,2013,Georgia,13011,Banks,North Central,83519.88
+6,2013,Georgia,13013,Barrow,North Central,46266.74
+7,2013,Georgia,13015,Bartow,North,173146.09
+8,2013,Georgia,13017,Ben Hill,Southwest,94641.56
+9,2013,Georgia,13019,Berrien,Southwest,172371.11
+10,2013,Georgia,13021,Bibb,Central,74211.85
+11,2013,Georgia,13023,Bleckley,Central,79892.87
+12,2013,Georgia,13025,Brantley,Southeast,244893.05
+13,2013,Georgia,13027,Brooks,Southwest,175864.04
+14,2013,Georgia,13029,Bryan,Southeast,198710.37
+15,2013,Georgia,13031,Bulloch,Southeast,288213.93
+16,2013,Georgia,13033,Burke,Central,328644.88
+17,2013,Georgia,13035,Butts,Central,74238.37
+18,2013,Georgia,13037,Calhoun,Central,74085.33
+19,2013,Georgia,13039,Camden,Southeast,277181.85
+20,2013,Georgia,13043,Candler,Southeast,83315.35
+21,2013,Georgia,13045,Carroll,North Central,181575.75
+22,2013,Georgia,13047,Catoosa,North,37837.73
+23,2013,Georgia,13049,Charlton,Southeast,368879.35
+24,2013,Georgia,13051,Chatham,Southeast,87249.19
+25,2013,Georgia,13053,Chattahoochee,Central,131750.77
+26,2013,Georgia,13055,Chattooga,North,177494.86
+27,2013,Georgia,13057,Cherokee,North,139900.07
+28,2013,Georgia,13059,Clarke,North Central,24908.42
+29,2013,Georgia,13061,Clay,Central,84724.18
+30,2013,Georgia,13063,Clayton,North Central,14530.57
+31,2013,Georgia,13065,Clinch,Southeast,556656.63
+32,2013,Georgia,13067,Cobb,North Central,21088.97
+33,2013,Georgia,13069,Coffee,Southeast,211036.16
+34,2013,Georgia,13071,Colquitt,Southwest,160556.36
+35,2013,Georgia,13073,Columbia,Central,93702.74
+36,2013,Georgia,13075,Cook,Southwest,75507.52
+37,2013,Georgia,13077,Coweta,North Central,164895.7
+38,2013,Georgia,13079,Crawford,Central,174638.74
+39,2013,Georgia,13081,Crisp,Southwest,78980.77
+40,2013,Georgia,13083,Dade,North,72568.08
+41,2013,Georgia,13085,Dawson,North,99900.93
+42,2013,Georgia,13087,Decatur,Southwest,178084.9
+43,2013,Georgia,13089,DeKalb,North Central,45975.5
+44,2013,Georgia,13091,Dodge,Southeast,221189.72
+45,2013,Georgia,13093,Dooly,Southwest,89698.67
+46,2013,Georgia,13095,Dougherty,Central,139890.03
+47,2013,Georgia,13097,Douglas,North Central,74634.0
+48,2013,Georgia,13099,Early,Southwest,173797.62
+49,2013,Georgia,13101,Echols,Southeast,234756.47
+50,2013,Georgia,13103,Effingham,Southeast,229858.21
+51,2013,Georgia,13105,Elbert,North Central,132570.0
+52,2013,Georgia,13107,Emanuel,Southeast,326510.26
+53,2013,Georgia,13109,Evans,Southeast,76696.66
+54,2013,Georgia,13111,Fannin,North,202322.75
+55,2013,Georgia,13113,Fayette,North Central,33312.83
+56,2013,Georgia,13115,Floyd,North,190312.55
+57,2013,Georgia,13117,Forsyth,North Central,57929.4
+58,2013,Georgia,13119,Franklin,North Central,79765.01
+59,2013,Georgia,13121,Fulton,North Central,111525.58
+60,2013,Georgia,13123,Gilmer,North,242195.19
+61,2013,Georgia,13125,Glascock,Central,77956.6
+62,2013,Georgia,13127,Glynn,Southeast,138291.86
+63,2013,Georgia,13129,Gordon,North,105456.62
+64,2013,Georgia,13131,Grady,Southwest,146976.02
+65,2013,Georgia,13133,Greene,Central,203249.7
+66,2013,Georgia,13135,Gwinnett,North Central,82187.45
+67,2013,Georgia,13137,Habersham,North,107965.86
+68,2013,Georgia,13139,Hall,North Central,105701.96
+69,2013,Georgia,13141,Hancock,Central,267806.16
+70,2013,Georgia,13143,Haralson,North Central,101416.27
+71,2013,Georgia,13145,Harris,Central,221051.46
+72,2013,Georgia,13147,Hart,North Central,55744.55
+73,2013,Georgia,13149,Heard,North Central,119100.26
+74,2013,Georgia,13151,Henry,North Central,83256.89
+75,2013,Georgia,13153,Houston,Central,127964.13
+76,2013,Georgia,13155,Irwin,Southwest,104766.43
+77,2013,Georgia,13157,Jackson,North Central,107821.9
+78,2013,Georgia,13159,Jasper,Central,200354.66
+79,2013,Georgia,13161,Jeff Davis,Southeast,151275.59
+80,2013,Georgia,13163,Jefferson,Central,239892.31
+81,2013,Georgia,13165,Jenkins,Southeast,150169.74
+82,2013,Georgia,13167,Johnson,Southeast,147657.24
+83,2013,Georgia,13169,Jones,Central,205079.16
+84,2013,Georgia,13171,Lamar,Central,95420.59
+85,2013,Georgia,13173,Lanier,Southwest,98495.86
+86,2013,Georgia,13175,Laurens,Southeast,332686.5
+87,2013,Georgia,13177,Lee,Central,137117.15
+88,2013,Georgia,13179,Liberty,Southeast,218064.67
+89,2013,Georgia,13181,Lincoln,Central,102723.77
+90,2013,Georgia,13183,Long,Southeast,224074.27
+91,2013,Georgia,13185,Lowndes,Southwest,206195.47
+92,2013,Georgia,13187,Lumpkin,North,144612.36
+93,2013,Georgia,13189,McDuffie,Central,116336.06
+94,2013,Georgia,13191,McIntosh,Southeast,164075.19
+95,2013,Georgia,13193,Macon,Central,140645.42
+96,2013,Georgia,13195,Madison,North Central,95046.1
+97,2013,Georgia,13197,Marion,Central,170624.36
+98,2013,Georgia,13199,Meriwether,North Central,250743.89
+99,2013,Georgia,13201,Miller,Southwest,69919.5
+100,2013,Georgia,13205,Mitchell,Southwest,135220.1
+101,2013,Georgia,13207,Monroe,Central,186412.07
+102,2013,Georgia,13209,Montgomery,Southeast,136132.87
+103,2013,Georgia,13211,Morgan,Central,154824.17
+104,2013,Georgia,13213,Murray,North,135553.07
+105,2013,Georgia,13215,Muscogee,Central,65925.2
+106,2013,Georgia,13217,Newton,North Central,69703.68
+107,2013,Georgia,13219,Oconee,North Central,65881.49
+108,2013,Georgia,13221,Oglethorpe,North Central,231079.9
+109,2013,Georgia,13223,Paulding,North Central,110957.96
+110,2013,Georgia,13225,Peach,Central,35533.85
+111,2013,Georgia,13227,Pickens,North,116707.89
+112,2013,Georgia,13229,Pierce,Southeast,109807.34
+113,2013,Georgia,13231,Pike,Central,95860.01
+114,2013,Georgia,13233,Polk,North Central,128854.46
+115,2013,Georgia,13235,Pulaski,Central,74734.54
+116,2013,Georgia,13237,Putnam,Central,142673.57
+117,2013,Georgia,13239,Quitman,Central,89478.34
+118,2013,Georgia,13241,Rabun,North,225281.46
+119,2013,Georgia,13243,Randolph,Central,168157.48
+120,2013,Georgia,13245,Richmond,Central,122852.76
+121,2013,Georgia,13247,Rockdale,North Central,22069.05
+122,2013,Georgia,13249,Schley,Central,111614.56
+123,2013,Georgia,13251,Screven,Southeast,325606.62
+124,2013,Georgia,13253,Seminole,Southwest,40209.59
+125,2013,Georgia,13255,Spalding,North Central,78195.42
+126,2013,Georgia,13257,Stephens,North,94786.83
+127,2013,Georgia,13259,Stewart,Central,235480.12
+128,2013,Georgia,13261,Sumter,Central,189439.21
+129,2013,Georgia,13263,Talbot,Central,206014.26
+130,2013,Georgia,13265,Taliaferro,Central,117671.47
+131,2013,Georgia,13267,Tattnall,Southeast,186480.18
+132,2013,Georgia,13269,Taylor,Central,225588.35
+133,2013,Georgia,13271,Telfair,Southeast,251252.5
+134,2013,Georgia,13273,Terrell,Central,155590.12
+135,2013,Georgia,13275,Thomas,Southwest,190355.73
+136,2013,Georgia,13277,Tift,Southwest,81419.33
+137,2013,Georgia,13279,Toombs,Southeast,151598.02
+138,2013,Georgia,13281,Towns,North,68612.33
+139,2013,Georgia,13283,Treutlen,Southeast,107350.98
+140,2013,Georgia,13285,Troup,North Central,190149.29
+141,2013,Georgia,13287,Turner,Southwest,66561.18
+142,2013,Georgia,13289,Twiggs,Central,195745.24
+143,2013,Georgia,13291,Union,North,156917.25
+144,2013,Georgia,13293,Upson,Central,150660.92
+145,2013,Georgia,13295,Walker,North,148634.27
+146,2013,Georgia,13297,Walton,North Central,130448.87
+147,2013,Georgia,13299,Ware,Southeast,453497.22
+148,2013,Georgia,13301,Warren,Central,162422.91
+149,2013,Georgia,13303,Washington,Central,299128.43
+150,2013,Georgia,13305,Wayne,Southeast,350375.37
+151,2013,Georgia,13307,Webster,Central,72094.46
+152,2013,Georgia,13309,Wheeler,Southeast,146198.52
+153,2013,Georgia,13311,White,North,119883.6
+154,2013,Georgia,13313,Whitfield,North,90589.74
+155,2013,Georgia,13315,Wilcox,Southwest,175405.76
+156,2013,Georgia,13317,Wilkes,Central,233513.91
+157,2013,Georgia,13319,Wilkinson,Central,265635.91
+158,2013,Georgia,13321,Worth,Southwest,167912.84
+0,2014,Georgia,13001,Appling,Southeast,239945.01
+1,2014,Georgia,13003,Atkinson,Southeast,159188.18
+2,2014,Georgia,13005,Bacon,Southeast,123971.71
+3,2014,Georgia,13007,Baker,Southwest,125618.28
+4,2014,Georgia,13009,Baldwin,Central,118717.55
+5,2014,Georgia,13011,Banks,North Central,83453.47
+6,2014,Georgia,13013,Barrow,North Central,45583.11
+7,2014,Georgia,13015,Bartow,North,172309.93
+8,2014,Georgia,13017,Ben Hill,Southwest,97811.94
+9,2014,Georgia,13019,Berrien,Southwest,172498.82
+10,2014,Georgia,13021,Bibb,Central,74634.32
+11,2014,Georgia,13023,Bleckley,Central,79599.13
+12,2014,Georgia,13025,Brantley,Southeast,243665.27
+13,2014,Georgia,13027,Brooks,Southwest,177911.92
+14,2014,Georgia,13029,Bryan,Southeast,196820.52
+15,2014,Georgia,13031,Bulloch,Southeast,286746.76
+16,2014,Georgia,13033,Burke,Central,329828.15
+17,2014,Georgia,13035,Butts,Central,74225.73
+18,2014,Georgia,13037,Calhoun,Central,73428.27
+19,2014,Georgia,13039,Camden,Southeast,276666.93
+20,2014,Georgia,13043,Candler,Southeast,82117.6
+21,2014,Georgia,13045,Carroll,North Central,172061.74
+22,2014,Georgia,13047,Catoosa,North,36737.17
+23,2014,Georgia,13049,Charlton,Southeast,377550.45
+24,2014,Georgia,13051,Chatham,Southeast,87072.18
+25,2014,Georgia,13053,Chattahoochee,Central,134362.94
+26,2014,Georgia,13055,Chattooga,North,153281.98
+27,2014,Georgia,13057,Cherokee,North,127513.58
+28,2014,Georgia,13059,Clarke,North Central,25364.03
+29,2014,Georgia,13061,Clay,Central,84735.81
+30,2014,Georgia,13063,Clayton,North Central,15000.42
+31,2014,Georgia,13065,Clinch,Southeast,559908.36
+32,2014,Georgia,13067,Cobb,North Central,20894.0
+33,2014,Georgia,13069,Coffee,Southeast,205918.52
+34,2014,Georgia,13071,Colquitt,Southwest,161657.37
+35,2014,Georgia,13073,Columbia,Central,89733.34
+36,2014,Georgia,13075,Cook,Southwest,78538.99
+37,2014,Georgia,13077,Coweta,North Central,166221.01
+38,2014,Georgia,13079,Crawford,Central,180565.67
+39,2014,Georgia,13081,Crisp,Southwest,80244.7
+40,2014,Georgia,13083,Dade,North,71103.88
+41,2014,Georgia,13085,Dawson,North,100132.02
+42,2014,Georgia,13087,Decatur,Southwest,187444.3
+43,2014,Georgia,13089,DeKalb,North Central,47187.64
+44,2014,Georgia,13091,Dodge,Southeast,226934.49
+45,2014,Georgia,13093,Dooly,Southwest,92078.79
+46,2014,Georgia,13095,Dougherty,Central,142656.35
+47,2014,Georgia,13097,Douglas,North Central,83747.09
+48,2014,Georgia,13099,Early,Southwest,177314.11
+49,2014,Georgia,13101,Echols,Southeast,243242.98
+50,2014,Georgia,13103,Effingham,Southeast,226445.29
+51,2014,Georgia,13105,Elbert,North Central,135460.27
+52,2014,Georgia,13107,Emanuel,Southeast,321556.38
+53,2014,Georgia,13109,Evans,Southeast,88903.34
+54,2014,Georgia,13111,Fannin,North,140153.27
+55,2014,Georgia,13113,Fayette,North Central,34058.32
+56,2014,Georgia,13115,Floyd,North,184284.9
+57,2014,Georgia,13117,Forsyth,North Central,58359.4
+58,2014,Georgia,13119,Franklin,North Central,79773.31
+59,2014,Georgia,13121,Fulton,North Central,113727.88
+60,2014,Georgia,13123,Gilmer,North,211560.59
+61,2014,Georgia,13125,Glascock,Central,78286.17
+62,2014,Georgia,13127,Glynn,Southeast,135143.38
+63,2014,Georgia,13129,Gordon,North,105287.13
+64,2014,Georgia,13131,Grady,Southwest,153199.54
+65,2014,Georgia,13133,Greene,Central,181250.82
+66,2014,Georgia,13135,Gwinnett,North Central,79368.43
+67,2014,Georgia,13137,Habersham,North,86654.78
+68,2014,Georgia,13139,Hall,North Central,108364.33
+69,2014,Georgia,13141,Hancock,Central,265705.2
+70,2014,Georgia,13143,Haralson,North Central,112010.8
+71,2014,Georgia,13145,Harris,Central,220577.37
+72,2014,Georgia,13147,Hart,North Central,55929.58
+73,2014,Georgia,13149,Heard,North Central,110165.32
+74,2014,Georgia,13151,Henry,North Central,90575.83
+75,2014,Georgia,13153,Houston,Central,127621.22
+76,2014,Georgia,13155,Irwin,Southwest,103340.04
+77,2014,Georgia,13157,Jackson,North Central,108499.99
+78,2014,Georgia,13159,Jasper,Central,186027.15
+79,2014,Georgia,13161,Jeff Davis,Southeast,149330.39
+80,2014,Georgia,13163,Jefferson,Central,243687.92
+81,2014,Georgia,13165,Jenkins,Southeast,147635.21
+82,2014,Georgia,13167,Johnson,Southeast,150942.01
+83,2014,Georgia,13169,Jones,Central,190287.51
+84,2014,Georgia,13171,Lamar,Central,91746.33
+85,2014,Georgia,13173,Lanier,Southwest,101388.48
+86,2014,Georgia,13175,Laurens,Southeast,331519.23
+87,2014,Georgia,13177,Lee,Central,142376.68
+88,2014,Georgia,13179,Liberty,Southeast,221397.79
+89,2014,Georgia,13181,Lincoln,Central,108366.86
+90,2014,Georgia,13183,Long,Southeast,228343.44
+91,2014,Georgia,13185,Lowndes,Southwest,204807.27
+92,2014,Georgia,13187,Lumpkin,North,113645.31
+93,2014,Georgia,13189,McDuffie,Central,114601.47
+94,2014,Georgia,13191,McIntosh,Southeast,162819.86
+95,2014,Georgia,13193,Macon,Central,146271.86
+96,2014,Georgia,13195,Madison,North Central,94869.52
+97,2014,Georgia,13197,Marion,Central,175645.12
+98,2014,Georgia,13199,Meriwether,North Central,258718.68
+99,2014,Georgia,13201,Miller,Southwest,72069.91
+100,2014,Georgia,13205,Mitchell,Southwest,132079.37
+101,2014,Georgia,13207,Monroe,Central,180919.52
+102,2014,Georgia,13209,Montgomery,Southeast,134545.77
+103,2014,Georgia,13211,Morgan,Central,159515.42
+104,2014,Georgia,13213,Murray,North,102324.11
+105,2014,Georgia,13215,Muscogee,Central,66183.99
+106,2014,Georgia,13217,Newton,North Central,76442.2
+107,2014,Georgia,13219,Oconee,North Central,67433.76
+108,2014,Georgia,13221,Oglethorpe,North Central,234871.31
+109,2014,Georgia,13223,Paulding,North Central,110704.23
+110,2014,Georgia,13225,Peach,Central,35315.14
+111,2014,Georgia,13227,Pickens,North,112271.55
+112,2014,Georgia,13229,Pierce,Southeast,106445.02
+113,2014,Georgia,13231,Pike,Central,95083.56
+114,2014,Georgia,13233,Polk,North Central,132381.36
+115,2014,Georgia,13235,Pulaski,Central,75211.79
+116,2014,Georgia,13237,Putnam,Central,122151.63
+117,2014,Georgia,13239,Quitman,Central,90358.2
+118,2014,Georgia,13241,Rabun,North,132726.83
+119,2014,Georgia,13243,Randolph,Central,186834.43
+120,2014,Georgia,13245,Richmond,Central,129834.46
+121,2014,Georgia,13247,Rockdale,North Central,23302.56
+122,2014,Georgia,13249,Schley,Central,112909.04
+123,2014,Georgia,13251,Screven,Southeast,322959.25
+124,2014,Georgia,13253,Seminole,Southwest,41175.24
+125,2014,Georgia,13255,Spalding,North Central,85875.73
+126,2014,Georgia,13257,Stephens,North,72929.7
+127,2014,Georgia,13259,Stewart,Central,237959.66
+128,2014,Georgia,13261,Sumter,Central,191575.51
+129,2014,Georgia,13263,Talbot,Central,209493.93
+130,2014,Georgia,13265,Taliaferro,Central,118185.6
+131,2014,Georgia,13267,Tattnall,Southeast,184616.05
+132,2014,Georgia,13269,Taylor,Central,228297.37
+133,2014,Georgia,13271,Telfair,Southeast,247855.22
+134,2014,Georgia,13273,Terrell,Central,149830.02
+135,2014,Georgia,13275,Thomas,Southwest,202048.72
+136,2014,Georgia,13277,Tift,Southwest,85317.38
+137,2014,Georgia,13279,Toombs,Southeast,152905.05
+138,2014,Georgia,13281,Towns,North,45437.87
+139,2014,Georgia,13283,Treutlen,Southeast,106245.17
+140,2014,Georgia,13285,Troup,North Central,198833.49
+141,2014,Georgia,13287,Turner,Southwest,69470.57
+142,2014,Georgia,13289,Twiggs,Central,196309.8
+143,2014,Georgia,13291,Union,North,95842.51
+144,2014,Georgia,13293,Upson,Central,149065.66
+145,2014,Georgia,13295,Walker,North,136124.17
+146,2014,Georgia,13297,Walton,North Central,131574.76
+147,2014,Georgia,13299,Ware,Southeast,463438.79
+148,2014,Georgia,13301,Warren,Central,161230.17
+149,2014,Georgia,13303,Washington,Central,308594.48
+150,2014,Georgia,13305,Wayne,Southeast,348950.82
+151,2014,Georgia,13307,Webster,Central,72566.02
+152,2014,Georgia,13309,Wheeler,Southeast,145069.86
+153,2014,Georgia,13311,White,North,103317.76
+154,2014,Georgia,13313,Whitfield,North,77376.99
+155,2014,Georgia,13315,Wilcox,Southwest,177992.67
+156,2014,Georgia,13317,Wilkes,Central,238061.25
+157,2014,Georgia,13319,Wilkinson,Central,268315.73
+158,2014,Georgia,13321,Worth,Southwest,172338.85
+0,2015,Georgia,13001,Appling,Southeast,234709.0
+1,2015,Georgia,13003,Atkinson,Southeast,153746.15
+2,2015,Georgia,13005,Bacon,Southeast,124110.68
+3,2015,Georgia,13007,Baker,Southwest,125576.17
+4,2015,Georgia,13009,Baldwin,Central,112818.01
+5,2015,Georgia,13011,Banks,North Central,83738.68
+6,2015,Georgia,13013,Barrow,North Central,45718.28
+7,2015,Georgia,13015,Bartow,North,165407.46
+8,2015,Georgia,13017,Ben Hill,Southwest,98044.34
+9,2015,Georgia,13019,Berrien,Southwest,163916.87
+10,2015,Georgia,13021,Bibb,Central,74745.1
+11,2015,Georgia,13023,Bleckley,Central,81335.59
+12,2015,Georgia,13025,Brantley,Southeast,251080.18
+13,2015,Georgia,13027,Brooks,Southwest,179132.3
+14,2015,Georgia,13029,Bryan,Southeast,196995.75
+15,2015,Georgia,13031,Bulloch,Southeast,287601.55
+16,2015,Georgia,13033,Burke,Central,322724.58
+17,2015,Georgia,13035,Butts,Central,77168.48
+18,2015,Georgia,13037,Calhoun,Central,73623.47
+19,2015,Georgia,13039,Camden,Southeast,277050.44
+20,2015,Georgia,13043,Candler,Southeast,88304.5
+21,2015,Georgia,13045,Carroll,North Central,172734.72
+22,2015,Georgia,13047,Catoosa,North,36635.91
+23,2015,Georgia,13049,Charlton,Southeast,379104.49
+24,2015,Georgia,13051,Chatham,Southeast,87177.16
+25,2015,Georgia,13053,Chattahoochee,Central,134580.18
+26,2015,Georgia,13055,Chattooga,North,151435.58
+27,2015,Georgia,13057,Cherokee,North,130006.72
+28,2015,Georgia,13059,Clarke,North Central,25390.94
+29,2015,Georgia,13061,Clay,Central,84874.83
+30,2015,Georgia,13063,Clayton,North Central,15027.33
+31,2015,Georgia,13065,Clinch,Southeast,537268.12
+32,2015,Georgia,13067,Cobb,North Central,21431.86
+33,2015,Georgia,13069,Coffee,Southeast,200104.33
+34,2015,Georgia,13071,Colquitt,Southwest,160795.93
+35,2015,Georgia,13073,Columbia,Central,89950.71
+36,2015,Georgia,13075,Cook,Southwest,78533.69
+37,2015,Georgia,13077,Coweta,North Central,166702.54
+38,2015,Georgia,13079,Crawford,Central,174900.06
+39,2015,Georgia,13081,Crisp,Southwest,79628.12
+40,2015,Georgia,13083,Dade,North,70927.97
+41,2015,Georgia,13085,Dawson,North,99466.9
+42,2015,Georgia,13087,Decatur,Southwest,189134.45
+43,2015,Georgia,13089,DeKalb,North Central,43539.39
+44,2015,Georgia,13091,Dodge,Southeast,230629.53
+45,2015,Georgia,13093,Dooly,Southwest,95246.44
+46,2015,Georgia,13095,Dougherty,Central,141268.97
+47,2015,Georgia,13097,Douglas,North Central,84121.24
+48,2015,Georgia,13099,Early,Southwest,178153.62
+49,2015,Georgia,13101,Echols,Southeast,243443.07
+50,2015,Georgia,13103,Effingham,Southeast,226668.85
+51,2015,Georgia,13105,Elbert,North Central,135934.81
+52,2015,Georgia,13107,Emanuel,Southeast,320186.52
+53,2015,Georgia,13109,Evans,Southeast,89045.11
+54,2015,Georgia,13111,Fannin,North,134413.23
+55,2015,Georgia,13113,Fayette,North Central,34201.57
+56,2015,Georgia,13115,Floyd,North,185327.25
+57,2015,Georgia,13117,Forsyth,North Central,58576.37
+58,2015,Georgia,13119,Franklin,North Central,74407.86
+59,2015,Georgia,13121,Fulton,North Central,109787.92
+60,2015,Georgia,13123,Gilmer,North,207956.7
+61,2015,Georgia,13125,Glascock,Central,78403.26
+62,2015,Georgia,13127,Glynn,Southeast,136684.49
+63,2015,Georgia,13129,Gordon,North,104492.55
+64,2015,Georgia,13131,Grady,Southwest,154807.86
+65,2015,Georgia,13133,Greene,Central,179477.47
+66,2015,Georgia,13135,Gwinnett,North Central,73788.81
+67,2015,Georgia,13137,Habersham,North,83199.57
+68,2015,Georgia,13139,Hall,North Central,108640.05
+69,2015,Georgia,13141,Hancock,Central,265289.98
+70,2015,Georgia,13143,Haralson,North Central,112466.16
+71,2015,Georgia,13145,Harris,Central,220925.75
+72,2015,Georgia,13147,Hart,North Central,56146.73
+73,2015,Georgia,13149,Heard,North Central,111436.3
+74,2015,Georgia,13151,Henry,North Central,92372.55
+75,2015,Georgia,13153,Houston,Central,122416.6
+76,2015,Georgia,13155,Irwin,Southwest,97056.53
+77,2015,Georgia,13157,Jackson,North Central,107658.27
+78,2015,Georgia,13159,Jasper,Central,184810.47
+79,2015,Georgia,13161,Jeff Davis,Southeast,143577.66
+80,2015,Georgia,13163,Jefferson,Central,238168.4
+81,2015,Georgia,13165,Jenkins,Southeast,147779.87
+82,2015,Georgia,13167,Johnson,Southeast,151589.46
+83,2015,Georgia,13169,Jones,Central,190697.43
+84,2015,Georgia,13171,Lamar,Central,91882.59
+85,2015,Georgia,13173,Lanier,Southwest,97886.66
+86,2015,Georgia,13175,Laurens,Southeast,336760.47
+87,2015,Georgia,13177,Lee,Central,138283.02
+88,2015,Georgia,13179,Liberty,Southeast,215822.29
+89,2015,Georgia,13181,Lincoln,Central,107907.46
+90,2015,Georgia,13183,Long,Southeast,228609.92
+91,2015,Georgia,13185,Lowndes,Southwest,200847.23
+92,2015,Georgia,13187,Lumpkin,North,110873.72
+93,2015,Georgia,13189,McDuffie,Central,115710.72
+94,2015,Georgia,13191,McIntosh,Southeast,163016.49
+95,2015,Georgia,13193,Macon,Central,146514.65
+96,2015,Georgia,13195,Madison,North Central,88669.79
+97,2015,Georgia,13197,Marion,Central,175801.23
+98,2015,Georgia,13199,Meriwether,North Central,258893.61
+99,2015,Georgia,13201,Miller,Southwest,72377.6
+100,2015,Georgia,13205,Mitchell,Southwest,132433.14
+101,2015,Georgia,13207,Monroe,Central,181245.8
+102,2015,Georgia,13209,Montgomery,Southeast,134757.5
+103,2015,Georgia,13211,Morgan,Central,159408.5
+104,2015,Georgia,13213,Murray,North,102447.69
+105,2015,Georgia,13215,Muscogee,Central,59034.56
+106,2015,Georgia,13217,Newton,North Central,76729.89
+107,2015,Georgia,13219,Oconee,North Central,67665.26
+108,2015,Georgia,13221,Oglethorpe,North Central,235569.35
+109,2015,Georgia,13223,Paulding,North Central,111066.58
+110,2015,Georgia,13225,Peach,Central,35385.25
+111,2015,Georgia,13227,Pickens,North,108774.42
+112,2015,Georgia,13229,Pierce,Southeast,106535.56
+113,2015,Georgia,13231,Pike,Central,95216.67
+114,2015,Georgia,13233,Polk,North Central,127188.9
+115,2015,Georgia,13235,Pulaski,Central,74090.92
+116,2015,Georgia,13237,Putnam,Central,120156.79
+117,2015,Georgia,13239,Quitman,Central,90401.94
+118,2015,Georgia,13241,Rabun,North,124084.72
+119,2015,Georgia,13243,Randolph,Central,187169.15
+120,2015,Georgia,13245,Richmond,Central,131460.86
+121,2015,Georgia,13247,Rockdale,North Central,23631.67
+122,2015,Georgia,13249,Schley,Central,113131.63
+123,2015,Georgia,13251,Screven,Southeast,323683.54
+124,2015,Georgia,13253,Seminole,Southwest,41388.58
+125,2015,Georgia,13255,Spalding,North Central,82678.02
+126,2015,Georgia,13257,Stephens,North,71111.39
+127,2015,Georgia,13259,Stewart,Central,232442.2
+128,2015,Georgia,13261,Sumter,Central,186622.59
+129,2015,Georgia,13263,Talbot,Central,209713.39
+130,2015,Georgia,13265,Taliaferro,Central,118821.43
+131,2015,Georgia,13267,Tattnall,Southeast,184696.94
+132,2015,Georgia,13269,Taylor,Central,228632.68
+133,2015,Georgia,13271,Telfair,Southeast,248067.75
+134,2015,Georgia,13273,Terrell,Central,150169.51
+135,2015,Georgia,13275,Thomas,Southwest,203111.81
+136,2015,Georgia,13277,Tift,Southwest,82323.28
+137,2015,Georgia,13279,Toombs,Southeast,153067.54
+138,2015,Georgia,13281,Towns,North,43176.01
+139,2015,Georgia,13283,Treutlen,Southeast,106372.94
+140,2015,Georgia,13285,Troup,North Central,201847.57
+141,2015,Georgia,13287,Turner,Southwest,69612.41
+142,2015,Georgia,13289,Twiggs,Central,196573.2
+143,2015,Georgia,13291,Union,North,89684.31
+144,2015,Georgia,13293,Upson,Central,149303.0
+145,2015,Georgia,13295,Walker,North,135039.59
+146,2015,Georgia,13297,Walton,North Central,132045.62
+147,2015,Georgia,13299,Ware,Southeast,464670.07
+148,2015,Georgia,13301,Warren,Central,164364.62
+149,2015,Georgia,13303,Washington,Central,309287.26
+150,2015,Georgia,13305,Wayne,Southeast,350060.51
+151,2015,Georgia,13307,Webster,Central,78310.32
+152,2015,Georgia,13309,Wheeler,Southeast,145197.07
+153,2015,Georgia,13311,White,North,100748.77
+154,2015,Georgia,13313,Whitfield,North,76511.16
+155,2015,Georgia,13315,Wilcox,Southwest,177555.4
+156,2015,Georgia,13317,Wilkes,Central,238390.1
+157,2015,Georgia,13319,Wilkinson,Central,268363.58
+158,2015,Georgia,13321,Worth,Southwest,172480.15
+0,2016,Georgia,13001,Appling,Southeast,234909.22
+1,2016,Georgia,13003,Atkinson,Southeast,154017.29
+2,2016,Georgia,13005,Bacon,Southeast,119591.19
+3,2016,Georgia,13007,Baker,Southwest,125559.42
+4,2016,Georgia,13009,Baldwin,Central,112870.11
+5,2016,Georgia,13011,Banks,North Central,83227.79
+6,2016,Georgia,13013,Barrow,North Central,45627.75
+7,2016,Georgia,13015,Bartow,North,161689.14
+8,2016,Georgia,13017,Ben Hill,Southwest,96603.74
+9,2016,Georgia,13019,Berrien,Southwest,161084.85
+10,2016,Georgia,13021,Bibb,Central,74884.52
+11,2016,Georgia,13023,Bleckley,Central,81520.74
+12,2016,Georgia,13025,Brantley,Southeast,251359.78
+13,2016,Georgia,13027,Brooks,Southwest,179069.99
+14,2016,Georgia,13029,Bryan,Southeast,197201.35
+15,2016,Georgia,13031,Bulloch,Southeast,293102.32
+16,2016,Georgia,13033,Burke,Central,318046.5
+17,2016,Georgia,13035,Butts,Central,77306.11
+18,2016,Georgia,13037,Calhoun,Central,78243.08
+19,2016,Georgia,13039,Camden,Southeast,279365.5
+20,2016,Georgia,13043,Candler,Southeast,88377.18
+21,2016,Georgia,13045,Carroll,North Central,171033.09
+22,2016,Georgia,13047,Catoosa,North,36516.43
+23,2016,Georgia,13049,Charlton,Southeast,377728.05
+24,2016,Georgia,13051,Chatham,Southeast,87783.73
+25,2016,Georgia,13053,Chattahoochee,Central,134721.67
+26,2016,Georgia,13055,Chattooga,North,155497.05
+27,2016,Georgia,13057,Cherokee,North,127379.91
+28,2016,Georgia,13059,Clarke,North Central,25236.01
+29,2016,Georgia,13061,Clay,Central,75210.25
+30,2016,Georgia,13063,Clayton,North Central,15024.22
+31,2016,Georgia,13065,Clinch,Southeast,531491.9
+32,2016,Georgia,13067,Cobb,North Central,21384.53
+33,2016,Georgia,13069,Coffee,Southeast,200206.62
+34,2016,Georgia,13071,Colquitt,Southwest,160590.82
+35,2016,Georgia,13073,Columbia,Central,90848.91
+36,2016,Georgia,13075,Cook,Southwest,78532.81
+37,2016,Georgia,13077,Coweta,North Central,161451.9
+38,2016,Georgia,13079,Crawford,Central,175086.49
+39,2016,Georgia,13081,Crisp,Southwest,81750.04
+40,2016,Georgia,13083,Dade,North,70752.16
+41,2016,Georgia,13085,Dawson,North,101426.38
+42,2016,Georgia,13087,Decatur,Southwest,192286.55
+43,2016,Georgia,13089,DeKalb,North Central,43423.68
+44,2016,Georgia,13091,Dodge,Southeast,235353.23
+45,2016,Georgia,13093,Dooly,Southwest,95163.44
+46,2016,Georgia,13095,Dougherty,Central,140361.31
+47,2016,Georgia,13097,Douglas,North Central,83937.79
+48,2016,Georgia,13099,Early,Southwest,178579.65
+49,2016,Georgia,13101,Echols,Southeast,243938.11
+50,2016,Georgia,13103,Effingham,Southeast,226907.93
+51,2016,Georgia,13105,Elbert,North Central,136835.1
+52,2016,Georgia,13107,Emanuel,Southeast,320805.12
+53,2016,Georgia,13109,Evans,Southeast,89231.76
+54,2016,Georgia,13111,Fannin,North,144956.97
+55,2016,Georgia,13113,Fayette,North Central,34307.83
+56,2016,Georgia,13115,Floyd,North,184806.13
+57,2016,Georgia,13117,Forsyth,North Central,59153.34
+58,2016,Georgia,13119,Franklin,North Central,74383.44
+59,2016,Georgia,13121,Fulton,North Central,112886.91
+60,2016,Georgia,13123,Gilmer,North,209468.92
+61,2016,Georgia,13125,Glascock,Central,78704.11
+62,2016,Georgia,13127,Glynn,Southeast,137769.73
+63,2016,Georgia,13129,Gordon,North,107192.08
+64,2016,Georgia,13131,Grady,Southwest,155027.64
+65,2016,Georgia,13133,Greene,Central,178103.2
+66,2016,Georgia,13135,Gwinnett,North Central,73693.6
+67,2016,Georgia,13137,Habersham,North,86990.06
+68,2016,Georgia,13139,Hall,North Central,106914.01
+69,2016,Georgia,13141,Hancock,Central,265726.53
+70,2016,Georgia,13143,Haralson,North Central,113925.68
+71,2016,Georgia,13145,Harris,Central,230515.38
+72,2016,Georgia,13147,Hart,North Central,56103.6
+73,2016,Georgia,13149,Heard,North Central,105671.63
+74,2016,Georgia,13151,Henry,North Central,92375.48
+75,2016,Georgia,13153,Houston,Central,122618.26
+76,2016,Georgia,13155,Irwin,Southwest,100599.35
+77,2016,Georgia,13157,Jackson,North Central,107652.8
+78,2016,Georgia,13159,Jasper,Central,182459.25
+79,2016,Georgia,13161,Jeff Davis,Southeast,137604.44
+80,2016,Georgia,13163,Jefferson,Central,234977.63
+81,2016,Georgia,13165,Jenkins,Southeast,147923.44
+82,2016,Georgia,13167,Johnson,Southeast,151705.29
+83,2016,Georgia,13169,Jones,Central,189983.96
+84,2016,Georgia,13171,Lamar,Central,92246.03
+85,2016,Georgia,13173,Lanier,Southwest,97991.52
+86,2016,Georgia,13175,Laurens,Southeast,343650.7
+87,2016,Georgia,13177,Lee,Central,138595.42
+88,2016,Georgia,13179,Liberty,Southeast,216031.64
+89,2016,Georgia,13181,Lincoln,Central,113986.91
+90,2016,Georgia,13183,Long,Southeast,228849.7
+91,2016,Georgia,13185,Lowndes,Southwest,200647.14
+92,2016,Georgia,13187,Lumpkin,North,122281.77
+93,2016,Georgia,13189,McDuffie,Central,111543.61
+94,2016,Georgia,13191,McIntosh,Southeast,163168.41
+95,2016,Georgia,13193,Macon,Central,142385.34
+96,2016,Georgia,13195,Madison,North Central,88616.14
+97,2016,Georgia,13197,Marion,Central,175857.45
+98,2016,Georgia,13199,Meriwether,North Central,258598.06
+99,2016,Georgia,13201,Miller,Southwest,71629.37
+100,2016,Georgia,13205,Mitchell,Southwest,132614.13
+101,2016,Georgia,13207,Monroe,Central,180530.99
+102,2016,Georgia,13209,Montgomery,Southeast,134834.71
+103,2016,Georgia,13211,Morgan,Central,159685.71
+104,2016,Georgia,13213,Murray,North,109173.54
+105,2016,Georgia,13215,Muscogee,Central,65545.73
+106,2016,Georgia,13217,Newton,North Central,76673.99
+107,2016,Georgia,13219,Oconee,North Central,67574.15
+108,2016,Georgia,13221,Oglethorpe,North Central,237188.45
+109,2016,Georgia,13223,Paulding,North Central,110911.81
+110,2016,Georgia,13225,Peach,Central,35807.98
+111,2016,Georgia,13227,Pickens,North,108464.81
+112,2016,Georgia,13229,Pierce,Southeast,105426.04
+113,2016,Georgia,13231,Pike,Central,95370.09
+114,2016,Georgia,13233,Polk,North Central,127099.68
+115,2016,Georgia,13235,Pulaski,Central,74272.05
+116,2016,Georgia,13237,Putnam,Central,126989.25
+117,2016,Georgia,13239,Quitman,Central,90545.76
+118,2016,Georgia,13241,Rabun,North,143196.49
+119,2016,Georgia,13243,Randolph,Central,186084.23
+120,2016,Georgia,13245,Richmond,Central,128755.44
+121,2016,Georgia,13247,Rockdale,North Central,22718.67
+122,2016,Georgia,13249,Schley,Central,113372.6
+123,2016,Georgia,13251,Screven,Southeast,323995.54
+124,2016,Georgia,13253,Seminole,Southwest,41496.7
+125,2016,Georgia,13255,Spalding,North Central,82015.31
+126,2016,Georgia,13257,Stephens,North,76582.06
+127,2016,Georgia,13259,Stewart,Central,232828.25
+128,2016,Georgia,13261,Sumter,Central,190317.56
+129,2016,Georgia,13263,Talbot,Central,210080.26
+130,2016,Georgia,13265,Taliaferro,Central,119003.82
+131,2016,Georgia,13267,Tattnall,Southeast,184805.31
+132,2016,Georgia,13269,Taylor,Central,234980.45
+133,2016,Georgia,13271,Telfair,Southeast,248303.9
+134,2016,Georgia,13273,Terrell,Central,150427.64
+135,2016,Georgia,13275,Thomas,Southwest,197176.72
+136,2016,Georgia,13277,Tift,Southwest,82330.35
+137,2016,Georgia,13279,Toombs,Southeast,148778.52
+138,2016,Georgia,13281,Towns,North,45201.12
+139,2016,Georgia,13283,Treutlen,Southeast,106477.48
+140,2016,Georgia,13285,Troup,North Central,201644.44
+141,2016,Georgia,13287,Turner,Southwest,69685.87
+142,2016,Georgia,13289,Twiggs,Central,196932.49
+143,2016,Georgia,13291,Union,North,99904.12
+144,2016,Georgia,13293,Upson,Central,149713.53
+145,2016,Georgia,13295,Walker,North,145795.49
+146,2016,Georgia,13297,Walton,North Central,130989.02
+147,2016,Georgia,13299,Ware,Southeast,464828.67
+148,2016,Georgia,13301,Warren,Central,164652.49
+149,2016,Georgia,13303,Washington,Central,307614.94
+150,2016,Georgia,13305,Wayne,Southeast,349447.12
+151,2016,Georgia,13307,Webster,Central,78419.95
+152,2016,Georgia,13309,Wheeler,Southeast,145309.68
+153,2016,Georgia,13311,White,North,108854.7
+154,2016,Georgia,13313,Whitfield,North,81714.76
+155,2016,Georgia,13315,Wilcox,Southwest,177639.41
+156,2016,Georgia,13317,Wilkes,Central,238760.27
+157,2016,Georgia,13319,Wilkinson,Central,268884.99
+158,2016,Georgia,13321,Worth,Southwest,162287.24
+0,2017,Georgia,13001,Appling,Southeast,234909.22
+1,2017,Georgia,13003,Atkinson,Southeast,154048.74
+2,2017,Georgia,13005,Bacon,Southeast,118040.86
+3,2017,Georgia,13007,Baker,Southwest,129097.81
+4,2017,Georgia,13009,Baldwin,Central,114388.7
+5,2017,Georgia,13011,Banks,North Central,88607.74
+6,2017,Georgia,13013,Barrow,North Central,45492.58
+7,2017,Georgia,13015,Bartow,North,162217.72
+8,2017,Georgia,13017,Ben Hill,Southwest,96873.42
+9,2017,Georgia,13019,Berrien,Southwest,161532.63
+10,2017,Georgia,13021,Bibb,Central,74967.73
+11,2017,Georgia,13023,Bleckley,Central,81755.24
+12,2017,Georgia,13025,Brantley,Southeast,251281.65
+13,2017,Georgia,13027,Brooks,Southwest,173437.96
+14,2017,Georgia,13029,Bryan,Southeast,197201.35
+15,2017,Georgia,13031,Bulloch,Southeast,292729.9
+16,2017,Georgia,13033,Burke,Central,319170.47
+17,2017,Georgia,13035,Butts,Central,77354.98
+18,2017,Georgia,13037,Calhoun,Central,84167.22
+19,2017,Georgia,13039,Camden,Southeast,278129.64
+20,2017,Georgia,13043,Candler,Southeast,85479.28
+21,2017,Georgia,13045,Carroll,North Central,168717.4
+22,2017,Georgia,13047,Catoosa,North,39911.71
+23,2017,Georgia,13049,Charlton,Southeast,373884.09
+24,2017,Georgia,13051,Chatham,Southeast,89401.04
+25,2017,Georgia,13053,Chattahoochee,Central,134853.09
+26,2017,Georgia,13055,Chattooga,North,162076.02
+27,2017,Georgia,13057,Cherokee,North,132976.75
+28,2017,Georgia,13059,Clarke,North Central,25209.1
+29,2017,Georgia,13061,Clay,Central,75274.15
+30,2017,Georgia,13063,Clayton,North Central,16514.69
+31,2017,Georgia,13065,Clinch,Southeast,529525.37
+32,2017,Georgia,13067,Cobb,North Central,23994.61
+33,2017,Georgia,13069,Coffee,Southeast,198755.18
+34,2017,Georgia,13071,Colquitt,Southwest,158221.52
+35,2017,Georgia,13073,Columbia,Central,95681.58
+36,2017,Georgia,13075,Cook,Southwest,78665.29
+37,2017,Georgia,13077,Coweta,North Central,165007.9
+38,2017,Georgia,13079,Crawford,Central,175203.01
+39,2017,Georgia,13081,Crisp,Southwest,82009.0
+40,2017,Georgia,13083,Dade,North,78001.85
+41,2017,Georgia,13085,Dawson,North,101721.92
+42,2017,Georgia,13087,Decatur,Southwest,189169.52
+43,2017,Georgia,13089,DeKalb,North Central,43655.42
+44,2017,Georgia,13091,Dodge,Southeast,242300.11
+45,2017,Georgia,13093,Dooly,Southwest,87716.8
+46,2017,Georgia,13095,Dougherty,Central,134647.1
+47,2017,Georgia,13097,Douglas,North Central,83669.78
+48,2017,Georgia,13099,Early,Southwest,180600.04
+49,2017,Georgia,13101,Echols,Southeast,243920.67
+50,2017,Georgia,13103,Effingham,Southeast,231568.06
+51,2017,Georgia,13105,Elbert,North Central,136360.56
+52,2017,Georgia,13107,Emanuel,Southeast,320308.73
+53,2017,Georgia,13109,Evans,Southeast,89231.76
+54,2017,Georgia,13111,Fannin,North,153563.08
+55,2017,Georgia,13113,Fayette,North Central,35101.39
+56,2017,Georgia,13115,Floyd,North,186912.66
+57,2017,Georgia,13117,Forsyth,North Central,59862.12
+58,2017,Georgia,13119,Franklin,North Central,73532.97
+59,2017,Georgia,13121,Fulton,North Central,112035.91
+60,2017,Georgia,13123,Gilmer,North,220351.73
+61,2017,Georgia,13125,Glascock,Central,78756.73
+62,2017,Georgia,13127,Glynn,Southeast,137725.0
+63,2017,Georgia,13129,Gordon,North,103644.77
+64,2017,Georgia,13131,Grady,Southwest,156285.93
+65,2017,Georgia,13133,Greene,Central,178152.02
+66,2017,Georgia,13135,Gwinnett,North Central,75391.72
+67,2017,Georgia,13137,Habersham,North,93672.75
+68,2017,Georgia,13139,Hall,North Central,100944.51
+69,2017,Georgia,13141,Hancock,Central,266883.99
+70,2017,Georgia,13143,Haralson,North Central,111196.24
+71,2017,Georgia,13145,Harris,Central,230630.86
+72,2017,Georgia,13147,Hart,North Central,56453.49
+73,2017,Georgia,13149,Heard,North Central,105508.08
+74,2017,Georgia,13151,Henry,North Central,91298.22
+75,2017,Georgia,13153,Houston,Central,122688.82
+76,2017,Georgia,13155,Irwin,Southwest,101263.37
+77,2017,Georgia,13157,Jackson,North Central,107144.47
+78,2017,Georgia,13159,Jasper,Central,181727.02
+79,2017,Georgia,13161,Jeff Davis,Southeast,137604.44
+80,2017,Georgia,13163,Jefferson,Central,224825.05
+81,2017,Georgia,13165,Jenkins,Southeast,150275.77
+82,2017,Georgia,13167,Johnson,Southeast,151687.46
+83,2017,Georgia,13169,Jones,Central,192202.31
+84,2017,Georgia,13171,Lamar,Central,92286.56
+85,2017,Georgia,13173,Lanier,Southwest,96339.3
+86,2017,Georgia,13175,Laurens,Southeast,355600.12
+87,2017,Georgia,13177,Lee,Central,138780.1
+88,2017,Georgia,13179,Liberty,Southeast,221788.66
+89,2017,Georgia,13181,Lincoln,Central,113986.91
+90,2017,Georgia,13183,Long,Southeast,228770.56
+91,2017,Georgia,13185,Lowndes,Southwest,200700.47
+92,2017,Georgia,13187,Lumpkin,North,128791.95
+93,2017,Georgia,13189,McDuffie,Central,111571.66
+94,2017,Georgia,13191,McIntosh,Southeast,163161.39
+95,2017,Georgia,13193,Macon,Central,142475.56
+96,2017,Georgia,13195,Madison,North Central,88303.19
+97,2017,Georgia,13197,Marion,Central,175991.41
+98,2017,Georgia,13199,Meriwether,North Central,257706.64
+99,2017,Georgia,13201,Miller,Southwest,71807.5
+100,2017,Georgia,13205,Mitchell,Southwest,133900.95
+101,2017,Georgia,13207,Monroe,Central,180685.62
+102,2017,Georgia,13209,Montgomery,Southeast,135311.17
+103,2017,Georgia,13211,Morgan,Central,159763.77
+104,2017,Georgia,13213,Murray,North,115574.05
+105,2017,Georgia,13215,Muscogee,Central,67911.02
+106,2017,Georgia,13217,Newton,North Central,72666.39
+107,2017,Georgia,13219,Oconee,North Central,65814.62
+108,2017,Georgia,13221,Oglethorpe,North Central,236369.17
+109,2017,Georgia,13223,Paulding,North Central,107917.75
+110,2017,Georgia,13225,Peach,Central,35640.99
+111,2017,Georgia,13227,Pickens,North,108718.56
+112,2017,Georgia,13229,Pierce,Southeast,105424.88
+113,2017,Georgia,13231,Pike,Central,95405.92
+114,2017,Georgia,13233,Polk,North Central,126949.43
+115,2017,Georgia,13235,Pulaski,Central,80105.84
+116,2017,Georgia,13237,Putnam,Central,130299.86
+117,2017,Georgia,13239,Quitman,Central,91061.6
+118,2017,Georgia,13241,Rabun,North,157427.94
+119,2017,Georgia,13243,Randolph,Central,187746.87
+120,2017,Georgia,13245,Richmond,Central,128811.78
+121,2017,Georgia,13247,Rockdale,North Central,21331.98
+122,2017,Georgia,13249,Schley,Central,113070.49
+123,2017,Georgia,13251,Screven,Southeast,325487.06
+124,2017,Georgia,13253,Seminole,Southwest,41726.59
+125,2017,Georgia,13255,Spalding,North Central,81822.89
+126,2017,Georgia,13257,Stephens,North,81525.33
+127,2017,Georgia,13259,Stewart,Central,232265.46
+128,2017,Georgia,13261,Sumter,Central,189048.52
+129,2017,Georgia,13263,Talbot,Central,210260.11
+130,2017,Georgia,13265,Taliaferro,Central,118871.28
+131,2017,Georgia,13267,Tattnall,Southeast,184794.97
+132,2017,Georgia,13269,Taylor,Central,235168.39
+133,2017,Georgia,13271,Telfair,Southeast,242465.57
+134,2017,Georgia,13273,Terrell,Central,155958.95
+135,2017,Georgia,13275,Thomas,Southwest,198036.69
+136,2017,Georgia,13277,Tift,Southwest,76495.78
+137,2017,Georgia,13279,Toombs,Southeast,149863.32
+138,2017,Georgia,13281,Towns,North,55631.6
+139,2017,Georgia,13283,Treutlen,Southeast,106477.48
+140,2017,Georgia,13285,Troup,North Central,201047.03
+141,2017,Georgia,13287,Turner,Southwest,69958.35
+142,2017,Georgia,13289,Twiggs,Central,197019.4
+143,2017,Georgia,13291,Union,North,110570.51
+144,2017,Georgia,13293,Upson,Central,147862.77
+145,2017,Georgia,13295,Walker,North,149828.46
+146,2017,Georgia,13297,Walton,North Central,129066.78
+147,2017,Georgia,13299,Ware,Southeast,457388.39
+148,2017,Georgia,13301,Warren,Central,164335.57
+149,2017,Georgia,13303,Washington,Central,307813.16
+150,2017,Georgia,13305,Wayne,Southeast,349226.52
+151,2017,Georgia,13307,Webster,Central,78479.5
+152,2017,Georgia,13309,Wheeler,Southeast,143862.42
+153,2017,Georgia,13311,White,North,117347.55
+154,2017,Georgia,13313,Whitfield,North,84927.46
+155,2017,Georgia,13315,Wilcox,Southwest,176825.79
+156,2017,Georgia,13317,Wilkes,Central,237377.52
+157,2017,Georgia,13319,Wilkinson,Central,270509.31
+158,2017,Georgia,13321,Worth,Southwest,163775.57
+0,2018,Georgia,13001,Appling,Southeast,228279.07
+1,2018,Georgia,13003,Atkinson,Southeast,154136.47
+2,2018,Georgia,13005,Bacon,Southeast,108893.86
+3,2018,Georgia,13007,Baker,Southwest,128926.65
+4,2018,Georgia,13009,Baldwin,Central,117650.45
+5,2018,Georgia,13011,Banks,North Central,88678.65
+6,2018,Georgia,13013,Barrow,North Central,44985.85
+7,2018,Georgia,13015,Bartow,North,162207.5
+8,2018,Georgia,13017,Ben Hill,Southwest,90635.59
+9,2018,Georgia,13019,Berrien,Southwest,161464.54
+10,2018,Georgia,13021,Bibb,Central,70136.99
+11,2018,Georgia,13023,Bleckley,Central,80124.37
+12,2018,Georgia,13025,Brantley,Southeast,253829.47
+13,2018,Georgia,13027,Brooks,Southwest,173282.43
+14,2018,Georgia,13029,Bryan,Southeast,197487.26
+15,2018,Georgia,13031,Bulloch,Southeast,291916.12
+16,2018,Georgia,13033,Burke,Central,318436.74
+17,2018,Georgia,13035,Butts,Central,77354.98
+18,2018,Georgia,13037,Calhoun,Central,84167.22
+19,2018,Georgia,13039,Camden,Southeast,269212.63
+20,2018,Georgia,13043,Candler,Southeast,85531.82
+21,2018,Georgia,13045,Carroll,North Central,169141.82
+22,2018,Georgia,13047,Catoosa,North,44310.38
+23,2018,Georgia,13049,Charlton,Southeast,410403.88
+24,2018,Georgia,13051,Chatham,Southeast,89115.51
+25,2018,Georgia,13053,Chattahoochee,Central,134853.09
+26,2018,Georgia,13055,Chattooga,North,166520.92
+27,2018,Georgia,13057,Cherokee,North,133058.88
+28,2018,Georgia,13059,Clarke,North Central,25288.98
+29,2018,Georgia,13061,Clay,Central,75274.15
+30,2018,Georgia,13063,Clayton,North Central,16534.92
+31,2018,Georgia,13065,Clinch,Southeast,531992.37
+32,2018,Georgia,13067,Cobb,North Central,19657.29
+33,2018,Georgia,13069,Coffee,Southeast,198935.08
+34,2018,Georgia,13071,Colquitt,Southwest,148969.72
+35,2018,Georgia,13073,Columbia,Central,100373.94
+36,2018,Georgia,13075,Cook,Southwest,78254.98
+37,2018,Georgia,13077,Coweta,North Central,165204.61
+38,2018,Georgia,13079,Crawford,Central,174179.01
+39,2018,Georgia,13081,Crisp,Southwest,81175.44
+40,2018,Georgia,13083,Dade,North,77988.37
+41,2018,Georgia,13085,Dawson,North,101452.63
+42,2018,Georgia,13087,Decatur,Southwest,197085.18
+43,2018,Georgia,13089,DeKalb,North Central,43718.45
+44,2018,Georgia,13091,Dodge,Southeast,242581.59
+45,2018,Georgia,13093,Dooly,Southwest,86731.78
+46,2018,Georgia,13095,Dougherty,Central,134647.1
+47,2018,Georgia,13097,Douglas,North Central,83783.42
+48,2018,Georgia,13099,Early,Southwest,180558.72
+49,2018,Georgia,13101,Echols,Southeast,244111.63
+50,2018,Georgia,13103,Effingham,Southeast,231801.17
+51,2018,Georgia,13105,Elbert,North Central,136493.9
+52,2018,Georgia,13107,Emanuel,Southeast,320544.44
+53,2018,Georgia,13109,Evans,Southeast,89373.37
+54,2018,Georgia,13111,Fannin,North,166647.35
+55,2018,Georgia,13113,Fayette,North Central,35114.88
+56,2018,Georgia,13115,Floyd,North,186738.39
+57,2018,Georgia,13117,Forsyth,North Central,59032.92
+58,2018,Georgia,13119,Franklin,North Central,73560.95
+59,2018,Georgia,13121,Fulton,North Central,113857.43
+60,2018,Georgia,13123,Gilmer,North,223545.56
+61,2018,Georgia,13125,Glascock,Central,79420.17
+62,2018,Georgia,13127,Glynn,Southeast,137490.16
+63,2018,Georgia,13129,Gordon,North,103984.92
+64,2018,Georgia,13131,Grady,Southwest,156212.57
+65,2018,Georgia,13133,Greene,Central,182511.49
+66,2018,Georgia,13135,Gwinnett,North Central,69444.1
+67,2018,Georgia,13137,Habersham,North,97682.6
+68,2018,Georgia,13139,Hall,North Central,101122.67
+69,2018,Georgia,13141,Hancock,Central,268281.0
+70,2018,Georgia,13143,Haralson,North Central,111291.59
+71,2018,Georgia,13145,Harris,Central,233318.46
+72,2018,Georgia,13147,Hart,North Central,56480.47
+73,2018,Georgia,13149,Heard,North Central,105624.0
+74,2018,Georgia,13151,Henry,North Central,87720.95
+75,2018,Georgia,13153,Houston,Central,122688.82
+76,2018,Georgia,13155,Irwin,Southwest,101165.0
+77,2018,Georgia,13157,Jackson,North Central,107178.19
+78,2018,Georgia,13159,Jasper,Central,182050.69
+79,2018,Georgia,13161,Jeff Davis,Southeast,134820.77
+80,2018,Georgia,13163,Jefferson,Central,224528.44
+81,2018,Georgia,13165,Jenkins,Southeast,150316.53
+82,2018,Georgia,13167,Johnson,Southeast,151874.17
+83,2018,Georgia,13169,Jones,Central,199095.17
+84,2018,Georgia,13171,Lamar,Central,88544.05
+85,2018,Georgia,13173,Lanier,Southwest,94832.29
+86,2018,Georgia,13175,Laurens,Southeast,357200.13
+87,2018,Georgia,13177,Lee,Central,138977.48
+88,2018,Georgia,13179,Liberty,Southeast,224587.22
+89,2018,Georgia,13181,Lincoln,Central,113986.91
+90,2018,Georgia,13183,Long,Southeast,228989.25
+91,2018,Georgia,13185,Lowndes,Southwest,197297.68
+92,2018,Georgia,13187,Lumpkin,North,134621.04
+93,2018,Georgia,13189,McDuffie,Central,111797.53
+94,2018,Georgia,13191,McIntosh,Southeast,161858.38
+95,2018,Georgia,13193,Macon,Central,142475.56
+96,2018,Georgia,13195,Madison,North Central,88349.61
+97,2018,Georgia,13197,Marion,Central,172433.08
+98,2018,Georgia,13199,Meriwether,North Central,258349.4
+99,2018,Georgia,13201,Miller,Southwest,71799.25
+100,2018,Georgia,13205,Mitchell,Southwest,127787.97
+101,2018,Georgia,13207,Monroe,Central,180685.62
+102,2018,Georgia,13209,Montgomery,Southeast,137977.17
+103,2018,Georgia,13211,Morgan,Central,159763.92
+104,2018,Georgia,13213,Murray,North,123792.25
+105,2018,Georgia,13215,Muscogee,Central,67911.17
+106,2018,Georgia,13217,Newton,North Central,71724.59
+107,2018,Georgia,13219,Oconee,North Central,60039.51
+108,2018,Georgia,13221,Oglethorpe,North Central,230557.89
+109,2018,Georgia,13223,Paulding,North Central,106094.94
+110,2018,Georgia,13225,Peach,Central,35640.99
+111,2018,Georgia,13227,Pickens,North,108244.06
+112,2018,Georgia,13229,Pierce,Southeast,106005.82
+113,2018,Georgia,13231,Pike,Central,95405.92
+114,2018,Georgia,13233,Polk,North Central,127090.92
+115,2018,Georgia,13235,Pulaski,Central,81557.53
+116,2018,Georgia,13237,Putnam,Central,140933.49
+117,2018,Georgia,13239,Quitman,Central,91134.99
+118,2018,Georgia,13241,Rabun,North,174199.44
+119,2018,Georgia,13243,Randolph,Central,188186.85
+120,2018,Georgia,13245,Richmond,Central,122803.91
+121,2018,Georgia,13247,Rockdale,North Central,16944.84
+122,2018,Georgia,13249,Schley,Central,113070.49
+123,2018,Georgia,13251,Screven,Southeast,320007.68
+124,2018,Georgia,13253,Seminole,Southwest,37516.29
+125,2018,Georgia,13255,Spalding,North Central,83457.69
+126,2018,Georgia,13257,Stephens,North,85498.8
+127,2018,Georgia,13259,Stewart,Central,232242.43
+128,2018,Georgia,13261,Sumter,Central,190628.79
+129,2018,Georgia,13263,Talbot,Central,208703.9
+130,2018,Georgia,13265,Taliaferro,Central,118871.28
+131,2018,Georgia,13267,Tattnall,Southeast,184811.69
+132,2018,Georgia,13269,Taylor,Central,236683.23
+133,2018,Georgia,13271,Telfair,Southeast,236898.49
+134,2018,Georgia,13273,Terrell,Central,155958.95
+135,2018,Georgia,13275,Thomas,Southwest,199453.67
+136,2018,Georgia,13277,Tift,Southwest,78369.22
+137,2018,Georgia,13279,Toombs,Southeast,153875.49
+138,2018,Georgia,13281,Towns,North,63813.37
+139,2018,Georgia,13283,Treutlen,Southeast,106570.36
+140,2018,Georgia,13285,Troup,North Central,200961.58
+141,2018,Georgia,13287,Turner,Southwest,72919.08
+142,2018,Georgia,13289,Twiggs,Central,197019.4
+143,2018,Georgia,13291,Union,North,122006.98
+144,2018,Georgia,13293,Upson,Central,147862.77
+145,2018,Georgia,13295,Walker,North,155470.8
+146,2018,Georgia,13297,Walton,North Central,123522.08
+147,2018,Georgia,13299,Ware,Southeast,488011.07
+148,2018,Georgia,13301,Warren,Central,164335.57
+149,2018,Georgia,13303,Washington,Central,307414.46
+150,2018,Georgia,13305,Wayne,Southeast,349302.68
+151,2018,Georgia,13307,Webster,Central,78479.5
+152,2018,Georgia,13309,Wheeler,Southeast,143966.1
+153,2018,Georgia,13311,White,North,126041.82
+154,2018,Georgia,13313,Whitfield,North,86725.93
+155,2018,Georgia,13315,Wilcox,Southwest,176717.09
+156,2018,Georgia,13317,Wilkes,Central,237464.28
+157,2018,Georgia,13319,Wilkinson,Central,270509.31
+158,2018,Georgia,13321,Worth,Southwest,163726.83
+0,2019,Georgia,13001,Appling,Southeast,223772.03
+1,2019,Georgia,13003,Atkinson,Southeast,154529.27
+2,2019,Georgia,13005,Bacon,Southeast,107959.98
+3,2019,Georgia,13007,Baker,Southwest,128801.7
+4,2019,Georgia,13009,Baldwin,Central,117570.92
+5,2019,Georgia,13011,Banks,North Central,83120.58
+6,2019,Georgia,13013,Barrow,North Central,45138.97
+7,2019,Georgia,13015,Bartow,North,156507.25
+8,2019,Georgia,13017,Ben Hill,Southwest,90307.84
+9,2019,Georgia,13019,Berrien,Southwest,148734.43
+10,2019,Georgia,13021,Bibb,Central,70110.12
+11,2019,Georgia,13023,Bleckley,Central,80222.3
+12,2019,Georgia,13025,Brantley,Southeast,259201.71
+13,2019,Georgia,13027,Brooks,Southwest,172923.89
+14,2019,Georgia,13029,Bryan,Southeast,197271.7
+15,2019,Georgia,13031,Bulloch,Southeast,289440.39
+16,2019,Georgia,13033,Burke,Central,318014.11
+17,2019,Georgia,13035,Butts,Central,77348.8
+18,2019,Georgia,13037,Calhoun,Central,84233.69
+19,2019,Georgia,13039,Camden,Southeast,268484.41
+20,2019,Georgia,13043,Candler,Southeast,85478.51
+21,2019,Georgia,13045,Carroll,North Central,163869.38
+22,2019,Georgia,13047,Catoosa,North,44078.77
+23,2019,Georgia,13049,Charlton,Southeast,416746.12
+24,2019,Georgia,13051,Chatham,Southeast,93427.55
+25,2019,Georgia,13053,Chattahoochee,Central,134776.15
+26,2019,Georgia,13055,Chattooga,North,168137.74
+27,2019,Georgia,13057,Cherokee,North,133820.46
+28,2019,Georgia,13059,Clarke,North Central,25085.7
+29,2019,Georgia,13061,Clay,Central,75249.92
+30,2019,Georgia,13063,Clayton,North Central,16575.49
+31,2019,Georgia,13065,Clinch,Southeast,534781.48
+32,2019,Georgia,13067,Cobb,North Central,19731.92
+33,2019,Georgia,13069,Coffee,Southeast,199016.67
+34,2019,Georgia,13071,Colquitt,Southwest,148668.38
+35,2019,Georgia,13073,Columbia,Central,100351.22
+36,2019,Georgia,13075,Cook,Southwest,77947.12
+37,2019,Georgia,13077,Coweta,North Central,167673.28
+38,2019,Georgia,13079,Crawford,Central,173475.91
+39,2019,Georgia,13081,Crisp,Southwest,80889.32
+40,2019,Georgia,13083,Dade,North,77467.03
+41,2019,Georgia,13085,Dawson,North,103025.98
+42,2019,Georgia,13087,Decatur,Southwest,203489.06
+43,2019,Georgia,13089,DeKalb,North Central,43370.1
+44,2019,Georgia,13091,Dodge,Southeast,241345.87
+45,2019,Georgia,13093,Dooly,Southwest,89504.41
+46,2019,Georgia,13095,Dougherty,Central,136073.7
+47,2019,Georgia,13097,Douglas,North Central,81393.47
+48,2019,Georgia,13099,Early,Southwest,183725.02
+49,2019,Georgia,13101,Echols,Southeast,244274.02
+50,2019,Georgia,13103,Effingham,Southeast,231525.51
+51,2019,Georgia,13105,Elbert,North Central,136937.1
+52,2019,Georgia,13107,Emanuel,Southeast,320922.57
+53,2019,Georgia,13109,Evans,Southeast,89100.99
+54,2019,Georgia,13111,Fannin,North,179274.93
+55,2019,Georgia,13113,Fayette,North Central,35113.29
+56,2019,Georgia,13115,Floyd,North,187791.79
+57,2019,Georgia,13117,Forsyth,North Central,59231.32
+58,2019,Georgia,13119,Franklin,North Central,74027.27
+59,2019,Georgia,13121,Fulton,North Central,114260.37
+60,2019,Georgia,13123,Gilmer,North,230740.9
+61,2019,Georgia,13125,Glascock,Central,78059.42
+62,2019,Georgia,13127,Glynn,Southeast,137430.96
+63,2019,Georgia,13129,Gordon,North,111228.79
+64,2019,Georgia,13131,Grady,Southwest,156383.62
+65,2019,Georgia,13133,Greene,Central,187603.46
+66,2019,Georgia,13135,Gwinnett,North Central,68216.52
+67,2019,Georgia,13137,Habersham,North,106047.65
+68,2019,Georgia,13139,Hall,North Central,95623.84
+69,2019,Georgia,13141,Hancock,Central,273955.03
+70,2019,Georgia,13143,Haralson,North Central,111735.59
+71,2019,Georgia,13145,Harris,Central,234341.31
+72,2019,Georgia,13147,Hart,North Central,56672.32
+73,2019,Georgia,13149,Heard,North Central,102649.54
+74,2019,Georgia,13151,Henry,North Central,85157.12
+75,2019,Georgia,13153,Houston,Central,123218.79
+76,2019,Georgia,13155,Irwin,Southwest,107256.13
+77,2019,Georgia,13157,Jackson,North Central,107512.4
+78,2019,Georgia,13159,Jasper,Central,182788.0
+79,2019,Georgia,13161,Jeff Davis,Southeast,134677.52
+80,2019,Georgia,13163,Jefferson,Central,225033.31
+81,2019,Georgia,13165,Jenkins,Southeast,150321.66
+82,2019,Georgia,13167,Johnson,Southeast,153974.13
+83,2019,Georgia,13169,Jones,Central,199553.93
+84,2019,Georgia,13171,Lamar,Central,95125.21
+85,2019,Georgia,13173,Lanier,Southwest,94675.02
+86,2019,Georgia,13175,Laurens,Southeast,352724.12
+87,2019,Georgia,13177,Lee,Central,138951.06
+88,2019,Georgia,13179,Liberty,Southeast,224397.93
+89,2019,Georgia,13181,Lincoln,Central,113870.0
+90,2019,Georgia,13183,Long,Southeast,234806.83
+91,2019,Georgia,13185,Lowndes,Southwest,196281.01
+92,2019,Georgia,13187,Lumpkin,North,137085.34
+93,2019,Georgia,13189,McDuffie,Central,111865.03
+94,2019,Georgia,13191,McIntosh,Southeast,162157.26
+95,2019,Georgia,13193,Macon,Central,142480.31
+96,2019,Georgia,13195,Madison,North Central,82549.07
+97,2019,Georgia,13197,Marion,Central,172195.79
+98,2019,Georgia,13199,Meriwether,North Central,259245.4
+99,2019,Georgia,13201,Miller,Southwest,74190.7
+100,2019,Georgia,13205,Mitchell,Southwest,127488.38
+101,2019,Georgia,13207,Monroe,Central,180661.04
+102,2019,Georgia,13209,Montgomery,Southeast,137767.28
+103,2019,Georgia,13211,Morgan,Central,159753.92
+104,2019,Georgia,13213,Murray,North,131112.46
+105,2019,Georgia,13215,Muscogee,Central,67835.17
+106,2019,Georgia,13217,Newton,North Central,72549.9
+107,2019,Georgia,13219,Oconee,North Central,59856.84
+108,2019,Georgia,13221,Oglethorpe,North Central,231349.24
+109,2019,Georgia,13223,Paulding,North Central,101612.98
+110,2019,Georgia,13225,Peach,Central,35658.45
+111,2019,Georgia,13227,Pickens,North,107627.2
+112,2019,Georgia,13229,Pierce,Southeast,106357.85
+113,2019,Georgia,13231,Pike,Central,95386.9
+114,2019,Georgia,13233,Polk,North Central,127188.39
+115,2019,Georgia,13235,Pulaski,Central,81559.23
+116,2019,Georgia,13237,Putnam,Central,140771.72
+117,2019,Georgia,13239,Quitman,Central,91031.49
+118,2019,Georgia,13241,Rabun,North,192412.1
+119,2019,Georgia,13243,Randolph,Central,183844.61
+120,2019,Georgia,13245,Richmond,Central,122679.24
+121,2019,Georgia,13247,Rockdale,North Central,16772.33
+122,2019,Georgia,13249,Schley,Central,113054.55
+123,2019,Georgia,13251,Screven,Southeast,319848.58
+124,2019,Georgia,13253,Seminole,Southwest,43750.62
+125,2019,Georgia,13255,Spalding,North Central,82657.33
+126,2019,Georgia,13257,Stephens,North,83711.07
+127,2019,Georgia,13259,Stewart,Central,232163.93
+128,2019,Georgia,13261,Sumter,Central,190244.09
+129,2019,Georgia,13263,Talbot,Central,208811.34
+130,2019,Georgia,13265,Taliaferro,Central,122069.45
+131,2019,Georgia,13267,Tattnall,Southeast,184759.05
+132,2019,Georgia,13269,Taylor,Central,236267.43
+133,2019,Georgia,13271,Telfair,Southeast,236918.33
+134,2019,Georgia,13273,Terrell,Central,156318.74
+135,2019,Georgia,13275,Thomas,Southwest,198674.9
+136,2019,Georgia,13277,Tift,Southwest,77957.98
+137,2019,Georgia,13279,Toombs,Southeast,153713.63
+138,2019,Georgia,13281,Towns,North,75780.3
+139,2019,Georgia,13283,Treutlen,Southeast,104961.41
+140,2019,Georgia,13285,Troup,North Central,198842.5
+141,2019,Georgia,13287,Turner,Southwest,72952.35
+142,2019,Georgia,13289,Twiggs,Central,195165.62
+143,2019,Georgia,13291,Union,North,136368.87
+144,2019,Georgia,13293,Upson,Central,147835.41
+145,2019,Georgia,13295,Walker,North,157123.19
+146,2019,Georgia,13297,Walton,North Central,123941.68
+147,2019,Georgia,13299,Ware,Southeast,478273.63
+148,2019,Georgia,13301,Warren,Central,164486.05
+149,2019,Georgia,13303,Washington,Central,307931.93
+150,2019,Georgia,13305,Wayne,Southeast,349389.6
+151,2019,Georgia,13307,Webster,Central,84944.81
+152,2019,Georgia,13309,Wheeler,Southeast,147231.51
+153,2019,Georgia,13311,White,North,127503.32
+154,2019,Georgia,13313,Whitfield,North,86124.7
+155,2019,Georgia,13315,Wilcox,Southwest,182906.19
+156,2019,Georgia,13317,Wilkes,Central,237425.23
+157,2019,Georgia,13319,Wilkinson,Central,264787.93
+158,2019,Georgia,13321,Worth,Southwest,163245.63
