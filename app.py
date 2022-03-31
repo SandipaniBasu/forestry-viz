@@ -31,15 +31,15 @@ measures = [
 
 
 
-df = pd.read_csv('trials/unitWise_GA.csv')
+df = pd.read_csv('trials/allstates.csv')
 df = df[df.Year == 2019]
 #df = df[df.LandUse=='`0001 Timberland']
 regionList = df.Region.unique()
 print(regionList)
 #df['CountyEstimatedValue'] = df.groupby(['State','Fips','CountyName','Region'])['EstimatedValue'].transform('sum')
-df['RegionEstimatedValue'] = df.groupby(['Region'])['EstimatedValue'].transform('sum')
+df['RegionEstimatedValue'] = df.groupby(['State','Region'])['EstimatedValue'].transform('sum')
 
-df2 = pd.read_csv('trials/unitWise_GA.csv')
+df2 = pd.read_csv('trials/allstates.csv')
 county = df2.CountyName.unique()
 #df2[['Dummy','Year']] = df2['Year'].str.split(expand=True)
 df2.sort_values(by='Year',inplace=True)
