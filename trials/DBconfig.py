@@ -37,12 +37,14 @@ for index,row in masterdf.iterrows():
 # cursor.execute(yearwise_Query)
 # yearwise = cursor.fetchall()
 # df2 = pd.DataFrame(yearwise,columns=['State','Fips','CountyName','Region','Year' ,'EstimatedValue'])
-#df2.to_csv('yearWise_GA.csv')
+#df2.to_csv('yearWise_GA.csv') 
 
 # county = df2.CountyName.unique()
 # df2[['Dummy','Year']] = df2['Year'].str.split(expand=True)
 # overallState = df2.groupby(['State','Year']).sum('EstimatedValue').reset_index()
 # overallRegions = df2.groupby(['State','Region','Year']).sum('EstimatedValue').reset_index()
+allstatesdf['Fips'] = allstatesdf['Fips'].astype(str)
+allstatesdf.to_csv('allstates.csv')
 
 connection.close()
 
