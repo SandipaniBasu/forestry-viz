@@ -19,7 +19,7 @@ from dash.dependencies import Input, Output, State
 
 
 # 2. Create a Dash app instance
-app = dash.Dash(__name__,external_stylesheets=[dbc.themes.LUX])
+app = dash.Dash(__name__,external_stylesheets=[dbc.themes.VAPOR])
 server = app.server
 PLOTLY_LOGO = "https://images.plot.ly/logo/new-branding/plotly-logomark.png"
 states = [
@@ -30,7 +30,7 @@ measures = [
 ]
 
 
-image = 'grunge-paint-background.jpeg'
+image = 'grunge-paint-background.jpg'
 df = pd.read_csv('trials//allstates.csv',dtype={'Fips':'str'})
 df = df[df.Year <= 2019]
 #df = df[df.LandUse=='`0001 Timberland']
@@ -182,7 +182,7 @@ layout = html.Div([
             ]),
         style={'width': '80%', 'display': 'inline-block'})
             
-    ],style = {'background-image':image})
+    ],style = {'background-image': image})
 
 # Then we incorporate the snippet into our layout.
 # This example keeps it simple and just wraps it in a Container
