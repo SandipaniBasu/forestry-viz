@@ -94,7 +94,7 @@ layout = html.Div([
              dbc.Row([
                 dbc.Col([
                     html.Div([
-                        dcc.Checklist(
+                        dcc.Dropdown(
                             id="states",
                             options=[                            
                                 {'label': 'Georgia', 'value': 'Georgia'},
@@ -102,8 +102,7 @@ layout = html.Div([
                                 {'label': 'Florida', 'value': 'Florida'}
                                 ],
                             className ="nav-link dropdown-toggle show",                        
-                            #placeholder="Select a state",
-                            value = ['Georgia']
+                            placeholder="Select a state",                            
                             )],style = {'width' : '300%'}
                         ),
                     ],md=4)]),
@@ -209,11 +208,10 @@ def display_choropleth(n_clicks,state,spatial):
     fig = px.choropleth(locationmode="USA-states", color=[1], scope="usa",template='plotly_dark')
     #fig2 = px.bar(df2[df2.State == state],x='Year',y='EstimatedValue')
     changed_id = [p['prop_id'] for p in dash.callback_context.triggered][0]
-    #state = state[0]
     if 'viz' in changed_id and state == state and spatial == "State":
-        print(state,'Inside')
-        fig = px.choropleth(df[df.State.isin(state)], geojson=counties, locations='Fips',                                     
-                                     color = "State",                                
+        print(state)
+        fig = px.choropleth(df[df.State == state], geojson=counties, locations='Fips',                                     
+                                     color_discrete_sequence = ["green"],                                
                                      scope="usa",
                                      template='plotly_dark',
                                      basemap_visible=False,
@@ -228,7 +226,7 @@ def display_choropleth(n_clicks,state,spatial):
     
     elif 'viz' in changed_id and state == state and spatial == "Region":        
         print(spatial)
-        fig = px.choropleth(df[df.State.isin(state)], geojson=counties, locations='Fips',                                     
+        fig = px.choropleth(df[df.State == state], geojson=counties, locations='Fips',                                     
                                      color = "RegionEstimatedValue",                                
                                      scope="usa",
                                      template='plotly_dark',
@@ -247,7 +245,7 @@ def display_choropleth(n_clicks,state,spatial):
         
     elif 'viz' in changed_id and state == state and spatial == "County":
         print(spatial)
-        fig = px.choropleth(df[df.State.isin(state)], geojson=counties, locations='Fips',
+        fig = px.choropleth(df[df.State == state], geojson=counties, locations='Fips',                                     
                                      color = "EstimatedValue",                                
                                      scope="usa",
                                      template='plotly_dark',
