@@ -30,17 +30,19 @@ measures = [
 ]
 
 
-
+image = 'grunge-paint-background.jpeg'
 df = pd.read_csv('trials//allstates.csv',dtype={'Fips':'str'})
-df = df[df.Year == 2019]
+df = df[df.Year <= 2019]
 #df = df[df.LandUse=='`0001 Timberland']
 regionDict={}
 for state in df.State.unique():
+    print(state)
     regionDict[state] = df[df.State==state].Region.unique()
 countyDict={}
 for state in df.State.unique():
     countyDict[state] = df[df.State==state].CountyName.unique()
 print(regionDict)
+print(countyDict)
 df['RegionEstimatedValue'] = df.groupby(['State','Region'])['EstimatedValue'].transform('sum')
 df['Fips'] = df['Fips'].str.strip()
 df2 = pd.read_csv('trials/allstates.csv',dtype={'Fips':'str'})
@@ -79,26 +81,32 @@ navbar = dbc.Navbar(
     dark=True,
 )
 
-layout = html.Div([
+layout = html.Div([ 
+    html.Div(     
     dbc.Container([
         dbc.Row([
             dbc.Col(html.H5("Visualising forestry data across the country",className="text-center"),className = "mb-5 mt-5"),            
-            ]),
-        dbc.Row([
-            dbc.Col([
-                html.Div([
-                    dcc.Dropdown(
-                        id="states",
-                        options=[                            
-                            {'label': 'Georgia', 'value': 'Georgia'},
-                            {'label': 'Alabama', 'value': 'Alabama'},
-                            {'label': 'Florida', 'value': 'Florida'}
-                            ],
-                        className ="nav-link dropdown-toggle show",                        
-                        placeholder="Select a state",
-                        )],#style = {'left':'0px','width':'200px' }
-                    ),
-                ],md=4),
+            ])
+        ]),
+        ),
+    html.Div(
+        dbc.Container([              
+             dbc.Row([
+                dbc.Col([
+                    html.Div([
+                        dcc.Dropdown(
+                            id="states",
+                            options=[                            
+                                {'label': 'Georgia', 'value': 'Georgia'},
+                                {'label': 'Alabama', 'value': 'Alabama'},
+                                {'label': 'Florida', 'value': 'Florida'}
+                                ],
+                            className ="nav-link dropdown-toggle show",                        
+                            placeholder="Select a state",                            
+                            )],style = {'width' : '300%'}
+                        ),
+                    ],md=4)]),
+            dbc.Row([            
                 dbc.Col([
                 html.Div([dcc.Dropdown(
                 id="spatial",
@@ -109,9 +117,11 @@ layout = html.Div([
                 ],
                 className ="nav-link dropdown-toggle",
                 placeholder="Spatial resolution",                
-                )], #style = {'left':'0px','width':'200px' }       
+                )], style = {'width' : '300%'}       
                 ),
-                ],md=4),
+                ],md=4),            
+                ]),
+            dbc.Row([            
                 dbc.Col([                    
                 html.Div([dcc.Dropdown(
                 options=[
@@ -120,45 +130,59 @@ layout = html.Div([
                 className ="nav-link dropdown-toggle",
                 value='forest',
                 disabled=True
-                )],  #style = {'left':'0px','width':'200px' }                
+                )],  style = {'width' : '300%'}              
                 )
                 ],md=4),
             ]),
-        html.Br(),               
-        dbc.Row([
-            dbc.Col([
-                html.Button('Visualise !!', id='viz', n_clicks=0,className = 'btn btn-success'),
-                ],md=2)
-                ],justify='center')
-            ,html.Br(), html.Br(),       
-        dbc.Row([
-            dbc.Col(dcc.Graph(id="choropleth")),
-            dbc.Col(html.Div([
-                html.Div([dcc.Dropdown(
-                    id='regions', 
-                    # options=[{'value': x, 'label': x}                             
-                    #          for x in regionList],  
-                    # value=regionList[0],
-                    clearable=False,
-                    #className ='nav-link dropdown-toggle'
-                ),
+            html.Br(),               
+            dbc.Row([
+                dbc.Col([
+                    html.Button('Visualise !!', id='viz', n_clicks=0,className = 'btn btn-success',style = {'width' : '300%'}),
+                    ],md=4)
+                    ])
+                ,#html.Br(), html.Br(),                                              
+            ]),
+        style={'width': '20%', 'display': 'inline-block'}) ,
+    
+    html.Div(
+        html.Div([
+            html.Div(
+                dbc.Container([
+                    dbc.Row([
+                        dbc.Col(dcc.Graph(id="choropleth"))
+                        ])
                     ]),
-                html.Div([dcc.Dropdown(
-                    id='counties', 
-                    # options=[{'value': x, 'label': x} 
-                    #           for x in county],
-                    # value=county[0],
-                    clearable=False,
-                    #className ='nav-link dropdown-toggle'
-                ),
+                style={'width': '45%', 'display': 'inline-block'}),
+            html.Div(
+                dbc.Container([
+                    dbc.Row([
+                        dbc.Col(html.Div([
+                            html.Div([dcc.Dropdown(
+                                id='regions',                    
+                                clearable=False,                    
+                            ),
+                                ]),
+                            html.Div([dcc.Dropdown(
+                                id='counties', 
+                                # options=[{'value': x, 'label': x} 
+                                #           for x in county],
+                                # value=county[0],
+                                clearable=False,
+                                #className ='nav-link dropdown-toggle'
+                            ),
+                                ]),
+                            dcc.Graph(id="timeseries")
+                            ])
+                            ),
+                        ])
                     ]),
-                dcc.Graph(id="timeseries")
-                ])
-                ), 
-            ])
-                       
-        ]),            
-    ])
+                style={'width': '55%', 'display': 'inline-block'})
+            
+            
+            ]),
+        style={'width': '80%', 'display': 'inline-block'})
+            
+    ],style = {'background-image':image})
 
 # Then we incorporate the snippet into our layout.
 # This example keeps it simple and just wraps it in a Container
@@ -277,17 +301,17 @@ def display_timeseries(n_clicks,state,spatial,regions,county):
     
     elif 'viz' in changed_id and spatial == "Region":
         value_region = [{'label': i, 'value': i} for i in regionDict[state]]
-        default_region = regionDict[state][0]
-        style_dict_region = {'display': 'block'}
+        default_region = regions
+        style_dict_region = {'display': 'inline-block','width':'100%'}
         style_dict_county = {'display': 'none'}
         print(spatial)
         fig = px.line(overallRegions.loc[(overallRegions.State == state) & (overallRegions.Region == regions)],x='Year',y='EstimatedValue',template='plotly_dark')        
         
     elif 'viz' in changed_id and spatial == "County":
         value_county = [{'label': i, 'value': i} for i in countyDict[state]]
-        default_county = countyDict[state][0]
+        default_county = county
         style_dict_region = {'display': 'none'} 
-        style_dict_county = {'display': 'block'} 
+        style_dict_county = {'display': 'inline-block','width':'100%'} 
         print(county)
         fig = px.line(df2.loc[(df2.State == state) & (df2.CountyName == county)],x='Year',y='EstimatedValue',template='plotly_dark')             
     return fig,value_region,value_county,default_region,default_county,style_dict_region,style_dict_county
