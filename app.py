@@ -41,9 +41,7 @@ for state in df.State.unique():
 countyDict={}
 for state in df.State.unique():
     countyDict[state] = df[df.State==state].CountyName.unique()
-print(regionDict)
-print(countyDict)
-df['RegionEstimatedValue'] = df.groupby(['State','Region'])['EstimatedValue'].transform('sum')
+df['RegionEstimatedValue'] = df.groupby(['State','Region','Year'])['EstimatedValue'].transform('sum')
 df['Fips'] = df['Fips'].str.strip()
 df2 = pd.read_csv('trials/allstates.csv',dtype={'Fips':'str'})
 df2['Fips'] = df2['Fips'].str.strip()
@@ -154,36 +152,23 @@ layout = html.Div([
                         ])
                     ]),
                 style={'width': '45%', 'display': 'inline-block'}),
-            html.Div(
-                dbc.Container([
-                    dbc.Row([
-                        dbc.Col(html.Div([
-                            html.Div([dcc.Dropdown(
-                                id='regions',                    
-                                clearable=False,                    
-                            ),
-                                ]),
-                            html.Div([dcc.Dropdown(
-                                id='counties', 
-                                # options=[{'value': x, 'label': x} 
-                                #           for x in county],
-                                # value=county[0],
-                                clearable=False,
-                                #className ='nav-link dropdown-toggle'
-                            ),
-                                ]),
-                            dcc.Graph(id="timeseries")
-                            ])
-                            ),
-                        ])
-                    ]),
-                style={'width': '55%', 'display': 'inline-block'})
+            html.Div([                           
+                dcc.Dropdown(
+                    id='regions',                    
+                    clearable=False,                    
+                ),                              
+                dcc.Dropdown(
+                    id='counties',                     
+                    clearable=False,                    
+                ),                                
+                dcc.Graph(id="timeseries")                                                                            
+                ],style={'width': '55%', 'display': 'inline-block'})
             
             
             ]),
         style={'width': '80%', 'display': 'inline-block'})
             
-    ],style = {'background-image': image})
+    ])
 
 # Then we incorporate the snippet into our layout.
 # This example keeps it simple and just wraps it in a Container
@@ -241,9 +226,7 @@ def display_choropleth(n_clicks,state,spatial):
                                    )
     
         fig.update_geos(fitbounds="locations", visible=False)
-        fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
-        # fig.update_layout({"plot_bgcolor":"rgba(0,0,0,0)",
-        #                    "paper_bgcolor":"rgba(0,0,0,0)"})        
+        fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})            
         
     elif 'viz' in changed_id and state == state and spatial == "County":
         print(spatial)
@@ -299,23 +282,30 @@ def display_timeseries(n_clicks,state,spatial,regions,county):
     changed_id = [p['prop_id'] for p in dash.callback_context.triggered][0]
     if 'viz' in changed_id and state == state and spatial == "State":
         print(state)        
-        fig = px.line(overallState[overallState.State==state],x='Year',y='EstimatedValue',template='plotly_dark')                  
+        fig = px.line(overallState[overallState.State.isin(state)],x='Year',y='EstimatedValue',color='State',template='plotly_dark')                  
     
     elif 'viz' in changed_id and spatial == "Region":
-        value_region = [{'label': i, 'value': i} for i in regionDict[state]]
+        value_region = []
+        for s in state:
+            temp_region = [{'label': i, 'value': i} for i in regionDict[s]]
+            for val in temp_region:
+                value_region.append(val)
         default_region = regions
         style_dict_region = {'display': 'inline-block','width':'100%'}
         style_dict_county = {'display': 'none'}
         print(spatial)
-        fig = px.line(overallRegions.loc[(overallRegions.State == state) & (overallRegions.Region == regions)],x='Year',y='EstimatedValue',template='plotly_dark')        
+        fig = px.line(overallRegions.loc[(overallRegions.State.isin(state)) & (overallRegions.Region == regions)],x='Year',y='EstimatedValue',template='plotly_dark')        
         
     elif 'viz' in changed_id and spatial == "County":
-        value_county = [{'label': i, 'value': i} for i in countyDict[state]]
+        value_county = []        
+        for s in state:
+            temp_county = [{'label': i, 'value': i} for i in countyDict[s]]
+            for val in temp_county:
+                value_county.append(val)        
         default_county = county
         style_dict_region = {'display': 'none'} 
-        style_dict_county = {'display': 'inline-block','width':'100%'} 
-        print(county)
-        fig = px.line(df2.loc[(df2.State == state) & (df2.CountyName == county)],x='Year',y='EstimatedValue',template='plotly_dark')             
+        style_dict_county = {'display': 'inline-block','width':'100%'}         
+        fig = px.line(df2.loc[(df2.State.isin(state)) & (df2.CountyName == county)],x='Year',y='EstimatedValue',template='plotly_dark')             
     return fig,value_region,value_county,default_region,default_county,style_dict_region,style_dict_county
 
 # 5. Start the Dash server
