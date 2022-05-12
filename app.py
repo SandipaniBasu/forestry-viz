@@ -7,7 +7,6 @@ Created on Thu Feb  3 16:20:28 2022
 
 # 1. Import Dash
 import pandas as pd
-import sqlite3
 import dash
 import plotly.express as px
 from dash import dcc
@@ -52,7 +51,7 @@ overallState['EstimatedValue'] = overallState.EstimatedValue.round(2)
 overallRegions = df2.groupby(['State','Region','Year']).sum('EstimatedValue').reset_index()
 overallRegions['EstimatedValue'] = overallRegions.EstimatedValue.round(2)
 df2 = df2.astype({'Year':'int'})
-print(df2.Year.unique())
+print(df2[df2.State == 'Florida'].Year.unique())
 with urlopen('https://raw.githubusercontent.com/plotly/datasets/master/geojson-counties-fips.json') as response:
     counties = json.load(response)
   
@@ -92,16 +91,17 @@ layout = html.Div([
              dbc.Row([
                 dbc.Col([
                     html.Div([
-                        dcc.Checklist(
+                        dcc.Dropdown(
                             id="states",
                             options=[                            
                                 {'label': 'Georgia', 'value': 'Georgia'},
                                 {'label': 'Alabama', 'value': 'Alabama'},
                                 {'label': 'Florida', 'value': 'Florida'}
                                 ],
+                            multi=True,
                             className ="nav-link dropdown-toggle show",                        
                             #placeholder="Select a state",
-                            value = ['Georgia']
+                            #value = ['Georgia']
                             )],style = {'width' : '300%'}
                         ),
                     ],md=4)]),
@@ -155,11 +155,13 @@ layout = html.Div([
             html.Div([                           
                 dcc.Dropdown(
                     id='regions',                    
-                    clearable=False,                    
+                    clearable=False,   
+                    multi=True
                 ),                              
                 dcc.Dropdown(
                     id='counties',                     
-                    clearable=False,                    
+                    clearable=False,
+                    multi=True
                 ),                                
                 dcc.Graph(id="timeseries")                                                                            
                 ],style={'width': '55%', 'display': 'inline-block'})
@@ -263,7 +265,9 @@ def display_choropleth(n_clicks,state,spatial):
       Output("regions", "value"),
       Output("counties", "value"),
      Output("regions", "style"),
-     Output("counties", "style")],
+     Output("counties", "style"),
+     Output("timeseries", "style")
+     ],
     [Input("viz","n_clicks")],
     [State("states","value")],
     [State("spatial","value")],
@@ -273,15 +277,17 @@ def display_choropleth(n_clicks,state,spatial):
 def display_timeseries(n_clicks,state,spatial,regions,county):
     style_dict_region = {'display': 'none'}        
     style_dict_county = {'display': 'none'}
+    style_dict_timeseries = {'display': 'inline-block','width':'100%'}
     value_region=[{'label': i, 'value': i} for i in regionDict['Georgia']]
     value_county=[{'label': i, 'value': i} for i in countyDict['Georgia']]
-    default_region=regionDict['Georgia'][0]
-    default_county=countyDict['Georgia'][0]
+    default_region=[regionDict['Georgia'][0]]
+    default_county=[countyDict['Georgia'][0]]
     fig = px.choropleth(locationmode="USA-states", color=[1], scope="usa", template='plotly_dark')
     #fig2 = px.bar(df2[df2.State == state],x='Year',y='EstimatedValue')
     changed_id = [p['prop_id'] for p in dash.callback_context.triggered][0]
     if 'viz' in changed_id and state == state and spatial == "State":
-        print(state)        
+        print(state)
+        style_dict_timeseries = {'display': 'inline-block','width':'100%'}
         fig = px.line(overallState[overallState.State.isin(state)],x='Year',y='EstimatedValue',color='State',template='plotly_dark')                  
     
     elif 'viz' in changed_id and spatial == "Region":
@@ -293,8 +299,9 @@ def display_timeseries(n_clicks,state,spatial,regions,county):
         default_region = regions
         style_dict_region = {'display': 'inline-block','width':'100%'}
         style_dict_county = {'display': 'none'}
+        style_dict_timeseries = {'display': 'inline-block','width':'100%'}
         print(spatial)
-        fig = px.line(overallRegions.loc[(overallRegions.State.isin(state)) & (overallRegions.Region == regions)],x='Year',y='EstimatedValue',template='plotly_dark')        
+        fig = px.line(overallRegions[(overallRegions.State.isin(state)) & (overallRegions.Region.isin(regions))],x='Year',y='EstimatedValue',color='Region',template='plotly_dark')        
         
     elif 'viz' in changed_id and spatial == "County":
         value_county = []        
@@ -304,9 +311,10 @@ def display_timeseries(n_clicks,state,spatial,regions,county):
                 value_county.append(val)        
         default_county = county
         style_dict_region = {'display': 'none'} 
-        style_dict_county = {'display': 'inline-block','width':'100%'}         
-        fig = px.line(df2.loc[(df2.State.isin(state)) & (df2.CountyName == county)],x='Year',y='EstimatedValue',template='plotly_dark')             
-    return fig,value_region,value_county,default_region,default_county,style_dict_region,style_dict_county
+        style_dict_county = {'display': 'inline-block','width':'100%'}       
+        style_dict_timeseries = {'display': 'inline-block','width':'100%'}
+        fig = px.line(df2.loc[(df2.State.isin(state)) & (df2.CountyName.isin(county))],x='Year',y='EstimatedValue',color = 'CountyName',template='plotly_dark')             
+    return fig,value_region,value_county,default_region,default_county,style_dict_region,style_dict_county,style_dict_timeseries
 
 # 5. Start the Dash server
 if __name__ == "__main__":
