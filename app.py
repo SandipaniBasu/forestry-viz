@@ -18,7 +18,7 @@ from dash.dependencies import Input, Output, State
 
 
 # 2. Create a Dash app instance
-app = dash.Dash(__name__,external_stylesheets=[dbc.themes.VAPOR])
+app = dash.Dash(__name__,external_stylesheets=[dbc.themes.FLATLY])
 server = app.server
 PLOTLY_LOGO = "https://images.plot.ly/logo/new-branding/plotly-logomark.png"
 states = [
@@ -206,6 +206,7 @@ def display_choropleth(n_clicks,state,spatial):
                                      basemap_visible=False,
                                      #center={"lat":32.6836,"lon":-83.4644},
                                      hover_data = ["CountyName","EstimatedValue"],
+                                     color_continuous_scale = 'algae',
                                      #labels={'EstimatedValue':'Estimated Value'},
                                      fitbounds='locations',
                                    )
@@ -221,7 +222,7 @@ def display_choropleth(n_clicks,state,spatial):
                                      template='plotly_dark',
                                      basemap_visible=False,
                                      #center={"lat":32.6836,"lon":-83.4644},
-                                     color_continuous_scale = 'RdBu',                                
+                                     color_continuous_scale = 'algae',                                
                                      hover_data = ["Region","RegionEstimatedValue"],                                     
                                      #labels={'EstimatedValue':'Estimated Value'},
                                      fitbounds='locations',                                     
@@ -238,7 +239,8 @@ def display_choropleth(n_clicks,state,spatial):
                                      template='plotly_dark',
                                      basemap_visible=False,
                                      #center={"lat":32.6836,"lon":-83.4644},
-                                     hover_data = ["CountyName","EstimatedValue"],                                    
+                                     hover_data = ["CountyName","EstimatedValue"],
+                                     color_continuous_scale = 'algae',
                                      #labels={'CountyEstimatedValue':'Estimated Value'},
                                      fitbounds='locations',
                                    )
